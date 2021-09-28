@@ -2,32 +2,75 @@
   width: 100vw;
   height: 100vh;
   position: fixed;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero_section .hero_logo_wrapper {
+  position: absolute;
+  left: calc(50% - 122.5px);
+  top: calc(50% - 260px);
+  width: 255px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+}
+
+.hero_section .hero_logo_wrapper button {
+  padding: 20px 50px 20px 50px;
+  background-color: transparent;
+  border: 1px solid #fcfcfc7a;
+  color: #fcfcfc;
+  font-family: 'Raleway', sans-serif;
+  z-index: 10;
+  font-size: 8pt;
+}
+
+.hero_section .hero_logo_wrapper button:after {
+  background-color: transparent;
+  width: 185px;
+  height: 54px;
+  position: absolute;
+  left: 27px;
+  bottom: 6px;
+  content: '';
+  border: 1px solid #fcfcfc7a;
 }
 
 .hero_section .logo {
-  width: 300px;
-  position: absolute;
-  left: calc(50% - 150px);
-  top: 10%;
+  z-index: 10;
+  margin-bottom: 40px;
+  border-radius: 14%;
+  width: 350px;
 }
 
 .hero_section h1 {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Raleway', sans-serif;
   position: absolute;
-  top: 40%;
+  bottom: 0;
+  left: 100px;
+  color: #fcfcfc;
+  font-size: 48pt;
+  width: 640px;
+  z-index: 10;
 }
 
 .hero_section .hero_img {
@@ -37,18 +80,61 @@
   height: 100%;
 }
 
-.hero_section .hero_overlay {
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: white;
-  opacity: 0.1;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.6;
 }
 
-.hero_section .hero_nav {
+.hero_scroll_container {
   position: absolute;
+  bottom: 60px;
+  left: 30px;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero_scroll_container h5 {
+  text-orientation: upright;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  color: #fcfcfc;
+  font-family: 'Raleway', sans-serif;
+  margin: 0 0 10px 0;
+  font-size: 6pt;
+}
+
+.hero_scroll_container img {
+  width: 15px;
+}
+
+.hero_copyright {
+  position: absolute;
+  bottom: 0;
+  right: 35px;
+  color: #fcfcfc;
+  z-index: 10;
+  font-size: 7pt;
+  font-family: 'Raleway', sans-serif;
+}
+
+.hero_nav {
+  position: fixed;
+  z-index: 10;
   top: 0;
   width: 100%;
   display: -webkit-box;
@@ -59,18 +145,221 @@
           justify-content: center;
 }
 
-.hero_section .hero_nav ul {
+.hero_nav .hero_nav_ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style: none;
 }
 
-.hero_section .hero_nav ul li {
-  color: white;
-  padding: 15px;
-  font-weight: bold;
+.hero_nav .hero_nav_ul li {
+  color: #fcfcfc;
+  padding: 15px 25px;
   font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.hero_nav .hero_nav_ul li:hover {
+  color: #fcfcfc;
+  background-color: #386e35;
+}
+
+.hero_nav .hero_nav_dropdown_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 15px;
+}
+
+.hero_nav .hero_nav_dropdown_wrapper .hero_nav_dropdown {
+  padding-bottom: 0;
+  background-color: #386e35;
+  border-radius: 3px;
+}
+
+.hero_nav .hero_nav_dropdown_wrapper .hero_nav_dropdown ul {
+  margin-top: 0;
+  padding-top: 0;
+  border-radius: 0;
+  background-color: #386e35;
+}
+
+.hero_nav .hero_nav_dropdown_wrapper .hero_nav_dropdown ul li span {
+  color: #fcfcfc;
+  font-family: 'Raleway', sans-serif;
+}
+
+.hero_nav .hero_nav_dropdown_wrapper .hero_nav_dropdown ul li:hover > span {
+  color: #386e35;
+}
+
+.hero_nav .hero_nav_dropdown_wrapper .hero_nav_dropdown button span {
+  color: #fcfcfc;
+  font-family: 'Raleway', sans-serif;
+}
+
+.hero_nav .hero_nav_dropdown_wrapper .hero_nav_dropdown button::after {
+  border-top: 5px solid #fcfcfc;
+}
+
+.about_us_section {
+  margin-top: 100vh;
+  position: relative;
+  width: 100%;
+  background-color: #FEFEFE;
+}
+
+.about_us_title_wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about_us_title_wrapper .about_us_title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30pt;
+}
+
+.about_us_content_parentwrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about_us_content_wrapper {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about_us_content_wrapper h2 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: 50px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+}
+
+.values_title {
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.about_us_values_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.about_us_values_wrapper .hero_section_values_container_wrapper {
+  width: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about_us_values_wrapper .hero_section_values_container {
+  width: 31%;
+  margin: 5px;
+  text-align: center;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  height: 250px;
+  width: 250px;
+}
+
+.about_us_values_wrapper .hero_section_values_container h3 {
+  font-family: 'Nunito', sans-serif;
+}
+
+.about_us_us {
+  width: 100%;
+  margin: 30px 0 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about_us_us .about_us_pwrapper {
+  width: 50%;
+}
+
+.about_us_us .about_us_pwrapper:nth-child(odd) {
+  margin: 0 0 0 50px;
+}
+
+.about_us_us .about_us_pwrapper p {
+  width: 70%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.about_us_us .about_us_imagewrapper {
+  width: 50%;
+}
+
+.card {
+  width: 300px;
+  height: 200px;
+  background-color: darkgreen;
 }
 
 body {

@@ -1,0 +1,131 @@
+.about_us_section {
+    margin-top: 100vh;
+    position: relative;
+    width: 100%;
+    background-color: #FEFEFE;
+}
+
+.about_us_title_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .about_us_title {
+        font-family: 'Raleway', sans-serif;
+        font-size: 30pt;
+    }
+}
+
+
+.about_us_content_parentwrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about_us_content_wrapper {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    h2{
+        align-self: flex-start;
+        margin-left: 50px;
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+    }
+}
+
+.values_title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+.about_us_values_wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .hero_section_values_container_wrapper {
+        width: 33%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero_section_values_container {
+        width: 31%;
+        margin: 5px;
+        text-align: center;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        height: 250px;
+        width: 250px;
+
+        h3 {
+            font-family: 'Nunito', sans-serif;
+        }
+    }
+}
+
+
+.about_us_us {
+    width: 100%;
+    margin: 30px 0 30px 0;
+    display: flex;
+
+    .about_us_pwrapper{
+        width: 50%;
+
+        &:nth-child(odd) {
+            margin: 0 0 0 50px;
+        }
+    
+        p {
+            width: 70%;
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            line-height: 1.5;
+            margin: 0;
+        }
+    }
+
+    .about_us_imagewrapper {
+        width: 50%;
+    }
+
+}
+
+// .about_us_us:first-child {
+//     margin-bottom: 10px;
+//     margin-left: 20px;
+//     align-self: flex-start;
+// }
+
+// .about_us_us:last-child {
+//     margin-top: 10px;
+//     margin-left: 20px;
+//     align-self: flex-start;
+// }
+
+// .about_us_us:nth-child(even) {
+//     align-self: flex-end;
+//     margin-right: 20px;
+// }
+
+.card {
+    width: 300px;
+    height: 200px;
+    background-color: darkgreen;
+}

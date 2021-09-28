@@ -1,24 +1,30 @@
 import React from "react";
-import heroImage from "../images/hero.jpg"
-import logo from "../images/logo.png"
-import bike from "../images/bike.svg"
+import NavBar from "./NavBar";
+import { text } from "../utility/text";
 
-const HeroSection = () => {
+const HeroSection = (props) => {
     return (
+        <>
+        <NavBar
+                changeLang={props.changeLang}
+            />
         <section className="hero_section">
-            <img className="hero_img" src={heroImage} alt="Lake"/>
-                <img className="logo" src={logo} alt="logo"></img>
-                <h1>Coming Soon</h1>
-            {/* <nav className = "hero_nav">
-                <ul>
-                    <li>Lorem</li>
-                    <li>Ipsum</li>
-                    <li>Quem Somos</li>
-                    <li>Contact Us</li>
-                </ul>
-            </nav>
-            <div className="hero_overlay"></div> */}
-        </section> 
+            <img className="hero_img" src="../images/hero.jpg" alt="Lake"/>
+            <div className="hero_logo_wrapper">
+                <img className="logo" src="../images/logo.png" alt="logo"></img>
+                <button>OUR PRODUCTS</button>
+            </div>
+                {text.map((data, key) => {
+                    return <h1 className="hero_text_banner" key={key}>{data["banner-english"]}</h1>
+                })}
+        <div className="hero_scroll_container">
+            <h5>SCROLL</h5>
+            <img src="../images/arrow-down.svg"/>
+        </div>
+        <h5 className="hero_copyright"><span>{'\u00A9'}</span> 2021 SINTRA WELCOME CENTRE, TRADEMARKS AND BRAND ARE THE PROPERTY OF THEIR RESPECTIVE</h5>
+        <div className="overlay"></div>
+        </section>
+        </>
     )
   
 }
