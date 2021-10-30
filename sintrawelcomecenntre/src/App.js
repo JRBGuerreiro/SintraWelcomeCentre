@@ -1,6 +1,9 @@
 import { useState } from "react";
 import AboutUs from "./components/AboutUs";
+import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
+import Products from "./components/Products";
+import Form from "./components/Form";
 function App() {
 
   const [lang, setLang] = useState("GB")
@@ -12,9 +15,14 @@ function App() {
      <HeroSection
         changeLang = {changeLanguage}
      />
+      <Products
+       language = {lang}
+      />
      <AboutUs 
         language={lang}
      />
+     <Form/>
+     <Footer/>
     </div>
   );
 }

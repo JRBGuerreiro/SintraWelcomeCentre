@@ -25,17 +25,29 @@
             font-family: 'Raleway', sans-serif;
             z-index: 10;
             font-size: 8pt;
+            transition: 0.3s ease-in;
         }
 
         button:after {
             background-color: transparent;
-            width: 185px;
-            height: 54px;
+            width: 183px;
+            height: 52px;
             position: absolute;
             left: 27px;
             bottom: 6px;
             content: '';
             border: 1px solid #fcfcfc7a;
+            transition: 0.3s ease-out;
+        }
+
+        button:hover {
+            color: #386e35;
+            background-color: #fcfcfc;
+            font-weight: bold;
+            &:after {
+                left: 35px;
+                bottom: 0px;
+            }
         }
     }
 
@@ -106,6 +118,7 @@
     z-index: 10;
     font-size: 7pt;
     font-family: 'Raleway', sans-serif;
+    
 }
 
 .hero_nav {
@@ -115,6 +128,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    z-index: 20;
 
     .hero_nav_ul {
         display: flex;
@@ -141,7 +155,6 @@
 
         .hero_nav_dropdown {
             padding-bottom: 0;
-            background-color: #386e35;
             border-radius: 3px;
 
             ul {
@@ -163,6 +176,7 @@
             }
 
             button {
+                border: none;
                 span {
                     color: #fcfcfc;
                     font-family: 'Raleway', sans-serif;

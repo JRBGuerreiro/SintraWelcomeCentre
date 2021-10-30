@@ -1,12 +1,32 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactFlagsSelect from 'react-flags-select';
 
 const NavBar = (props) => {
 
     const [currentLang, setCurrentLang] = useState("");
 
+    // useEffect(() => {
+    //     const changeNavBgColor = () => {
+    //         const wH = window.innerHeight;
+    //         const nav = document.getElementById('nav');
+    //         const currentH = document.documentElement.scrollTop;
+    
+    //         if(currentH >= wH) {
+    //             nav.style.backgroundColor = "#386e35";
+    //         } else {
+    //             nav.style.backgroundColor = 'transparent'
+    //         }
+    //     }
+    //     window.addEventListener("scroll", changeNavBgColor)
+
+    //     return(() => {
+    //         window.removeEventListener('scroll', changeNavBgColor);
+    //     })
+    // }, [])
+   
+
     return(
-        <nav className = "hero_nav">
+        <nav className = "hero_nav" id="nav">
             <ul className="hero_nav_ul">
                 <li>Lorem</li>
                 <li>Ipsum</li>
