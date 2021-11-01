@@ -5,26 +5,36 @@ import HeroSection from "./components/HeroSection";
 import Products from "./components/Products";
 import Form from "./components/Form";
 function App() {
-
+  const hideIt = true
   const [lang, setLang] = useState("GB")
 
   const changeLanguage = (language) => setLang(language)
 
   return (
-    <div className="App">
-     <HeroSection
-        changeLang = {changeLanguage}
-     />
-      <Products
-       language = {lang}
-      />
-     <AboutUs 
-        language={lang}
-     />
-     <Form/>
-     <Footer/>
-    </div>
-  );
+    !hideIt ? (
+      <div className="App">
+       <HeroSection
+          changeLang = {changeLanguage}
+       />
+        <Products
+         language = {lang}
+        />
+       <AboutUs 
+          language={lang}
+       />
+       <Form/>
+       <Footer/>
+      </div>
+      ) : (
+        <div style={{width:'100vw', height:'100vh', backgroundColor:'black', display:'flex', justifyContent:'center', alignItems:'center'}}>
+          <div>
+            <img style={{width:'350px'}} className="logo" src="../images/logo.png" alt="logo"></img>
+            <h1 style={{color: 'white', fontFamily:'"Raleway", sans-serif', textAlign:'center'}}>COMING SOON</h1>
+          </div>
+        </div>
+      )
+
+    )
 }
 
 export default App;
