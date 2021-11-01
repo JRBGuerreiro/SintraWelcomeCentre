@@ -335,7 +335,30 @@
   margin-top: 100vh;
 }
 
-.products h2 {
+.products .products_title {
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  padding: 0px 0 30px 0;
+  color: #386e35;
+  text-align: center;
+  font-size: 24pt;
+  margin: 0;
+}
+
+.products .products_title:after {
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+  content: "Our Products";
+  display: block;
+  color: rgba(40, 54, 71, 0.1);
+  -webkit-transform: rotate3d(1, 0, 0, 114deg) scale(1, 2.5) skew(-38deg, 0deg);
+          transform: rotate3d(1, 0, 0, 114deg) scale(1, 2.5) skew(-38deg, 0deg);
+  margin: -12px 0 0 10px;
+}
+
+.products_why_us h2 {
   width: 100%;
   font-family: 'Raleway', sans-serif;
   padding: 30px 0 45px 0;
@@ -344,22 +367,17 @@
   font-size: 24pt;
 }
 
-.products h2:after {
+.products_why_us h2:after {
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
   -webkit-transition-delay: 0.8s;
           transition-delay: 0.8s;
-  content: "Check Our Products";
+  content: "Why Us?";
   display: block;
   color: rgba(40, 54, 71, 0.1);
   -webkit-transform: rotate3d(1, 0, 0, 114deg) scale(1, 2.5) skew(-38deg, 0deg);
           transform: rotate3d(1, 0, 0, 114deg) scale(1, 2.5) skew(-38deg, 0deg);
   margin: -12px 0 0 10px;
-}
-
-.products .clouds {
-  background: url("./images/clouds.png") repeat-x 0/100% auto;
-  height: 100px;
 }
 
 .products_content {
@@ -374,6 +392,35 @@
   margin-bottom: 100px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .formWrapper {

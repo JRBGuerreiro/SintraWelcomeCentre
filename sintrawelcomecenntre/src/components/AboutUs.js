@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 const AboutUsSection = styled.section `
     width:100%;
-    background-image: url('./images/praia.jpg');
+    background-color: #386e35;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -16,19 +16,22 @@ const AboutUsSection = styled.section `
 `
 
 const AboutUsHeader = styled.h2 `
+    width: 100%;
     font-family: 'Raleway', sans-serif;
-    text-align: center;
+    padding: 30px 0 45px 0;
     color: #fcfcfc;
-    font-size: 30pt;
-    z-index: 10;
-`
+    text-align: center;
+    font-size: 24pt;
 
-const AboutUsImageWrapperRight = styled.div `
-    width: 90%;
-    display: flex;
-    justify-content: flex-start;
-    height: 400px;
-    z-index: 10;
+    &:after {
+        transition: opacity 1s;
+        transition-delay: 0.8s;
+        content: "About Us";
+        display: block;
+        color: rgba(252,252,252,.1);
+        transform: rotate3d(1, 0, 0, 114deg) scale(1, 2.5) skew(-38deg, 0deg);
+        margin: -12px 0 0 10px;
+    }
 `
 
 const AboutUsImageWrapperLeft = styled.div `
@@ -47,12 +50,6 @@ const AboutUsImage = styled.div `
     z-index: 10;
 `
 
-const AboutUsTextWrapperLeft = styled.div `
-    display: flex;
-    justify-content: flex-start;
-    white-space: pre-line;
-`
-
 const AboutUsTextWrapperRight = styled.div `
     display: flex;
     justify-content: flex-end;
@@ -66,34 +63,13 @@ const AboutUsText = styled.p `
     font-size: 14pt;
 `
 
-const Overlay = styled.div `
-    background-color: #000000;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left:0;
-    opacity: 0.4;
-`
-
 ///display content
 
 
 
 const AboutUs = (props) => {
-    const aboutUs = aboutUsText.map((content, index) => {
+    const aboutUs = aboutUsText.map((content) => {
         const values = content[props.language]
-            if(index % 2 === 0) {
-                return <>
-                <AboutUsImageWrapperRight>
-                    <AboutUsImage/>
-                </AboutUsImageWrapperRight>
-                <AboutUsTextWrapperLeft>
-                    <AboutUsText>{values.text}</AboutUsText>
-                </AboutUsTextWrapperLeft>
-                </>
-            }
-
             return <>
             <AboutUsImageWrapperLeft>
                 <AboutUsImage/>
@@ -102,13 +78,13 @@ const AboutUs = (props) => {
                 <AboutUsText>{values.text}</AboutUsText>
             </AboutUsTextWrapperRight>
             </>
-        
     })
+
     return (
         <>
         <AboutUsSection>
+            <AboutUsHeader>About Us</AboutUsHeader>
             {aboutUs}
-        <Overlay/>
         </AboutUsSection>
         </>
     )
