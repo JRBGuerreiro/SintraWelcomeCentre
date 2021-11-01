@@ -1,7 +1,7 @@
 import React from "react";
-import { aboutUsText } from "../utility/aboutUs";
-import { valuesText } from "../utility/valuesText";
-import { valuesImages } from "../utility/valuesImages";
+import { aboutUsText } from "../utility/text/aboutUs";
+import { valuesText } from "../utility/text/valuesText";
+import { valuesImages } from "../utility/images/valuesImages";
 import styled from "styled-components";
 
 const AboutUsSection = styled.section `

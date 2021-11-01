@@ -1,5 +1,5 @@
 import React from "react";
-import { products } from '../utility/products';
+import { products } from '../utility/text/products';
 import Card from "./Card";
 
 

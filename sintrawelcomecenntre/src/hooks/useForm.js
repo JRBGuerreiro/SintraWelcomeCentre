@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import emailjs from "emailjs-com"
-import validateFormInfo from './validateForm'
+import validateFormInfo from '../components/validateForm'
 
 const useForm = () => {
     const [values, setValues] = useState({

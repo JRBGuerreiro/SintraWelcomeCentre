@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "./NavBar";
-import { text } from "../utility/text";
+import { text } from "../utility/text/text";
 
 const HeroSection = (props) => {
     return (
