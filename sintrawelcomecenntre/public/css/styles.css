@@ -226,6 +226,24 @@
   border-top: 5px solid #fcfcfc;
 }
 
+@media (max-width: 767px) {
+  .hero_section .logo {
+    z-index: 10;
+    margin-bottom: 40px;
+    border-radius: 14%;
+    width: 275px;
+  }
+  .hero_section .hero_copyright {
+    font-size: 5pt;
+  }
+  .hero_section h1 {
+    left: 80px;
+    color: #fcfcfc;
+    font-size: 37pt;
+    width: auto;
+  }
+}
+
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

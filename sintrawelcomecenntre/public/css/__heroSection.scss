@@ -189,4 +189,28 @@
     }
 }
 
+//SMALL DEVICES
 
+@media (max-width: 767px) {
+    .hero_section {
+        .logo {
+            z-index: 10;
+            margin-bottom: 40px;
+            border-radius: 14%;
+            width: 275px;
+        }
+
+        .hero_copyright {
+            font-size: 5pt;
+        }
+
+        h1 {
+            left: 80px;
+            color: #fcfcfc;
+            font-size: 37pt;
+            width: auto;
+        }
+    }
+
+    
+}
