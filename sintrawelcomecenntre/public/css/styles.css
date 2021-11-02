@@ -235,12 +235,17 @@
   }
   .hero_section .hero_copyright {
     font-size: 5pt;
+    bottom: 50px;
   }
   .hero_section h1 {
     left: 80px;
     color: #fcfcfc;
     font-size: 35pt;
     width: auto;
+    bottom: 50px;
+  }
+  .hero_section .hero_scroll_container {
+    bottom: 100px;
   }
 }
 

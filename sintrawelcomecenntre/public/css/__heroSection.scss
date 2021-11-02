@@ -202,6 +202,7 @@
 
         .hero_copyright {
             font-size: 5pt;
+            bottom: 50px;
         }
 
         h1 {
@@ -209,6 +210,10 @@
             color: #fcfcfc;
             font-size: 35pt;
             width: auto;
+            bottom: 50px;
+        }
+        .hero_scroll_container {
+            bottom: 100px;
         }
     }
 
