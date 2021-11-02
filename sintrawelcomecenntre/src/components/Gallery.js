@@ -16,12 +16,10 @@ const GallerySection = styled.section`
 const GalleryWrapper = styled.div`
     display: flex;
     width: 70%;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
-    overflow-x: hidden;
-    cursor: grab;
+    flex-wrap: wrap;
 `
 
 const GalleryImage = styled.div`
@@ -55,11 +53,22 @@ const GalleryImage = styled.div`
     &:hover::after {
         opacity: 0.8;
     }
+
+    @media (max-width: 767px) {
+        min-width: 150px;
+        height: 150px;
+
+        &:after {
+            font-size: 9.5pt;
+        }
+    }
 `
 
 const GalleryImageWrapper = styled.div`
    display: flex;
    justify-content: center;
+   width: 100%;
+   flex-wrap: wrap;
 `
 
 const GalleryTitle = styled.h2 `
@@ -68,69 +77,20 @@ const GalleryTitle = styled.h2 `
     font-size: 22pt;
 `
 
-const renderImagesTopRow = () => {
-    return Object.entries(galleryImages).map((entry, index) => {
-        if(index <= 3) {
-            return <GalleryImage imageSrc={entry[1]} imageTitle={entry[0]} />
-        } else return
+const renderImages = () => {
+    return Object.entries(galleryImages).map((entry) => {
+        return <GalleryImage imageSrc={entry[1]} imageTitle={entry[0]} />
     })
 }
-
-const renderImagesBottomRow = () => {
-    return Object.entries(galleryImages).map((entry, index) => {
-        if(index > 3) {
-            return <GalleryImage imageSrc={entry[1]} imageTitle={entry[0]} />
-        } else {return}
-    })
-}
-
-const isMobile = () => {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  }
 
 const Gallery = () => {
-    useEffect(() => {
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-
-        const slider = document.getElementById('wrapper');
-
-        slider.addEventListener( isMobile ? 'touchstart' : 'mousedown', (e) => {
-            isDown = true;
-            slider.classList.add('active');
-            startX = e.pageX - slider.offsetLeft;
-            scrollLeft = slider.scrollLeft;
-        });
-
-        slider.addEventListener( isMobile ? 'touchend' : 'mouseleave', () => {
-            isDown = false;
-            slider.classList.remove('active');
-        });
-
-        slider.addEventListener('mouseup', () => {
-            isDown = false;
-            slider.classList.remove('active');
-        });
-
-        slider.addEventListener( isMobile? 'touchmove' : 'mousemove', (e) => {
-            if(!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - slider.offsetLeft;
-            const walk = (x - startX) * 3;
-            slider.scrollLeft = scrollLeft - walk;
-        });
-    }, [])
 
     return(
         <GallerySection>
             <GalleryTitle>Places You Can't Miss</GalleryTitle>
             <GalleryWrapper id="wrapper" onMouseDown>
                 <GalleryImageWrapper>
-                    {renderImagesTopRow()}
-                </GalleryImageWrapper>
-                <GalleryImageWrapper>
-                    {renderImagesBottomRow()}
+                    {renderImages()}
                 </GalleryImageWrapper>
             </GalleryWrapper>
         </GallerySection>
