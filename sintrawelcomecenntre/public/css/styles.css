@@ -231,7 +231,7 @@
     z-index: 10;
     margin-bottom: 40px;
     border-radius: 14%;
-    width: 275px;
+    width: 290px;
   }
   .hero_section .hero_copyright {
     font-size: 5pt;
@@ -239,7 +239,7 @@
   .hero_section h1 {
     left: 80px;
     color: #fcfcfc;
-    font-size: 37pt;
+    font-size: 35pt;
     width: auto;
   }
 }
