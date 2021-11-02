@@ -28,6 +28,10 @@ const BannerParagraph = styled.p`
     width: 40%;
     white-space: pre-line;
     font-size: 13pt;
+
+    @media (max-width: 767px) {
+        width: 80%;
+    }
 `
 const Banner = ({language}) => {
 
