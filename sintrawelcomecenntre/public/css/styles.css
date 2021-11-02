@@ -91,7 +91,7 @@
 .hero_section .hero_img {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
+  width: 100vw;
   height: 100%;
 }
 
