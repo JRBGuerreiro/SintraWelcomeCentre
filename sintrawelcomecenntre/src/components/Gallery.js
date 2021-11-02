@@ -26,7 +26,7 @@ const GalleryWrapper = styled.div`
 
 const GalleryImage = styled.div`
     background-image: ${props => `url('${props.imageSrc}')`};
-    width: 250px;
+    min-width: 250px;
     height: 250px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -58,7 +58,8 @@ const GalleryImage = styled.div`
 `
 
 const GalleryImageWrapper = styled.div`
-   display: inline-box;
+   display: flex;
+   justify-content: center;
 `
 
 const GalleryTitle = styled.h2 `

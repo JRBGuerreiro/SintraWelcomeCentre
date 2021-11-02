@@ -16,7 +16,7 @@ const Form = styled.form `
     justify-content: center;
     align-items: center;
     p{
-        color: #3dc8c5;
+        color: #424e54;
         font-size: 10pt;
         margin: 0;
     }
@@ -135,7 +135,7 @@ const FormData = () => {
                 <MdContactMail className="form-icon"/>
             </Icon>
             <ContactTextWrapper animateOpacityWrapper={show.contactWrapper} ref={refContactTitleWrapper} className="contactTextWrapper">
-                <Paragraph ref={refParagraph} animateOpacityParagraph={show.paragraph}>Feel free to contact with any questions about my work and availability</Paragraph>
+                <Paragraph ref={refParagraph} animateOpacityParagraph={show.paragraph}>Feel free to contact with any questions, problems or feedback</Paragraph>
             </ContactTextWrapper>
             <Form animateForm={show.form} ref={refForm} name="contact-form">
                 {formErrors.name && <p>{formErrors.name}</p>}

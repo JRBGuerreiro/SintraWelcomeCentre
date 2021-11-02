@@ -16,7 +16,7 @@ const BannerTitle = styled.h2`
     text-align: center;
     font-family: 'Raleway', sans-serif;
     color: #2A2D32;
-    font-size: 23pt;
+    font-size: 28pt;
     margin-bottom: 0;
     white-space: pre-line;
 `
@@ -27,7 +27,7 @@ const BannerParagraph = styled.p`
     color: #2A2D32;
     width: 40%;
     white-space: pre-line;
-    font-size: 12pt;
+    font-size: 13pt;
 `
 const Banner = ({language}) => {
 
