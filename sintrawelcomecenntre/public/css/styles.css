@@ -234,7 +234,7 @@
     width: 290px;
   }
   .hero_section .hero_copyright {
-    font-size: 5pt;
+    font-size: 4pt;
     bottom: 50px;
   }
   .hero_section h1 {
@@ -246,6 +246,9 @@
   }
   .hero_section .hero_scroll_container {
     bottom: 100px;
+  }
+  .hero_nav {
+    width: 0;
   }
 }
 
