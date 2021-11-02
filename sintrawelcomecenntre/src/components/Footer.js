@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram, FaTripadvisor } from 'react-icons/fa'
 import styled from "styled-components";
 
 const FooterSection = styled.section`
-    width: 100%;
+    width: 100vw;
     background-color: #424e54;
     display: flex;
     flex-direction: column;

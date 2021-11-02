@@ -5,7 +5,7 @@ import { galleryImages } from '../utility/images/galleryImages';
 const GallerySection = styled.section`
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
     background-color: #dde4e4;
     position: relative;
     padding: 30px 0 60px;

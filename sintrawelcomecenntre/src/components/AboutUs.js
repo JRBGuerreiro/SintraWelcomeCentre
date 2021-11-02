@@ -5,7 +5,7 @@ import { valuesImages } from "../utility/images/valuesImages";
 import styled from "styled-components";
 
 const AboutUsSection = styled.section `
-    width:100%;
+    width:100vw;
     background-color: #fcfcfc;
     position: relative;
     display: flex;
