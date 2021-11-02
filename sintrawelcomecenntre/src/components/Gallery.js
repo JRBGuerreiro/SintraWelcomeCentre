@@ -84,6 +84,10 @@ const renderImagesBottomRow = () => {
     })
 }
 
+const isMobile = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  }
+
 const Gallery = () => {
     useEffect(() => {
         let isDown = false;
@@ -92,14 +96,14 @@ const Gallery = () => {
 
         const slider = document.getElementById('wrapper');
 
-        slider.addEventListener('mousedown', (e) => {
+        slider.addEventListener( isMobile ? 'touchstart' : 'mousedown', (e) => {
             isDown = true;
             slider.classList.add('active');
             startX = e.pageX - slider.offsetLeft;
             scrollLeft = slider.scrollLeft;
         });
 
-        slider.addEventListener('mouseleave', () => {
+        slider.addEventListener( isMobile ? 'touchend' : 'mouseleave', () => {
             isDown = false;
             slider.classList.remove('active');
         });
@@ -109,7 +113,7 @@ const Gallery = () => {
             slider.classList.remove('active');
         });
 
-        slider.addEventListener('mousemove', (e) => {
+        slider.addEventListener( isMobile? 'touchmove' : 'mousemove', (e) => {
             if(!isDown) return;
             e.preventDefault();
             const x = e.pageX - slider.offsetLeft;
