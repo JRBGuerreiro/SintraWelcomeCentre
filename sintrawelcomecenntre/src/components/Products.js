@@ -18,6 +18,7 @@ const ProductsWhyContentText = styled.h4`
     color: #fcfcfc;
     font-family: 'Raleway', sans-serif;
     font-size: 11pt;
+    font-weight: lighter;
 `
 
 const ProductsWhyContentImg = styled.img`
@@ -31,7 +32,7 @@ const ProductsWhyContentWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #264424;
+    background-color: #424e54;
     border-radius: 3px;
     margin: 10px 10px 0 10px;
     padding: 20px 10px 10px 10px;

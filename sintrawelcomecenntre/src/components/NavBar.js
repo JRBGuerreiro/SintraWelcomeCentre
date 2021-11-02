@@ -12,7 +12,7 @@ const NavBar = (props) => {
             const currentH = document.documentElement.scrollTop;
     
             if(currentH >= wH) {
-                nav.style.backgroundColor = "#386e35";
+                nav.style.backgroundColor = "#424e54";
             } else {
                 nav.style.backgroundColor = 'transparent'
             }

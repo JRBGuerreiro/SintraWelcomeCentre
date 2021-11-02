@@ -179,8 +179,7 @@
 }
 
 .hero_nav .hero_nav_ul li:hover {
-  color: #fcfcfc;
-  background-color: #386e35;
+  color: #386e35;
 }
 
 .hero_nav .hero_nav_dropdown_wrapper {
@@ -339,7 +338,7 @@
   width: 100%;
   font-family: 'Raleway', sans-serif;
   padding: 0px 0 30px 0;
-  color: #386e35;
+  color: #424e54;
   text-align: center;
   font-size: 24pt;
   margin: 0;
@@ -362,7 +361,7 @@
   width: 100%;
   font-family: 'Raleway', sans-serif;
   padding: 30px 0 45px 0;
-  color: #386e35;
+  color: #424e54;
   text-align: center;
   font-size: 24pt;
 }
@@ -425,7 +424,7 @@
 
 .formWrapper {
   width: 100vw;
-  background-color: white;
+  background-color: #dde4e4;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -440,7 +439,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #fcfcfc;
 }
 
 input, textarea {
@@ -448,7 +446,7 @@ input, textarea {
   margin: 2px 0 2px 0;
   padding: 18px 28px;
   border: none;
-  background-color: #386e35;
+  background-color: #424e54;
   font-family: 'Raleway', sans-serif;
   color: #ffffff;
 }
@@ -500,7 +498,7 @@ textarea {
           align-items: center;
   width: 70px;
   height: 70px;
-  background-color: #386e35;
+  background-color: #424e54;
   padding: 12px 18px;
   margin-top: 20px;
   border-radius: 50%;
@@ -531,7 +529,7 @@ label {
 }
 
 button {
-  background-color: #3f9a39;
+  background-color: #424e54;
   padding: 12px 20px 12px 20px;
   border: none;
   margin-top: 8px;
@@ -554,5 +552,6 @@ button:hover {
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -9,7 +9,7 @@ const Form = styled.form `
     transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     width: 600px;
     margin: 0 0 30px 0;
-    background-color: #fcfcfc;
+    background-color: #dde4e4;
     display:flex;
     border-radius: 5px;
     flex-direction: column;
@@ -31,7 +31,7 @@ const DivWrapper = styled.div `
 `;
 
 const HeaderTitle = styled.h1 `
-    color: #386e35;
+    color: #424e54;
     font-size: 32pt;
     font-family: 'Raleway', sans-serif;
     font-weight: 200;

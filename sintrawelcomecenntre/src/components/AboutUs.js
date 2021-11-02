@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 const AboutUsSection = styled.section `
     width:100%;
-    background-color: #386e35;
+    background-color: #fcfcfc;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -57,10 +57,11 @@ const AboutUsTextWrapperRight = styled.div `
 `
 
 const AboutUsText = styled.p `
-    color: white;
+    color: #2a2d32;
     font-family: 'Raleway', sans-serif;
     line-height: 2.2;
     font-size: 14pt;
+    text-align: center;
 `
 
 ///display content

@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const FooterSection = styled.section`
     width: 100%;
-    background-color: #386e35;
+    background-color: #424e54;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,7 +18,7 @@ const IconWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #3e9a39;
+    background-color: #5b6d75;
     position: relative;
 
     &::after {

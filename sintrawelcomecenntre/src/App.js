@@ -5,6 +5,7 @@ import HeroSection from "./components/HeroSection";
 import Products from "./components/Products";
 import Form from "./components/Form";
 import Slider from "./components/Swipper";
+import Gallery from "./components/Gallery";
 function App() {
   const hideIt = true
   const [lang, setLang] = useState("GB")
@@ -20,7 +21,8 @@ function App() {
         <Products
          language = {lang}
         />
-        <Slider/>
+        {/* <Slider/> */}
+        <Gallery/>
        <AboutUs 
           language={lang}
        />
