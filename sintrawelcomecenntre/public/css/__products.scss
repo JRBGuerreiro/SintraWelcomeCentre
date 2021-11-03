@@ -162,3 +162,8 @@ $lg: new-breakpoint(min-width 1024px);
 	object-fit: cover;
   }
 
+  .carousel-root {
+	  display: contents;
+	  width: 100%;
+  }
+

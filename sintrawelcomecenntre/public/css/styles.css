@@ -451,6 +451,11 @@
      object-fit: cover;
 }
 
+.carousel-root {
+  display: contents;
+  width: 100%;
+}
+
 .formWrapper {
   width: 100vw;
   background-color: #dde4e4;

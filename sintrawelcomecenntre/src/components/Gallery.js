@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { galleryImages } from '../utility/images/galleryImages';
-import { Carousel } from 'react-bootstrap';
+import SwipperGallery from './SwipperGallery';
+
 
 const GallerySection = styled.section`
     display: flex;
@@ -90,17 +91,6 @@ const renderImages = () => {
     })
 }
 
-const renderImagesCarousel = () => {
-    return Object.entries(galleryImages).map((entry) => {
-        return <Carousel.Item>
-                <div
-                    className="d-block w-100"
-                    style={{backgroundImage:`url(${entry[1]})`, backgroundSize: 'cover', height:'300px', backgroundRepeat: 'no-repeat'}}
-                />
-                </Carousel.Item>
-    })
-}
-
 const Gallery = () => {
 
     return(
@@ -108,9 +98,7 @@ const Gallery = () => {
         <GallerySection>
             <GalleryTitle>Places You Can't Miss</GalleryTitle>
             {isMobile() ? (
-                <Carousel>
-                    {renderImagesCarousel()}    
-                </Carousel>
+                <SwipperGallery imageData={galleryImages}/>
             ) : (
             <GalleryWrapper id="wrapper" onMouseDown> 
                 <GalleryImageWrapper>
