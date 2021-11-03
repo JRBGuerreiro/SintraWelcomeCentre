@@ -13,7 +13,7 @@ function App() {
   const changeLanguage = (language) => setLang(language)
 
   return (
-    hideIt ? (
+    !hideIt ? (
       <div className="App">
        <HeroSection
           changeLang = {changeLanguage}
