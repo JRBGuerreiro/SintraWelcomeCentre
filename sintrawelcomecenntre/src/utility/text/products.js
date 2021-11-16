@@ -7,7 +7,8 @@ export const products = [
     
         "PT": {
             "title": "Passeios de TukTuk"
-        }
+        },
+        "image":"../images/biciProducts.jpg"
 
     },
     {
@@ -18,7 +19,8 @@ export const products = [
 
         "PT": {
             "title": "Bicicletas eléctricas"
-        }
+        },
+        "image":"../images/biciProducts.jpg"
     },
     {
         "GB": {
@@ -28,6 +30,7 @@ export const products = [
 
         "PT": {
             "title": "Caminhadas"
-        }
+        },
+        "image":"../images/biciProducts.jpg"
     }
 ]

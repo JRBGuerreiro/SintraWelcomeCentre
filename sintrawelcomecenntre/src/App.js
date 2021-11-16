@@ -1,10 +1,8 @@
 import { useState } from "react";
-import AboutUs from "./components/AboutUs";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import Products from "./components/Products";
 import Form from "./components/Form";
-import Slider from "./components/Swipper";
 import Gallery from "./components/Gallery";
 function App() {
   const hideIt = true
@@ -13,7 +11,7 @@ function App() {
   const changeLanguage = (language) => setLang(language)
 
   return (
-    !hideIt ? (
+    hideIt ? (
       <div className="App">
        <HeroSection
           changeLang = {changeLanguage}
@@ -23,9 +21,6 @@ function App() {
         />
         {/* <Slider/> */}
         <Gallery/>
-       <AboutUs 
-          language={lang}
-       />
        <Form/>
        <Footer/>
       </div>

@@ -5,6 +5,7 @@ import Card from "./Card";
 import styled from "styled-components";
 import { valuesImages } from "../utility/images/valuesImages";
 import Banner from "./Banner";
+import AboutUs from "./AboutUs";
 
 const ProductsWhyContent = styled.div`
     display: flex;
@@ -42,6 +43,9 @@ const ProductsWhyContentWrapper = styled.div`
 const Products = (props) => {
     return(
         <section className="products">
+            <AboutUs 
+                language={props.language}
+            />
             <div className="products_why_us">
                 <h2>Why Us?</h2>
                 <ProductsWhyContent>
@@ -67,6 +71,7 @@ const Products = (props) => {
                     return <Card 
                     title={product[props.language].title}
                     description={product[props.language].description}
+                    image={product.image}
                     />
                 })}
             </div>
