@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from "styled-components";
 
 const CardWrapper = styled.div`
@@ -56,15 +57,26 @@ const CardTitle = styled.h3`
     margin-left: 10px;
 `
 
-const CardButton = styled.button`
+const CardButton = styled(Link)`
     padding: 11px 10px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     position: relative;
-    bottom: -20px;
+    bottom: -22px;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
+    font-family: 'Raleway';
+    font-size: 10pt;
+    background-color: #424e54;
+    color: #fcfcfc;
+    transition: 0.3s ease-in;
+
+    &:hover {
+        background-color: #fcfcfc;
+        color: #424e54;
+    }
 `
 
 const Card = ({title, image}) => {
@@ -76,7 +88,7 @@ const Card = ({title, image}) => {
             <CardWrapperContent>
                 <CardDescription>Adventure and Wilderness</CardDescription>
                 <CardTitle>{title}</CardTitle>
-                <CardButton>Find out More</CardButton>
+                <CardButton to="/tuktuktours">Find out More</CardButton>
             </CardWrapperContent>
         </CardWrapper>
     )

@@ -10,7 +10,7 @@ const NavBar = (props) => {
             const wH = window.innerHeight;
             const nav = document.getElementById('nav');
             const currentH = document.documentElement.scrollTop;
-    
+            if(!nav) return;
             if(currentH >= wH) {
                 nav.style.backgroundColor = "#424e54";
             } else {

@@ -7,6 +7,7 @@ import { valuesImages } from "../utility/images/valuesImages";
 import Banner from "./Banner";
 import AboutUs from "./AboutUs";
 
+
 const ProductsWhyContent = styled.div`
     display: flex;
     justify-content: center;
