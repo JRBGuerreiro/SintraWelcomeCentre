@@ -9,7 +9,7 @@ const FooterSection = styled.section`
     flex-direction: column;
     justify-content: center;
     position: relative;
-    padding: 50px 0;
+    padding: 25px 0;
 `
 
 const IconWrapper = styled.div`
@@ -51,7 +51,8 @@ const Copyright = styled.div`
     justify-content: center;
 `
 
-const Footer = () => {
+const Footer = ({ language }) => {
+    
     return (
         <FooterSection>
             <IconsWrapper>
