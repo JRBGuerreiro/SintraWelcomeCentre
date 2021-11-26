@@ -23,6 +23,11 @@ const AboutUsWrapper = styled.div`
     box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
     padding: 5px;
     background-color: #009688;
+
+    @media (max-width: 767px) {
+        width: 80%;
+        height: 250px;
+    }
 `
 
 const AboutUsHeader = styled.h2 `
@@ -32,6 +37,7 @@ const AboutUsHeader = styled.h2 `
     color: #424e54;
     text-align: center;
     font-size: 24pt;
+    font-weight: 200;
 
     &:after {
         transition: opacity 1s;
@@ -42,6 +48,10 @@ const AboutUsHeader = styled.h2 `
         transform: rotate3d(1, 0, 0, 114deg) scale(1, 2.5) skew(-38deg, 0deg);
         margin: -12px 0 0 10px;
     }
+
+    @media (max-width: 767px) {
+        padding: 25px 0 0 0;
+    }
 `
 
 const AboutUsImage = styled.div `
@@ -51,6 +61,10 @@ const AboutUsImage = styled.div `
     background-size: cover;
     z-index: 10;
     height: 450px;
+    @media (max-width: 767px) {
+        width: 80%;
+        height: 260px;
+    }
 `
 
 const AboutUsText = styled.p `
@@ -64,6 +78,12 @@ const AboutUsText = styled.p `
     ::-webkit-scrollbar {
         width: 0px;
         background: transparent; /* make scrollbar transparent */
+    }
+
+    @media (max-width: 767px) {
+        font-size: 11pt;
+        line-height: 1.8;
+        width: 90%;
     }
 `
 

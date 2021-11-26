@@ -21,6 +21,10 @@ input, textarea{
     &:focus {
         outline: #3f9a39 auto 1px;
     }
+
+    @media (max-width: 767px) {
+        width: 100%;
+    }
 }
 
 textarea{

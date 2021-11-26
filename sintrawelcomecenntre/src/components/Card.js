@@ -18,6 +18,18 @@ const CardWrapper = styled.div`
     &:last-child {
         margin-left: 30px;
     }
+
+    @media (max-width: 767px) {
+        &:first-child {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+
+        &:last-child {
+            margin-left: 0;
+            margin-top: 15px;
+        }
+    }
 `
 
 const CardImageWrapper = styled.div`

@@ -20,6 +20,10 @@ const Form = styled.form `
         font-size: 10pt;
         margin: 0;
     }
+
+    @media (max-width: 767px) {
+        width: 90%;
+    }
 `;
 
 const DivWrapper = styled.div `
@@ -32,7 +36,8 @@ const DivWrapper = styled.div `
 
 const HeaderTitle = styled.h1 `
     color: #424e54;
-    font-size: 32pt;
+    font-size: 24pt;
+    font-weight: 200;
     font-family: 'Raleway', sans-serif;
     font-weight: 200;
     margin: 50px 0 10px 0;
@@ -45,10 +50,7 @@ const HeaderTitle = styled.h1 `
         color: rgba(40,54,71,.1);
         transform: rotate3d(1, 0, 0, 114deg) scale(1, 2.5) skew(-38deg, 0deg);
         margin: -20px 0 0 10px;
-    }
-    @media (max-width: 768px) {
-        font-size: 30pt;
-    }
+    }v
 `;
 
 const ContactTextWrapper = styled.div `

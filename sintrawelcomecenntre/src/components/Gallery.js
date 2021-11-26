@@ -14,6 +14,10 @@ const GallerySection = styled.section`
     padding: 30px 0 60px;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 767px) {
+        padding: 10px 0 0 0;
+    }
 `
 
 const GalleryWrapper = styled.div`
@@ -78,6 +82,10 @@ const GalleryTitle = styled.h2 `
     font-family: 'Raleway', sans-serif;
     color: #2a2d32;
     font-size: 22pt;
+
+    @media (max-width: 767px) {
+        margin-bottom: 25px;
+    }
 `
 
 const PartnerShipTitle = styled.h3`
@@ -98,6 +106,12 @@ const PartnerShipImage = styled.div`
     height: 150px;
     margin: 0 15px;
     background-color: white;
+
+    @media (max-width: 767px) {
+        width: 100px;
+        height: 100px;
+        margin: 10px 0;
+    }
 `
 
 const PartnerShipWrapper = styled.div`
@@ -107,6 +121,7 @@ const PartnerShipWrapper = styled.div`
     margin: 10px auto 30px auto;
     background-color: #dde4e4;
     padding: 20px 0;
+    flex-wrap: wrap;
 `
 
 const PartnerShipContainer = styled.div`
@@ -118,6 +133,14 @@ const PartnerShipContainer = styled.div`
     width: 100%;
     margin-top: 60px;
     padding-top: 10px;
+`
+
+const PartnerShipLink = styled.a`
+    @media (max-width: 767px) {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
 `
 
 const partnersImagesArray = [
@@ -147,7 +170,7 @@ const Gallery = ({language}) => {
     })
 
     const partnerImages = partnersImagesArray.map((image) => {
-        return <a href={image[1]}><PartnerShipImage imageSrc={image[0]}/></a>
+        return <PartnerShipLink href={image[1]}><PartnerShipImage imageSrc={image[0]}/></PartnerShipLink>
     })
     return(
     

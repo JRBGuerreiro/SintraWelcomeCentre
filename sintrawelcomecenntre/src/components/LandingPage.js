@@ -7,7 +7,7 @@ import Gallery from "./Gallery";
 
 const LandingPage = () => {
 
-    const hideIt = false
+    const hideIt = true
     const [lang, setLang] = useState("GB")
     const changeLanguage = (language) => setLang(language)
 

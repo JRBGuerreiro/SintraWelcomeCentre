@@ -9,7 +9,11 @@ const BannerWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 65px 0;
+    margin: 65px 0 ;
+
+    @media (max-width: 767px) {
+        margin: 65px 0 50px 0;
+    }
 `
 
 const BannerTitle = styled.h2`
@@ -19,6 +23,10 @@ const BannerTitle = styled.h2`
     font-size: 28pt;
     margin-bottom: 0;
     white-space: pre-line;
+
+    @media (max-width: 767px) {
+        font-size: 22pt;
+    }
 `
 
 const BannerParagraph = styled.p`
@@ -31,6 +39,8 @@ const BannerParagraph = styled.p`
 
     @media (max-width: 767px) {
         width: 80%;
+        font-size: 11pt;
+        white-space: normal;
     }
 `
 const Banner = ({language}) => {
