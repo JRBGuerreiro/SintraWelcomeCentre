@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { valuesImages } from "../utility/images/valuesImages";
 import Banner from "./Banner";
 import AboutUs from "./AboutUs";
+import { titles } from "../utility/text/titles";
 
 
 const ProductsWhyContent = styled.div`
@@ -48,7 +49,7 @@ const Products = (props) => {
                 language={props.language}
             />
             <div className="products_why_us">
-                <h2>Why Us?</h2>
+                <h2>{titles[props.language].whyUs}</h2>
                 <ProductsWhyContent>
                     {valuesText.map((value) => {
                         return Object.values(value[props.language]).map((valueWLang, index) => {
@@ -66,13 +67,14 @@ const Products = (props) => {
             <Banner
                 language={props.language}
             />
-                <h2 className="products_title">Our Products</h2>
+                <h2 className="products_title" id="product">{titles[props.language].ourProducts}</h2>
             <div className="products_content">
                 {products.map(product => {
                     return <Card 
                     title={product[props.language].title}
                     description={product[props.language].description}
                     image={product.image}
+                    language = {props.language}
                     />
                 })}
             </div>

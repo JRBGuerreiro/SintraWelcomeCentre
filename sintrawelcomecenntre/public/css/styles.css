@@ -152,13 +152,18 @@
   z-index: 10;
   top: 0;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   z-index: 20;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .hero_nav .hero_nav_ul {
@@ -168,7 +173,7 @@
   list-style: none;
 }
 
-.hero_nav .hero_nav_ul li {
+.hero_nav .hero_nav_ul a {
   color: #fcfcfc;
   padding: 15px 25px;
   font-family: sans-serif;
@@ -176,9 +181,11 @@
   -webkit-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
   cursor: pointer;
+  text-decoration: none;
+  margin-top: 13px;
 }
 
-.hero_nav .hero_nav_ul li:hover {
+.hero_nav .hero_nav_ul a:hover {
   color: #386e35;
 }
 
@@ -226,6 +233,22 @@
   border-top: 5px solid #fcfcfc;
 }
 
+.open > div {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+  background-color: transparent;
+}
+
+.open > div::before {
+  -webkit-transform: rotate(45deg) translate(35px, -35px);
+          transform: rotate(45deg) translate(35px, -35px);
+}
+
+.open > div::after {
+  -webkit-transform: rotate(-45deg) translate(35px, 35px);
+          transform: rotate(-45deg) translate(35px, 35px);
+}
+
 @media (max-width: 767px) {
   .hero_section .logo {
     z-index: 10;
@@ -235,22 +258,51 @@
   }
   .hero_section .hero_copyright {
     font-size: 4pt;
-    bottom: 50px;
-    right: 15px;
+    bottom: 30px;
   }
   .hero_section h1 {
-    left: 80px;
+    left: 60px;
     color: #fcfcfc;
     color: #fcfcfc;
-    font-size: 30pt;
+    font-size: 24pt;
     width: 80%;
-    bottom: 50px;
+    bottom: 30px;
   }
   .hero_section .hero_scroll_container {
-    bottom: 100px;
+    left: 20px;
+  }
+  .hero_section .hero_scroll_container h5 {
+    font-size: 5pt;
+  }
+  .hero_section .hero_scroll_container img {
+    width: 10px;
   }
   .hero_nav {
-    width: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #424e54 !important;
+    padding-bottom: 50px;
+    height: 100vh;
+    -webkit-transition: 0.3s ease-out;
+    transition: 0.3s ease-out;
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
+  }
+  .hero_nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 10px;
+  }
+  .hero_nav ul li {
+    margin-top: 30px;
+    margin-left: 27px;
   }
 }
 
@@ -374,19 +426,6 @@
   margin: 0;
 }
 
-.products .products_title:after {
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
-  -webkit-transition-delay: 0.8s;
-          transition-delay: 0.8s;
-  content: "Our Products";
-  display: block;
-  color: rgba(40, 54, 71, 0.1);
-  -webkit-transform: rotate3d(1, 0, 0, 114deg) scale(1, 2.5) skew(-38deg, 0deg);
-          transform: rotate3d(1, 0, 0, 114deg) scale(1, 2.5) skew(-38deg, 0deg);
-  margin: -12px 0 0 10px;
-}
-
 .products_why_us h2 {
   width: 100%;
   font-family: 'Raleway', sans-serif;
@@ -395,19 +434,6 @@
   text-align: center;
   font-size: 24pt;
   font-weight: 200;
-}
-
-.products_why_us h2:after {
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
-  -webkit-transition-delay: 0.8s;
-          transition-delay: 0.8s;
-  content: "Why Us?";
-  display: block;
-  color: rgba(40, 54, 71, 0.1);
-  -webkit-transform: rotate3d(1, 0, 0, 114deg) scale(1, 2.5) skew(-38deg, 0deg);
-          transform: rotate3d(1, 0, 0, 114deg) scale(1, 2.5) skew(-38deg, 0deg);
-  margin: -12px 0 0 10px;
 }
 
 @media (max-width: 767px) {

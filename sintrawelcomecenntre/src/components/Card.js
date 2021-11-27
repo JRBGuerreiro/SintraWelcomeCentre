@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
+import { titles } from '../utility/text/titles';
 
 const CardWrapper = styled.div`
     display: flex;
@@ -91,16 +92,16 @@ const CardButton = styled(Link)`
     }
 `
 
-const Card = ({title, image}) => {
+const Card = ({title, image, language}) => {
     return (
         <CardWrapper>
             <CardImageWrapper>
                 <CardImage image={image}/>
             </CardImageWrapper>
             <CardWrapperContent>
-                <CardDescription>Adventure and Wilderness</CardDescription>
+                <CardDescription>{titles[language].cardTitle}</CardDescription>
                 <CardTitle>{title}</CardTitle>
-                <CardButton to="/tuktuktours">Find out More</CardButton>
+                <CardButton to="/tuktuktours" state={{lang: language}}>{titles[language].cardButton}</CardButton>
             </CardWrapperContent>
         </CardWrapper>
     )

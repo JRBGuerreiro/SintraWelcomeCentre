@@ -6,7 +6,7 @@ export const valuesText = [
             2: "Attention to detail",
             3: "Adaptability",
             4: "Efficiency",
-            5: "Passion for Quality"
+            5: "Quality"
         },
         "PT": {
             0: "Responsabilidade", 
@@ -14,7 +14,7 @@ export const valuesText = [
             2: "Detalhe e pormenor",
             3: "Adaptabilidade",
             4: "Eficiência",
-            5: "Paixão pela Qualidade"
+            5: "Qualidade"
         }
     }
 ]

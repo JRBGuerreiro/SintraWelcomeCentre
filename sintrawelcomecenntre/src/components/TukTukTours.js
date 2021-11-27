@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { AiOutlineClockCircle } from 'react-icons/ai';
+import { AiOutlineClockCircle, AiOutlineHome } from 'react-icons/ai';
 import { tuktukTours } from "../utility/text/tuktuktours";
 import { RiMoneyEuroCircleLine } from 'react-icons/ri';
 import Footer from "./Footer";
+import { useLocation } from "react-router";
+import { Link } from "react-router-dom";
 
 const TukTukSection = styled.section`
     display: flex;
@@ -16,6 +18,7 @@ const ProductsTitleWrapper = styled.div`
     display: flex;
     background-color: #424e54;
     margin-bottom: 20px;
+    position: relative;
 `
 
 const ProductsTitle = styled.h1`
@@ -23,6 +26,8 @@ const ProductsTitle = styled.h1`
     font-size: 18pt;
     text-align: center;
     color: #fcfcfc;
+    margin: 0;
+    padding: 20px 0;
 `
 
 const WrapperOfProducts = styled.div`
@@ -34,6 +39,10 @@ const ProductWrapperContainer = styled.div`
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
+
+    @media (max-width: 767px) {
+        width: 100%;
+    }
 `
 const ProductWrapper = styled.div`
     display: flex;
@@ -80,6 +89,22 @@ const ProductButton = styled.button`
 const IconProductCenterWrapper = styled.div`
     display: flex;
     align-items: center;
+`
+
+const GoBackWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 10px;
+    padding-top: 20px;
+`
+
+const GoBackText = styled(Link)`
+    font-family: Raleway, sans-serif;
+    font-size: 10pt;
+    color: #fcfcfc;
+    margin: 0 0 0 5px;
+    text-decoration: none;
 `
 
 export const convertMinutesToHours = (timeinMins) => {
@@ -135,7 +160,10 @@ const renderProductsContent = (lang) => {
     })
 }
 
-const TukTukTours = ({lang = "GB"}) => {
+const TukTukTours = () => {
+
+    const location = useLocation();
+    const { lang } = location.state
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -145,13 +173,18 @@ const TukTukTours = ({lang = "GB"}) => {
         <>
             <TukTukSection>
                 <ProductsTitleWrapper>
+                    <GoBackWrapper>
+                        <AiOutlineHome style={{color:"#fcfcfc"}}/><GoBackText to="/">Go Back</GoBackText>
+                    </GoBackWrapper>
                     <ProductsTitle>TukTuk Tours</ProductsTitle>
                 </ProductsTitleWrapper>
                 <WrapperOfProducts>
                     {renderProductsContent(lang)}
                 </WrapperOfProducts>
             </TukTukSection>
-            <Footer/>
+            <Footer
+                language = { lang }
+            />
         </>
     )
 }

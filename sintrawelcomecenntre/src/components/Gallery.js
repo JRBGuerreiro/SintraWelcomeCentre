@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { galleryImages } from '../utility/images/galleryImages';
 import SwipperGallery from './SwipperGallery';
 import { partnersText } from "../utility/text/partnersText";
+import { titles } from '../utility/text/titles';
 
 
 const GallerySection = styled.section`
@@ -11,7 +12,7 @@ const GallerySection = styled.section`
     width: 100vw;
     background-color: #dde4e4;
     position: relative;
-    padding: 30px 0 60px;
+    padding: 30px 0 30px;
     flex-direction: column;
     align-items: center;
 
@@ -105,6 +106,7 @@ const PartnerShipImage = styled.div`
     width: 150px;
     height: 150px;
     margin: 0 15px;
+    margin-top: 5px;
     background-color: white;
 
     @media (max-width: 767px) {
@@ -148,6 +150,10 @@ const partnersImagesArray = [
     ["./images/PartnerLogos/Logo_Freeport.jpg", "https://freeportfashionoutlet.pt"],
     ["./images/PartnerLogos/logotipo_penaaventura.png", "https://www.penaaventura.com.pt/"],
     ["./images/PartnerLogos/zoovertical.jpg", "https://www.zoo.pt/"],
+    ["./images/PartnerLogos/piriquita_logo.png", "https://piriquita.pt/"],
+    ["./images/PartnerLogos/centrohipico_logo.jpg", "https://www.centrohipicocostaestoril.com"],
+    ["./images/PartnerLogos/furnas.png", "https://www.furnasdoguincho.pt/"],
+    ["./images/PartnerLogos/DP_logo.png", "https://www.dinoparque.pt/"],
 ]
 
 const isMobile = window.mobileCheck = function() {
@@ -174,8 +180,8 @@ const Gallery = ({language}) => {
     })
     return(
     
-        <GallerySection>
-            <GalleryTitle>Places You Can't Miss</GalleryTitle>
+        <GallerySection id="places">
+            <GalleryTitle>{titles[language].placesNoMiss}</GalleryTitle>
             {isMobile() ? (
                 <SwipperGallery imageData={galleryImages}/>
             ) : (

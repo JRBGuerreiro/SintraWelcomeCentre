@@ -7,7 +7,7 @@ import Gallery from "./Gallery";
 
 const LandingPage = () => {
 
-    const hideIt = false
+    const hideIt = true
     const [lang, setLang] = useState("GB")
     const changeLanguage = (language) => setLang(language)
 
@@ -17,15 +17,17 @@ const LandingPage = () => {
                 <div className="App">
                   <HeroSection
                     changeLang = {changeLanguage}
+                    language = {lang}
                   />
                     <Products
                     language = {lang}
                     />
-                    {/* <Slider/> */}
                     <Gallery
                        language = { lang }
                     />
-                  <Form/>
+                  <Form
+                    language= {lang}
+                  />
                   <Footer
                     language = { lang }
                   />

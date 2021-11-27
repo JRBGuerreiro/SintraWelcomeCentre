@@ -8,7 +8,7 @@ export const products = [
         "PT": {
             "title": "Passeios de TukTuk"
         },
-        "image":"../images/biciProducts.jpg"
+        "image":"../images/ProductsImages/tuks-min.jpg"
 
     },
     {
@@ -31,6 +31,6 @@ export const products = [
         "PT": {
             "title": "Caminhadas"
         },
-        "image":"../images/biciProducts.jpg"
-    }
+        "image":"../images/app_logo.png"
+    },
 ]

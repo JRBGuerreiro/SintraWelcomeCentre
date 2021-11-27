@@ -3,6 +3,8 @@ import styled from "styled-components";
 import {MdContactMail} from "react-icons/md"
 import useForm from "../hooks/useForm"
 import validateFormInfo from './validateForm';
+import { titles } from '../utility/text/titles';
+import { formText } from '../utility/text/formText';
 
 const Form = styled.form `
     transform: translateX(${({animateForm}) => (animateForm ? "0" : "-100vw")});
@@ -40,17 +42,7 @@ const HeaderTitle = styled.h1 `
     font-weight: 200;
     font-family: 'Raleway', sans-serif;
     font-weight: 200;
-    margin: 50px 0 10px 0;
-    &:after {
-        opacity: ${({animateOpacity}) => (animateOpacity ? "1" : "0")};
-        transition: opacity 1s;
-        transition-delay: 0.8s;
-        content: "Contact";
-        display: block;
-        color: rgba(40,54,71,.1);
-        transform: rotate3d(1, 0, 0, 114deg) scale(1, 2.5) skew(-38deg, 0deg);
-        margin: -20px 0 0 10px;
-    }v
+    margin: 20px 0 10px 0;
 `;
 
 const ContactTextWrapper = styled.div `
@@ -71,7 +63,7 @@ transition: opacity 1s;
 transition-delay: 0.6s;
 `
 
-const FormData = () => {
+const FormData = ({ language }) => {
     const {handleChange, values, handleSubmit, paragraph, formErrors} = useForm(validateFormInfo)
     //Animations whilst scrolling
     const [show, doShow] = useState({
@@ -131,27 +123,27 @@ const FormData = () => {
     return(
         <section className="formWrapper" id="contact">
             <DivWrapper animate={show.wrapperTitle} ref={refWrapperTitle}>
-                <HeaderTitle animateOpacity={show.title} ref={refTitle}>Contact</HeaderTitle>
+                <HeaderTitle animateOpacity={show.title} ref={refTitle}>{titles[language].contactUs}</HeaderTitle>
             </DivWrapper>
             <Icon ref={refIcon} animateIcon={show.icon} className="iconWrapper">
                 <MdContactMail className="form-icon"/>
             </Icon>
             <ContactTextWrapper animateOpacityWrapper={show.contactWrapper} ref={refContactTitleWrapper} className="contactTextWrapper">
-                <Paragraph ref={refParagraph} animateOpacityParagraph={show.paragraph}>Feel free to contact with any questions, problems or feedback</Paragraph>
+                <Paragraph ref={refParagraph} animateOpacityParagraph={show.paragraph}>{formText[language].title}</Paragraph>
             </ContactTextWrapper>
             <Form animateForm={show.form} ref={refForm} name="contact-form">
                 {formErrors.name && <p>{formErrors.name}</p>}
                 <label htmlFor="name">First Name</label>
-                <input type="text" value={values.name} name="name" onChange={handleChange} placeholder="First Name" id="name"></input>
+                <input type="text" value={values.name} name="name" onChange={handleChange} placeholder={formText[language].firstName} id="name"></input>
                 {formErrors.lastName && <p>{formErrors.lastName}</p>}
                 <label htmlFor="lastname">Last Name</label>
-                <input type="text" value={values.lastName} name="lastName" onChange={handleChange} placeholder="Last Name" id="lastname"></input>
+                <input type="text" value={values.lastName} name="lastName" onChange={handleChange} placeholder={formText[language].lastName} id="lastname"></input>
                 {formErrors.email && <p>{formErrors.email}</p>}
                 <label htmlFor="email">Email</label>
                 <input type="text" value={values.email} name="email" onChange={handleChange} placeholder="E-mail" id="email"></input>
                 {formErrors.textArea && <p>{formErrors.textArea}</p>}
-                <label htmlFor="message">Message</label>
-                <textarea type="textarea" styler="resize:none" value={values.textArea} name="textArea" onChange={handleChange} placeholder="Message..." id="message"></textarea>
+                <label htmlFor="message">Message...</label>
+                <textarea type="textarea" styler="resize:none" value={values.textArea} name="textArea" onChange={handleChange} placeholder={formText[language].message} id="message"></textarea>
                 {paragraph}
                 <button type="submit" onClick={handleSubmit}>Submit</button>
             </Form>

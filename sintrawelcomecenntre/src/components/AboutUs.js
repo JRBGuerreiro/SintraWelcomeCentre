@@ -1,6 +1,7 @@
 import React from "react";
 import { aboutUsText } from "../utility/text/aboutUs";
 import styled from "styled-components";
+import { titles } from "../utility/text/titles";
 
 const AboutUsSection = styled.section `
     width:100vw;
@@ -17,7 +18,7 @@ const AboutUsWrapper = styled.div`
     width: 600px;
     display: flex;
     justify-content: center;
-    height: 300px;
+    min-height: 250px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
@@ -38,16 +39,6 @@ const AboutUsHeader = styled.h2 `
     text-align: center;
     font-size: 24pt;
     font-weight: 200;
-
-    &:after {
-        transition: opacity 1s;
-        transition-delay: 0.8s;
-        color: rgba(40,54,71,.1);
-        content: "About Us";
-        display: block;
-        transform: rotate3d(1, 0, 0, 114deg) scale(1, 2.5) skew(-38deg, 0deg);
-        margin: -12px 0 0 10px;
-    }
 
     @media (max-width: 767px) {
         padding: 25px 0 0 0;
@@ -102,8 +93,8 @@ const AboutUs = (props) => {
 
     return (
         <>
-            <AboutUsSection>
-                <AboutUsHeader>About Us</AboutUsHeader>
+            <AboutUsSection id="aboutus">
+                <AboutUsHeader>{titles[props.language].aboutUs}</AboutUsHeader>
                 <AboutUsImage />
                 {aboutUs}
             </AboutUsSection>

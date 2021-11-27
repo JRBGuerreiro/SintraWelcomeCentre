@@ -8,7 +8,7 @@ export const aboutUsText = [
         "PT": {
             "text": "Ao melhorar e dinamizar a visita do turista, tentamos com isto, claro, dar mais tempo de qualidade ao cliente da vila de Sintra, o que fará da Sintra Welcome Centre uma referência totalmente diferenciadora de qualquer outra empresa de animação turística.",
             "title": "Missão"
-        }
+        },
     },
 
     {

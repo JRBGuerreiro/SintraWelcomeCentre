@@ -126,23 +126,28 @@
     z-index: 10;
     top: 0;
     width: 100%;
-    display: flex;
     justify-content: center;
     z-index: 20;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    display: flex;
+    align-items: baseline;
 
     .hero_nav_ul {
         display: flex;
         list-style: none;
-        li {
+        a {
             color: #fcfcfc;
             padding: 15px 25px;
             font-family: sans-serif;
             font-family: 'Raleway', sans-serif;
             transition: 0.3s ease-in;
             cursor: pointer;
+            text-decoration: none;
+            margin-top: 13px;
         }
 
-        li:hover {
+        a:hover {
             color: #386e35;
         }
     }
@@ -189,6 +194,19 @@
     }
 }
 
+.open > div {
+    transform: translateX(-50px);
+    background-color: transparent;
+}
+
+.open > div::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.open > div::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
 //SMALL DEVICES
 
 @media (max-width: 767px) {
@@ -202,25 +220,46 @@
 
         .hero_copyright {
             font-size: 4pt;
-            bottom: 50px;
-            right: 15px;
+            bottom: 30px;
         }
 
         h1 {
-            left: 80px;
+            left: 60px;
             color: #fcfcfc;
             color: #fcfcfc;
-            font-size: 30pt;
+            font-size: 24pt;
             width: 80%;
-            bottom: 50px;
+            bottom: 30px;
         }
         .hero_scroll_container {
-            bottom: 100px;
+            left: 20px;
+            h5{
+                font-size: 5pt;
+            }
+
+            img {
+                width: 10px;
+            }
         }
     }
 
     .hero_nav {
-        width: 0;
+        flex-direction: column;
+        align-items: center;
+        background-color: #424e54 !important;
+        padding-bottom: 50px;
+        height: 100vh;
+        transition: 0.3s ease-out;
+        transform: translateX(-100vw);
+        ul{
+            flex-direction: column;
+            padding-left: 10px;
+
+            li{
+                margin-top: 30px;
+                margin-left: 27px;
+            }
+        }
     }
 
     

@@ -88,16 +88,6 @@ $lg: new-breakpoint(min-width 1024px);
 		font-size: 24pt;
 		font-weight: 200;
 		margin: 0;
-
-		&:after {
-			transition: opacity 1s;
-			transition-delay: 0.8s;
-			content: "Our Products";
-			display: block;
-			color: rgba(40,54,71,.1);
-			transform: rotate3d(1, 0, 0, 114deg) scale(1, 2.5) skew(-38deg, 0deg);
-			margin: -12px 0 0 10px;
-    	}
     }
 }
 
@@ -110,16 +100,6 @@ $lg: new-breakpoint(min-width 1024px);
 		text-align: center;
 		font-size: 24pt;
 		font-weight: 200;
-
-		&:after {
-			transition: opacity 1s;
-			transition-delay: 0.8s;
-			content: "Why Us?";
-			display: block;
-			color: rgba(40,54,71,.1);
-			transform: rotate3d(1, 0, 0, 114deg) scale(1, 2.5) skew(-38deg, 0deg);
-			margin: -12px 0 0 10px;
-    	}
 		
 		@media (max-width: 767px) {
 			padding: 25px 0 0 0;
