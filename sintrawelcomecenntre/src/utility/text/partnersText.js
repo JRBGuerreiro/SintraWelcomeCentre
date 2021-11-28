@@ -1,10 +1,10 @@
 export const partnersText = [
     {
-        "GB": {
+        "en": {
             "title": "Partnership Spotlight"
         },
 
-        "PT": {
+        "pt": {
             "title": "Parceria em destaque"
         }
     }

@@ -1,18 +1,42 @@
 export const NavBarData = [
     {
-        title: "About Us",
+        "en":{
+            title: "About Us",
+        },
+
+        "pt": {
+            title: "Sobre Nós"
+        },
         path: "/#aboutus"
     },
     {
-        title: "Products",
+        "en":{
+            title: "Products",
+        },
+
+        "pt": {
+            title: "Produtos"
+        },
         path: "/#product"
     },
     {
-        title: "Places You Can't Miss",
+        "en":{
+            title: "Places You Can't Miss",
+        },
+
+        "pt": {
+            title: "Sitios Que Não Pode Perder"
+        },
         path: "/#places"
     },
     {
-        title: "Contact Us",
+        "en":{
+            title: "Contact Us",
+        },
+
+        "pt": {
+            title: "Contacte-nos"
+        },
         path: "/#contact"
     },
 ]

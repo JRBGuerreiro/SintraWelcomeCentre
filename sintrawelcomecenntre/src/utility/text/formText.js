@@ -1,12 +1,12 @@
 export const formText = {
-    "GB": {
+    "en": {
         "firstName": "First Name",
         "lastName" : "Last Name",
         "message": "Message...",
         "title": "Feel free to contact with any questions, problems or feedback"
     },
 
-    "PT": {
+    "pt": {
         "firstName": "Nome Próprio",
         "lastName" : "Apelido",
         "message": "Mensagem...",

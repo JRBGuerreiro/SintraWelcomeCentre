@@ -14,6 +14,7 @@ const SwipperGallery = ({imageData}) => {
     return Object.entries(imageData).map((entry) => {
         return <>
             <Image imageSrc={entry[1]}/>
+            <p className="legend">Legend 1</p>
         </>
     })
  }

@@ -1,6 +1,6 @@
 export const valuesText = [
     {
-        "GB": {
+        "en": {
             0: "Responsibility", 
             1: "Hospitality",
             2: "Attention to detail",
@@ -8,7 +8,7 @@ export const valuesText = [
             4: "Efficiency",
             5: "Quality"
         },
-        "PT": {
+        "pt": {
             0: "Responsabilidade", 
             1: "Hospitalidade",
             2: "Detalhe e pormenor",

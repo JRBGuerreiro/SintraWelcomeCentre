@@ -1,12 +1,49 @@
 import React, { useEffect, useState } from "react";
-import ReactFlagsSelect from 'react-flags-select';
 import { NavBarData } from "./NavBarData";
-import {HashLink} from 'react-router-hash-link' 
+import {HashLink} from 'react-router-hash-link';
+import $ from 'jquery';
+import jqueryDdslick from "ddslick/src/jquery.ddslick";
+import styled from "styled-components";
+import {GrLanguage} from 'react-icons/gr';
+
+const Dropdown = styled.select`
+    width: 50px;
+    height: 10px;
+`
+
+const SelectBox = ({onSelect}) => {
+    useEffect(() => {
+        debugger
+      
+
+        $('#myDropdown').ddslick({
+            onSelected: function(selectedData){
+                debugger
+                if(selectedData.selectedData.value === "2") return;
+                onSelect(selectedData.selectedData.value)
+            }   
+        });
+    }, [onSelect])
+
+    return(
+        <Dropdown id="myDropdown" style={{color: 'red'}}> 
+            <option value="2" disabled selected="selected" data-imagesrc="./images/Flags/world.png"
+            data-description="">LinkedIn</option>
+            <option value="pt" data-imagesrc="./images/Flags/portugal-flag-small.png"
+            data-description="">Facebook</option>
+            <option value="en" data-imagesrc="./images/Flags/united-kingdom.png"
+            data-description="">Twitter</option>
+        </Dropdown>
+    )
+}
 
 const NavBar = (props) => {
-
-    const [currentLang, setCurrentLang] = useState("");
     const [menuOpen, setMenuOpen] = useState(false);
+
+    function handleChangeLang(lang) {
+        debugger
+            props.changeLang(lang)
+    }
 
     useEffect(() => {
 
@@ -52,21 +89,15 @@ const NavBar = (props) => {
                     return (
                         <li key={index}>
                             <HashLink to={item.path} smooth>
-                                <span onClick={() => setMenuOpen(false)}>{item.title}</span>
+                                <span onClick={() => setMenuOpen(false)}>{item[props.language].title}</span>
                             </HashLink>
                         </li>
                     )
                 })}
             </ul>
             <div className="hero_nav_dropdown_wrapper">
-                <ReactFlagsSelect
-                    className="hero_nav_dropdown"
-                    countries={["PT", "GB"]}
-                    selected={currentLang}
-                    onSelect = {(country) => {
-                        setCurrentLang(country);
-                        props.changeLang(country)
-                    }}
+                <SelectBox
+                    onSelect = {handleChangeLang}
                 />
             </div>
         </nav>

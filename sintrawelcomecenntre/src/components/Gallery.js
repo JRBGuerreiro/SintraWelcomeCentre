@@ -86,6 +86,7 @@ const GalleryTitle = styled.h2 `
 
     @media (max-width: 767px) {
         margin-bottom: 25px;
+        text-align: center;
     }
 `
 

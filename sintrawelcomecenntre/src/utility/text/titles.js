@@ -1,5 +1,5 @@
 export const titles = {
-    "GB": {
+    "en": {
         "aboutUs": "About Us",
         "whyUs" : "Why Us",
         "ourProducts": "Our Products",
@@ -11,7 +11,7 @@ export const titles = {
         "cardButton": "Find out More"
     },
 
-    "PT": {
+    "pt": {
         "aboutUs": "Sobre Nós",
         "whyUs" : "Porquê Nós",
         "ourProducts": "Os Nossos Produtos",

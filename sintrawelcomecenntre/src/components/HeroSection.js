@@ -9,6 +9,7 @@ const HeroSection = (props) => {
         <>
         <NavBar
             changeLang={props.changeLang}
+            language={props.language}
         />
         <HamburguerButton/>
         <section className="hero_section">

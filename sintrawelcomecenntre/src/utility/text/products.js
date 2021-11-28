@@ -1,34 +1,34 @@
 export const products = [
     {
-        "GB": {
+        "en": {
             "title": "TukTuk tours",
             "description": "Enjoy a ride around Sintra with adrenaline involved"
         },
     
-        "PT": {
+        "pt": {
             "title": "Passeios de TukTuk"
         },
         "image":"../images/ProductsImages/tuks-min.jpg"
 
     },
     {
-        "GB": {
+        "en": {
             "title": "E-Bikes",
             "description": "Try out our most wanted E-bikes and join pleasure with exercise"
         },
 
-        "PT": {
+        "pt": {
             "title": "Bicicletas eléctricas"
         },
         "image":"../images/biciProducts.jpg"
     },
     {
-        "GB": {
+        "en": {
             "title": "Walking Tours",
             "description": "Walk around the village of Sintra through places unacessible by vehicles"
         },
 
-        "PT": {
+        "pt": {
             "title": "Caminhadas"
         },
         "image":"../images/app_logo.png"

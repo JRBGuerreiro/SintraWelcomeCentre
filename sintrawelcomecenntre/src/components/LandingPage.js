@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Footer from "./Footer";
 import HeroSection from "./HeroSection";
 import Products from "./Products";
@@ -7,9 +7,26 @@ import Gallery from "./Gallery";
 
 const LandingPage = () => {
 
-    const hideIt = false
-    const [lang, setLang] = useState("GB")
+    const hideIt = true
+    const [lang, setLang] = useState("pt")
     const changeLanguage = (language) => setLang(language)
+
+    useEffect(() => {
+      debugger;
+      const languages = navigator.languages;
+
+        const currentLanguages = ["en", "pt"]
+
+        const userLang = languages && languages.filter((lang) => {
+            return lang === currentLanguages[0] || lang === currentLanguages[1]
+        })
+
+        if(userLang) {
+            setLang(userLang)
+        } else {
+          setLang("en")
+        }
+    }, [])
 
     return (
         hideIt ? (

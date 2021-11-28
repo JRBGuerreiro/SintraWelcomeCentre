@@ -1,6 +1,6 @@
 export const policy = 
     {
-        "GB": {
+        "en": {
             "text": `PRIVACY POLICY\n
             Your privacy is important to us, so we respect it and are committed to protecting it as stipulated in the Regulamento Geral de Proteção de Dados Pessoais (RGPD) and other applicable national legislation. To better protect your privacy, we introduce our privacy practices and options available for how your information is collected and used.
             If you are concerned about how the information provided through our website is handled, please do not hesitate to present all your questions to us.
@@ -48,7 +48,7 @@ export const policy =
             Web: www.sintrawelcomecentre.com`
         },
 
-        "PT": {
+        "pt": {
             "text": `POLÍTICA DE PRIVACIDADE\n
             A sua privacidade é importante para nós, por isso respeitamo-la e estamos
             empenhados a protegê-la conforme estipula o Regulamento Geral de Proteção de
