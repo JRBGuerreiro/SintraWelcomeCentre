@@ -44,19 +44,21 @@ const ButtonHamburguer = styled.div`
 const HamburguerButton = () => {
 
     useEffect(() => {
-
+        
         const hideShowButton = () => {
             const button = document.getElementById('menuButton');
 
             window.innerWidth > 767 ? button.style.visibility = 'hidden' : button.style.visibility = 'visible'
         }
 
+        hideShowButton();
+
         window.addEventListener('resize', hideShowButton)
 
         return () => {
             window.removeEventListener('resize', hideShowButton)
         }
-    })
+    }, [])
 
     return(
         <ButtonContainer id="menuButton">

@@ -13,12 +13,8 @@ const Dropdown = styled.select`
 
 const SelectBox = ({onSelect}) => {
     useEffect(() => {
-        debugger
-      
-
         $('#myDropdown').ddslick({
             onSelected: function(selectedData){
-                debugger
                 if(selectedData.selectedData.value === "2") return;
                 onSelect(selectedData.selectedData.value)
             }   
@@ -41,8 +37,7 @@ const NavBar = (props) => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     function handleChangeLang(lang) {
-        debugger
-            props.changeLang(lang)
+        props.changeLang(lang)
     }
 
     useEffect(() => {

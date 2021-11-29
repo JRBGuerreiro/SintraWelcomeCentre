@@ -25,6 +25,7 @@ const IconWrapper = styled.div`
     align-items: center;
     background-color: #5b6d75;
     position: relative;
+    cursor: pointer;
 
     &::after {
         content: '';
@@ -161,12 +162,12 @@ const Footer = ({ language }) => {
                 <PrivacyPolicyBtn onClick={() => setVisible(true) }>{titles[language].privacyPolicy}</PrivacyPolicyBtn>
                 <IconsWrapper>
                     <IconWrapper>
-                        <FaFacebook style={{width:"15px", height: "15px", color:"#fcfcfc", zIndex:10}}/>
+                        <FaFacebook  onClick={() => window.open('https://www.facebook.com/sintrawelcomecentre')} style={{width:"15px", height: "15px", color:"#fcfcfc", zIndex:10}}/>
                     </IconWrapper>
-                    <IconWrapper style={{marginLeft:"15px"}}>
+                    <IconWrapper onClick={() => window.open('https://www.instagram.com/sintrawelcomecentre/')} style={{marginLeft:"15px"}}>
                         <FaInstagram style={{width:"15px", height: "15px", color:"#fcfcfc", zIndex:10}}/>
                     </IconWrapper>
-                    <IconWrapper style={{marginLeft:"15px"}}>
+                    <IconWrapper onClick={() => window.open('https://www.tripadvisor.co.uk/Attraction_Review-g189164-d16935621-Reviews-Sintra_Welcome_Centre-Sintra_Sintra_Municipality_Lisbon_District_Central_Portuga.html')} style={{marginLeft:"15px"}}>
                         <FaTripadvisor style={{width:"15px", height: "15px", color:"#fcfcfc", zIndex:10}}/>
                     </IconWrapper>
                 </IconsWrapper>

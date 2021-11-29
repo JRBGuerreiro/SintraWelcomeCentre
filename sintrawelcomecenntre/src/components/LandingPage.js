@@ -12,7 +12,6 @@ const LandingPage = () => {
     const changeLanguage = (language) => setLang(language)
 
     useEffect(() => {
-      debugger;
       const languages = navigator.languages;
 
         const currentLanguages = ["en", "pt"]
