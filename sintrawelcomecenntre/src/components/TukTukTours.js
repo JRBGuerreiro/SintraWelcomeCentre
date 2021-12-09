@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { AiOutlineClockCircle, AiOutlineHome } from 'react-icons/ai';
 import { tuktukTours } from "../utility/text/tuktuktours";
@@ -6,6 +6,9 @@ import { RiMoneyEuroCircleLine } from 'react-icons/ri';
 import Footer from "./Footer";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
+import TukModal from "./TukModal";
+import { titles } from "../utility/text/titles";
+import { tuktukmodaltext } from "../utility/text/tuktukmodaltext";
 
 const TukTukSection = styled.section`
     display: flex;
@@ -106,6 +109,25 @@ const GoBackText = styled(Link)`
     margin: 0 0 0 5px;
     text-decoration: none;
 `
+const DisclaimerWrapper = styled.div`
+    width: 70%;
+    background-color: #386e35;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+`
+const Disclaimer = styled.h4`
+    font-family: Raleway, sans-serif;
+    font-size: 13pt;
+    color: #fcfcfc;
+    width: 80%;
+    font-weight: 500;
+
+    @media (max-width: 767px) {
+        font-size: 11pt;
+    }
+`
 
 export const convertMinutesToHours = (timeinMins) => {
     let returnTime;
@@ -138,7 +160,7 @@ export const convertMinutesToHours = (timeinMins) => {
     return returnTime;
 }
 
-const renderProductsContent = (lang) => {
+const renderProductsContent = (lang, show) => {
     return tuktukTours.map((tour) => {
         return <>
         <ProductWrapperContainer>
@@ -153,7 +175,7 @@ const renderProductsContent = (lang) => {
                         <RiMoneyEuroCircleLine/><ProductPrice> {tour[lang].price}</ProductPrice>
                     </IconProductCenterWrapper>
                 </ProductInfoWrapper>
-                <ProductButton>Buy</ProductButton>
+                <ProductButton onClick={() => show(tour[lang].title, convertMinutesToHours(tour[lang].duration), tour.data, tour.description)}>{tuktukmodaltext[lang].find}</ProductButton>
             </ProductWrapper>   
         </ProductWrapperContainer>
         </>
@@ -161,9 +183,26 @@ const renderProductsContent = (lang) => {
 }
 
 const TukTukTours = () => {
-
+    const [show, setShow] = useState(false)
+    const [data, setData] = useState([])
+    const [imageData, setImageData] = useState([])
     const location = useLocation();
     const { lang } = location.state
+
+    const setModalToShow = (title, duration, imgData, description) => {
+        let dataModal = [title, duration, description]
+        setImageData(imgData)
+        setData(dataModal)
+        setShow(true)
+        document.body.style.overflowY = "hidden"
+        document.documentElement.style.overflowY = "hidden"
+    }
+
+    const closeModal = () => {
+        setShow(false)
+        document.body.style.overflowY = "visible"
+        document.documentElement.style.overflowY = "visible"
+    }
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -178,11 +217,21 @@ const TukTukTours = () => {
                     </GoBackWrapper>
                     <ProductsTitle>TukTuk Tours</ProductsTitle>
                 </ProductsTitleWrapper>
+                <DisclaimerWrapper>
+                    <Disclaimer>{tuktukmodaltext[lang].disclaimer}</Disclaimer>
+                </DisclaimerWrapper>
                 <WrapperOfProducts>
-                    {renderProductsContent(lang)}
+                    {renderProductsContent(lang, setModalToShow)}
                 </WrapperOfProducts>
             </TukTukSection>
             <Footer
+                language = { lang }
+            />
+            <TukModal
+                data = { data }
+                showModal = {show}
+                imageData = { imageData }
+                close = {closeModal}
                 language = { lang }
             />
         </>

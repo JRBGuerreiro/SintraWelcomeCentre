@@ -4,7 +4,6 @@ import {HashLink} from 'react-router-hash-link';
 import $ from 'jquery';
 import jqueryDdslick from "ddslick/src/jquery.ddslick";
 import styled from "styled-components";
-import {GrLanguage} from 'react-icons/gr';
 
 const Dropdown = styled.select`
     width: 50px;

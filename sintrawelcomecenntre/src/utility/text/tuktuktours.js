@@ -11,7 +11,9 @@ export const tuktukTours = [
             "price": "2 pessoas 40€, 3 ou mais 60€ ",
             "duration": 30
         },
-        "image": "../images/ProductsImages/Pena6-min.jpg"
+        "image": "../images/ProductsImages/Pena6-min.jpg",
+        "data": ["../images/ProductsImages/palacionacional2-min.jpg", "../images/mouros.jpg", "../images/ProductsImages/Pena6-min.jpg"],
+        "description": "Palácio Nacional de Sintra, Túneis, The Biester, Challet do Relógio, Castelo dos Mouros"
     },
 
     {
@@ -26,7 +28,9 @@ export const tuktukTours = [
             "price": "2 pessoas 80€, 3 ou mais 120€ ",
             "duration": 90
         },
-        "image": "../images/ProductsImages/penatour-min.jpg"
+        "image": "../images/ProductsImages/penatour-min.jpg",
+        "data": ["../images/ProductsImages/palacionacional2-min.jpg", "../images/mouros.jpg", "../images/ProductsImages/Pena6-min.jpg"],
+        "description": ' Fonte da Sabuga, Palácio Nacional de Sintra, Túneis, The Biester, Challet do Relógio, nos portões de madeira para ver Castelo dos Mouros e Palácio da Pena, Lagos'
     },
     {
         "en": {
@@ -40,7 +44,9 @@ export const tuktukTours = [
             "price": "2 pessoas 40€, 3 ou mais 130€ ",
             "duration": 90
         },
-        "image": "../images/ProductsImages/regaleira2-min.jpg"
+        "image": "../images/ProductsImages/regaleira2-min.jpg",
+        "data": ["../images/monserrate.jpg", "../images/regaleira.jpg", "../images/seteais.webp"],
+        "description": 'Cascata dos Pisões, Quinta da Regaleira, Palácio de seteais, Palácio de Monserrate e jardins de Monserrate'
     },
     {
         "en": {
@@ -54,7 +60,9 @@ export const tuktukTours = [
             "price": "2 pessoas 40€, 3 ou mais 220€ ",
             "duration": "180 to 240"
         },
-        "image": "../images/ProductsImages/Mouros-min.jpg"
+        "image": "../images/ProductsImages/Mouros-min.jpg",
+        "data": ["../images/ProductsImages/palacionacional2-min.jpg", "../images/mouros.jpg", "../images/ProductsImages/Pena6-min.jpg", "../images/monserrate.jpg", "../images/regaleira.jpg", "../images/seteais.webp"],
+        "description": 'Fonte da Sabuga, Palácio Nacional de Sintra, Túneis, The Biester, Challet do Relógio, Castelo dos Mouros & Palácio da Pena, Lagos'
     },
     {
         "en": {
@@ -68,7 +76,9 @@ export const tuktukTours = [
             "price": "2 pessoas. 160€, 3 ou mais 220€ ",
             "duration": "180 to 240"
         },
-        "image": "../images/ProductsImages/cascais-min.jpg"
+        "image": "../images/ProductsImages/cascais-min.jpg",
+        "data": ["../images/cascais-min.jpg", "../images/cascaisbaia.jpg"],
+        "description": 'Guincho, Boca do Inferno, marina de Cascais, Forte Cidadela, baía de Cascais, Museu Condes de Castro de Guimarães, Estoril – Casino e Hotel Palácio.  '
     },
     {
         "en": {
@@ -82,7 +92,9 @@ export const tuktukTours = [
             "price": "2 pessoas 120€, 3 ou mais 60€ ",
             "duration": 150
         },
-        "image": "../images/ProductsImages/roca-min.jpg"
+        "image": "../images/ProductsImages/roca-min.jpg",
+        "data": ["../images/monserrate.jpg", "../images/regaleira.jpg", "../images/seteais.webp", "../images/roca-min.jpg" ],
+        "description": ' Cascata dos Pisões, Quinta da Regaleira, Palácio de Seteais, Palácio de Monserrate e Cabo da Roca. '
     },
     {
         "en": {
@@ -96,7 +108,9 @@ export const tuktukTours = [
             "price": "2 pessoas 250€, 3 ou mais 350€ ",
             "duration": "420 to 480"
         },
-        "image": "../images/ProductsImages/palacionacional2-min.jpg"
+        "image": "../images/ProductsImages/palacionacional2-min.jpg",
+        "data": ["../images/ProductsImages/palacionacional2-min.jpg", "../images/mouros.jpg", "../images/ProductsImages/Pena6-min.jpg", "../images/monserrate.jpg", "../images/regaleira.jpg", "../images/seteais.webp", "../images/roca-min.jpg"],
+        "description": 'Fonte da Sabuga, Palácio Nacional de Sintra, Túneis, The Biester, Challet do Relógio, Castelo dos Mouros & Palácio da Pena, Lagos, Cascata dos Pisões, Quinta da Regaleira, Palácio de seteais, Palácio de Monserrate,  Praia das Maças, Azenhas do Mar, Praia da Adraga, Cabo da Roca, Peninha  '
     },
     {
         "en": {
@@ -110,7 +124,9 @@ export const tuktukTours = [
             "price": "2 pessoas 160€ + 35pp, 3 ou mais 220€ + 35pp ",
             "duration": 240
         },
-        "image": "../images/ProductsImages/adegaviuvagomes-min.jpg"
+        "image": "../images/ProductsImages/adegaviuvagomes-min.jpg",
+        "data": ["../images/monserrate.jpg", "../images/regaleira.jpg", "../images/seteais.webp", "../images/roca-min.jpg", "../images/ProductsImages/adegaviuvagomes-min.jpg", "../images/azenhas.jpg"],
+        "description": 'Cascata dos Pisões, Quinta da Regaleira, Palácio de seteais, Palácio de Monserrate'
     },
     
 ]

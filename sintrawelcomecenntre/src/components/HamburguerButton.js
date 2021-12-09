@@ -8,11 +8,11 @@ const ButtonContainer = styled.div`
     z-index: 30;
     height: 45px;
     width: 45px;
-    border: 1px solid #386e35;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    background-color: #fcfcfc;
 `
 
 const ButtonHamburguer = styled.div`
@@ -54,7 +54,6 @@ const HamburguerButton = () => {
         hideShowButton();
 
         window.addEventListener('resize', hideShowButton)
-
         return () => {
             window.removeEventListener('resize', hideShowButton)
         }
@@ -62,7 +61,7 @@ const HamburguerButton = () => {
 
     return(
         <ButtonContainer id="menuButton">
-            <ButtonHamburguer/>
+            <ButtonHamburguer id='menuButtonStripe'/>
         </ButtonContainer>
     )
 }

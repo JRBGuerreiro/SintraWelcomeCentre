@@ -20,8 +20,6 @@ const Modal = ({language, onClose, visible}) =>  {
 
     return (
         <div>
-            {/* <button onClick={() => setVisible(true)}>show</button> */}
-
             <Rodal customStyles={customStyles} visible={visible} onClose={onClose}>
                 <RodalModalInner>{policy[language].text}</RodalModalInner>
             </Rodal>
