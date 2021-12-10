@@ -92,7 +92,7 @@ const CardButton = styled(Link)`
     }
 `
 
-const Card = ({title, image, language}) => {
+const Card = ({title, image, language, route}) => {
     return (
         <CardWrapper>
             <CardImageWrapper>
@@ -101,7 +101,7 @@ const Card = ({title, image, language}) => {
             <CardWrapperContent>
                 <CardDescription>{titles[language].cardTitle}</CardDescription>
                 <CardTitle>{title}</CardTitle>
-                <CardButton to="/tuktuktours" state={{lang: language}}>{titles[language].cardButton}</CardButton>
+                <CardButton to={route} state={{lang: language}}>{titles[language].cardButton}</CardButton>
             </CardWrapperContent>
         </CardWrapper>
     )

@@ -7,7 +7,6 @@ import Footer from "./Footer";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import TukModal from "./TukModal";
-import { titles } from "../utility/text/titles";
 import { tuktukmodaltext } from "../utility/text/tuktukmodaltext";
 
 const TukTukSection = styled.section`

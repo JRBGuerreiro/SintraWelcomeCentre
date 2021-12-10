@@ -8,7 +8,8 @@ export const products = [
         "pt": {
             "title": "Passeios de TukTuk"
         },
-        "image":"../images/ProductsImages/tuks-min.jpg"
+        "image":"../images/ProductsImages/tuks-min.jpg",
+        'route':'/tuktuktours'
 
     },
     {
@@ -20,7 +21,8 @@ export const products = [
         "pt": {
             "title": "Bicicletas eléctricas"
         },
-        "image":"../images/biciProducts.jpg"
+        "image":"../images/biciProducts.jpg",
+        'route': '/bycicletours'
     },
     {
         "en": {
@@ -31,6 +33,7 @@ export const products = [
         "pt": {
             "title": "Caminhadas"
         },
-        "image":"../images/app_logo.png"
+        "image":"../images/app_logo.png",
+        'route': '/walkingtours'
     },
 ]

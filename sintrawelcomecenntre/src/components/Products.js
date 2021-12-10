@@ -75,6 +75,7 @@ const Products = (props) => {
                     description={product[props.language].description}
                     image={product.image}
                     language = {props.language}
+                    route = {product.route}
                     />
                 })}
             </div>
