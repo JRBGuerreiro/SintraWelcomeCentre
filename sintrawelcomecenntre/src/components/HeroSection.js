@@ -16,7 +16,6 @@ const HeroSection = (props) => {
             <img className="hero_img" src="../images/hero.jpg" alt="Lake"/>
             <div className="hero_logo_wrapper">
                 <img className="logo" src="../images/logo.png" alt="logo"></img>
-                <button>OUR PRODUCTS</button>
             </div>
                 <h1 className="hero_text_banner">{titles[props.language].banner}</h1>
         <div className="hero_scroll_container">

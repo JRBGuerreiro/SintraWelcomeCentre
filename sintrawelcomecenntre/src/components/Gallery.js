@@ -155,6 +155,9 @@ const partnersImagesArray = [
     ["./images/PartnerLogos/centrohipico_logo.jpg", "https://www.centrohipicocostaestoril.com"],
     ["./images/PartnerLogos/furnas.png", "https://www.furnasdoguincho.pt/"],
     ["./images/PartnerLogos/DP_logo.png", "https://www.dinoparque.pt/"],
+    ["./images/PartnerLogos/natapura.jpg", "#"],
+    ["./images/PartnerLogos/mourisca.jpg", "#"],
+    ["./images/PartnerLogos/bouldersintra.jpg", "https:/www.instagram.com/bouldersintra/"],
 ]
 
 const isMobile = window.mobileCheck = function() {
