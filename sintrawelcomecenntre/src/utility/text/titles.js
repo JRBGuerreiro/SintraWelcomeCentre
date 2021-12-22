@@ -6,7 +6,7 @@ export const titles = {
         "placesNoMiss": "Places You Can't Miss",
         "contactUs": "Contact Us",
         "privacyPolicy": "Privacy Policy",
-        "banner": "Join us in\n discovering Portugal's\n most magical places",
+        "banner": "Join us in\n discovering the most magical\n place in Portugal",
         "cardTitle": "Adventure and Wilderness",
         "cardButton": "Find out More"
     },
@@ -18,7 +18,7 @@ export const titles = {
         "placesNoMiss": "Sitios Que Não Pode Perder",
         "contactUs": "Contacte-nos",
         "privacyPolicy": "Politica de Privacidade",
-        "banner": "Junte-se a nós\n a descobrir os sitios\n mais mágicos de Portugal",
+        "banner": "Junte-se a nós\n a descobrir o sitio\n mais mágico em Portugal",
         "cardTitle": "Aventura e vida selvagem",
         "cardButton": "Descubra mais"
     }

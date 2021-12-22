@@ -17,7 +17,7 @@
 .hero_section .hero_logo_wrapper {
   position: absolute;
   left: calc(50% - 122.5px);
-  top: calc(50% - 260px);
+  top: calc(50% - 230px);
   width: 255px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -258,18 +258,18 @@
   }
   .hero_section .hero_copyright {
     font-size: 4pt;
-    bottom: 60px;
+    bottom: 130px;
   }
   .hero_section h1 {
     left: 60px;
     color: #fcfcfc;
-    color: #fcfcfc;
     font-size: 24pt;
     width: 80%;
-    bottom: 60px;
+    bottom: 130px;
   }
   .hero_section .hero_scroll_container {
     left: 20px;
+    bottom: 130px;
   }
   .hero_section .hero_scroll_container h5 {
     font-size: 5pt;

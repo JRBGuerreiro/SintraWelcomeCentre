@@ -5,13 +5,14 @@ import { titles } from "../utility/text/titles";
 
 const AboutUsSection = styled.section `
     width:100vw;
-    background-color: #fcfcfc;
+    background-color: #dce4e4;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-size: cover;
     z-index: 10;
+    padding-bottom: 60px;
 `
 
 const AboutUsWrapper = styled.div`

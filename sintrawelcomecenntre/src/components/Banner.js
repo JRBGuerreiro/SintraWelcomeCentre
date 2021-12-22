@@ -13,6 +13,7 @@ const BannerWrapper = styled.div`
 
     @media (max-width: 767px) {
         margin: 65px 0 50px 0;
+        padding-bottom: 10px;
     }
 `
 
