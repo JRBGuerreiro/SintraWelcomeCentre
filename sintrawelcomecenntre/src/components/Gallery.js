@@ -147,7 +147,7 @@ const PartnerShipLink = styled.a`
 `
 
 const partnersImagesArray = [
-    ["./images/PartnerLogos/cascaisShopping.jpg", "https://www.cascaishopping.pt/en/home/"],
+    ["./images/PartnerLogos/cascaisShopping.png", "https://www.cascaishopping.pt/en/home/"],
     ["./images/PartnerLogos/ADEGAfundobranco.jpg", "https://www.adegaviuvagomes.com"],
     ["./images/PartnerLogos/Logo_Freeport.jpg", "https://freeportfashionoutlet.pt"],
     ["./images/PartnerLogos/logotipo_penaaventura.png", "https://www.penaaventura.com.pt/"],
