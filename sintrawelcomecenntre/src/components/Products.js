@@ -7,6 +7,8 @@ import { valuesImages } from "../utility/images/valuesImages";
 import Banner from "./Banner";
 import AboutUs from "./AboutUs";
 import { titles } from "../utility/text/titles";
+import { AiFillHeart } from "react-icons/ai"
+import EventModal from "./EventModal";
 
 
 const ProductsWhyContent = styled.div`
@@ -41,8 +43,41 @@ const ProductsWhyContentWrapper = styled.div`
     padding: 20px 10px 10px 10px;
     
 `
+const EventsWrapper = styled.div`
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    background-color: #e41c40;
+    flex-direction: column;
+`
+
+const EventsAnotherWrapper = styled.div`
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+`
+
+const EventProduct = styled.h3`
+    font-family: 'Raleway', sans-serif;
+    color: #fcfcfc;
+`
+
+const EventsP = styled.p`
+    font-family: 'Raleway', sans-serif;
+    color: #fcfcfc;
+    text-decoration: underline;
+    cursor: pointer;
+`
 
 const Products = (props) => {
+
+    const tickleLocalStorageAndShowModal = () => {
+        localStorage.removeItem("valentines")
+        window.scrollBy(0,2)
+    }
+
     return(
         <section className="products">
             <AboutUs 
@@ -79,6 +114,16 @@ const Products = (props) => {
                     />
                 })}
             </div>
+            <EventsWrapper>
+                <EventsAnotherWrapper>
+                    <AiFillHeart style={{color: "#fcfcfc", marginRight: "5px"}}/><EventProduct>{props.language !== "en"
+                        ? "Dia dos Namorados"
+                        :"Valentine's Day"
+                    }
+                    </EventProduct><AiFillHeart style={{color: "#fcfcfc", marginLeft: "5px"}}/>
+                </EventsAnotherWrapper>
+                <EventsP onClick={tickleLocalStorageAndShowModal}>{props.language === "en" ? "Find out more" : "Descubra mais!"}</EventsP>
+            </EventsWrapper>
         </section>
     )
 }
