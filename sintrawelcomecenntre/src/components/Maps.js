@@ -28,11 +28,17 @@ const MapsTitle = styled.h2 `
 
 const MapsWrapper = styled.div`
     display: flex;
+
+    @media (max-width: 767px) {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
 `
 
 const Maps = ({ language }) => {
     return(
-        <MapsSection>
+        <MapsSection id="maps">
             <MapsTitle>{titles[language].maps}</MapsTitle>
             <MapsWrapper>
                 {maps.map(map => {

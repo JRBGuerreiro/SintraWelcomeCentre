@@ -12,21 +12,21 @@ const Animation = styled.div `
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 0;
+    top: 20px;
     z-index: 11;
 `
 
 const Modal = styled.div`
     position: fixed;
     display: flex;
-    width: 800px;
+    width: 500px;
     min-height: 500px;
     flex-direction: column;
     align-items: center;
     background-color: #e41c40;
 
     @media (max-width: 800px) {
-        width:100%;
+        width:92%;
     }
 `
 
@@ -34,7 +34,7 @@ const Event = styled.div`
     background-image: url("${props => props.imageSrc}");
     background-size: contain;
     background-repeat: no-repeat;
-    height:600px;
+    height:400px;
     width:100%;
 
     @media (max-width: 800px) {
@@ -50,6 +50,9 @@ const Description = styled.p`
     white-space: pre-line;
     @media (max-width: 800px) {
         font-size: 10pt;
+        margin-top: 10px
+        line-height: 27px;
+        padding: 0 15px;
     }
 `
 

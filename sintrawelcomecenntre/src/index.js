@@ -8,6 +8,7 @@ import AboutUs from "./components/AboutUs";
 import Products from "./components/Products";
 import Gallery from "./components/Gallery";
 import Form from "./components/Form";
+import Maps from "./components/Maps";
 
 const rootElement = document.getElementById("root");
 render(
@@ -20,6 +21,7 @@ render(
         <Route path='/aboutus' component={AboutUs}/>
         <Route path='/product' component={Products}/>
         <Route path='/places' component={Gallery}/>
+        <Route path='/maps' component={Maps} />
         <Route path='/contact' component={Form}/>
     </Routes>
   </BrowserRouter>,

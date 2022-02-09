@@ -190,7 +190,7 @@ const Gallery = ({language}) => {
             {isMobile() ? (
                 <SwipperGallery imageData={galleryImages}/>
             ) : (
-            <GalleryWrapper id="wrapper" onMouseDown> 
+            <GalleryWrapper id="wrapper"> 
                 <GalleryImageWrapper>
                     {renderImages()}
                 </GalleryImageWrapper>

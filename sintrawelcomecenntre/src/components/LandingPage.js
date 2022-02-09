@@ -5,6 +5,7 @@ import Products from "./Products";
 import Form from "./Form";
 import Gallery from "./Gallery";
 import EventModal from "./EventModal";
+import Maps from "./Maps";
 
 const LandingPage = () => {
 
@@ -20,6 +21,9 @@ const LandingPage = () => {
                   />
                     <Products
                     language = {lang}
+                    />
+                    <Maps 
+                      language= {lang}
                     />
                     <Gallery
                        language = { lang }

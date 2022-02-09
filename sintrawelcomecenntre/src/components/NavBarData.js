@@ -31,16 +31,6 @@ export const NavBarData = [
     },
     {
         "en":{
-            title: "Contact Us",
-        },
-
-        "pt": {
-            title: "Contacte-nos"
-        },
-        path: "/#contact"
-    },
-    {
-        "en":{
             title: "Maps",
         },
 
@@ -49,4 +39,15 @@ export const NavBarData = [
         },
         path: "/#maps"
     },
+    {
+        "en":{
+            title: "Contact Us",
+        },
+
+        "pt": {
+            title: "Contacte-nos"
+        },
+        path: "/#contact"
+    },
+    
 ]
