@@ -8,7 +8,7 @@ import Banner from "./Banner";
 import AboutUs from "./AboutUs";
 import { titles } from "../utility/text/titles";
 import { AiFillHeart } from "react-icons/ai"
-import EventModal from "./EventModal";
+import Maps from "./Maps";
 
 
 const ProductsWhyContent = styled.div`
@@ -72,7 +72,6 @@ const EventsP = styled.p`
 `
 
 const Products = (props) => {
-
     const tickleLocalStorageAndShowModal = () => {
         localStorage.removeItem("valentines")
         window.scrollBy(0,2)
@@ -124,6 +123,9 @@ const Products = (props) => {
                 </EventsAnotherWrapper>
                 <EventsP onClick={tickleLocalStorageAndShowModal}>{props.language === "en" ? "Find out more" : "Descubra mais!"}</EventsP>
             </EventsWrapper>
+            <Maps
+                language={props.language}
+            />
         </section>
     )
 }

@@ -10,7 +10,7 @@ const GallerySection = styled.section`
     display: flex;
     justify-content: center;
     width: 100vw;
-    background-color: #dde4e4;
+    background-color: #fcfcfc;
     position: relative;
     padding: 30px 0 30px;
     flex-direction: column;

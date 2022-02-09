@@ -39,4 +39,14 @@ export const NavBarData = [
         },
         path: "/#contact"
     },
+    {
+        "en":{
+            title: "Maps",
+        },
+
+        "pt": {
+            title: "Mapas"
+        },
+        path: "/#maps"
+    },
 ]

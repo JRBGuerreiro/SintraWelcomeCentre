@@ -8,7 +8,8 @@ export const titles = {
         "privacyPolicy": "Privacy Policy",
         "banner": "Join us in\n discovering the most magical\n place in Portugal",
         "cardTitle": "Adventure and Wilderness",
-        "cardButton": "Find out More"
+        "cardButton": "Find out More",
+        "maps": "Maps"
     },
 
     "pt": {
@@ -20,6 +21,7 @@ export const titles = {
         "privacyPolicy": "Politica de Privacidade",
         "banner": "Junte-se a nós\n a descobrir o sitio\n mais mágico em Portugal",
         "cardTitle": "Aventura e vida selvagem",
-        "cardButton": "Descubra mais"
+        "cardButton": "Descubra mais",
+        "maps": "Mapas"
     }
 }
