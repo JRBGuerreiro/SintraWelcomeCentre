@@ -5,6 +5,7 @@ import { BsHouseDoorFill } from 'react-icons/bs';
 import styled from "styled-components";
 import Modal from "./Modal";
 import { titles } from "../utility/text/titles";
+import ReactGa from "react-ga"
 
 const FooterSection = styled.section`
     width: 100vw;
@@ -129,6 +130,33 @@ const DevelopedBy = styled.a`
 
 const Footer = ({ language }) => {
     const [visible, setVisible] = useState(false)
+
+    const onClickFb = () => {
+        ReactGa.event({
+            category:'FB button',
+            action: 'FB button clicked'
+        })
+
+        window.open('https://www.facebook.com/sintrawelcomecentre')
+    }
+
+    const onClickIG = () => {
+        ReactGa.event({
+            category:'IG button',
+            action: 'IG button clicked'
+        })
+
+        window.open('https://www.instagram.com/sintrawelcomecentre/')
+    }
+
+    const onClickTP = () => {
+        ReactGa.event({
+            category:'TP button',
+            action: 'TripAdvisor button clicked'
+        })
+
+        window.open('https://www.tripadvisor.co.uk/Attraction_Review-g189164-d16935621-Reviews-Sintra_Welcome_Centre-Sintra_Sintra_Municipality_Lisbon_District_Central_Portuga.html')
+    }
     return (
         <FooterSection>
             
@@ -162,12 +190,12 @@ const Footer = ({ language }) => {
                 <PrivacyPolicyBtn onClick={() => setVisible(true) }>{titles[language].privacyPolicy}</PrivacyPolicyBtn>
                 <IconsWrapper>
                     <IconWrapper>
-                        <FaFacebook  onClick={() => window.open('https://www.facebook.com/sintrawelcomecentre')} style={{width:"15px", height: "15px", color:"#fcfcfc", zIndex:10}}/>
+                        <FaFacebook  onClick={onClickFb} style={{width:"15px", height: "15px", color:"#fcfcfc", zIndex:10}}/>
                     </IconWrapper>
-                    <IconWrapper onClick={() => window.open('https://www.instagram.com/sintrawelcomecentre/')} style={{marginLeft:"15px"}}>
+                    <IconWrapper onClick={onClickIG} style={{marginLeft:"15px"}}>
                         <FaInstagram style={{width:"15px", height: "15px", color:"#fcfcfc", zIndex:10}}/>
                     </IconWrapper>
-                    <IconWrapper onClick={() => window.open('https://www.tripadvisor.co.uk/Attraction_Review-g189164-d16935621-Reviews-Sintra_Welcome_Centre-Sintra_Sintra_Municipality_Lisbon_District_Central_Portuga.html')} style={{marginLeft:"15px"}}>
+                    <IconWrapper onClick={onClickTP} style={{marginLeft:"15px"}}>
                         <FaTripadvisor style={{width:"15px", height: "15px", color:"#fcfcfc", zIndex:10}}/>
                     </IconWrapper>
                 </IconsWrapper>

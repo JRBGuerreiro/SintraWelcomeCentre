@@ -121,17 +121,7 @@
     
 }
 
-.hero_nav {
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    width: 100%;
-    justify-content: center;
-    z-index: 20;
-    padding-top: 13px;
-    padding-bottom: 13px;
-    display: flex;
-    align-items: baseline;
+
 
     .hero_nav_ul {
         display: flex;
@@ -192,7 +182,7 @@
             }
         }
     }
-}
+
 
 .open > div {
     transform: translateX(-50px);

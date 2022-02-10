@@ -147,33 +147,14 @@
   font-family: 'Raleway', sans-serif;
 }
 
-.hero_nav {
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  z-index: 20;
-  padding-top: 13px;
-  padding-bottom: 13px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-}
-
-.hero_nav .hero_nav_ul {
+.hero_nav_ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style: none;
 }
 
-.hero_nav .hero_nav_ul a {
+.hero_nav_ul a {
   color: #fcfcfc;
   padding: 15px 25px;
   font-family: sans-serif;
@@ -185,11 +166,11 @@
   margin-top: 13px;
 }
 
-.hero_nav .hero_nav_ul a:hover {
+.hero_nav_ul a:hover {
   color: #386e35;
 }
 
-.hero_nav .hero_nav_dropdown_wrapper {
+.hero_nav_dropdown_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -199,37 +180,37 @@
   margin-left: 15px;
 }
 
-.hero_nav .hero_nav_dropdown_wrapper .hero_nav_dropdown {
+.hero_nav_dropdown_wrapper .hero_nav_dropdown {
   padding-bottom: 0;
   border-radius: 3px;
 }
 
-.hero_nav .hero_nav_dropdown_wrapper .hero_nav_dropdown ul {
+.hero_nav_dropdown_wrapper .hero_nav_dropdown ul {
   margin-top: 0;
   padding-top: 0;
   border-radius: 0;
   background-color: #386e35;
 }
 
-.hero_nav .hero_nav_dropdown_wrapper .hero_nav_dropdown ul li span {
+.hero_nav_dropdown_wrapper .hero_nav_dropdown ul li span {
   color: #fcfcfc;
   font-family: 'Raleway', sans-serif;
 }
 
-.hero_nav .hero_nav_dropdown_wrapper .hero_nav_dropdown ul li:hover > span {
+.hero_nav_dropdown_wrapper .hero_nav_dropdown ul li:hover > span {
   color: #386e35;
 }
 
-.hero_nav .hero_nav_dropdown_wrapper .hero_nav_dropdown button {
+.hero_nav_dropdown_wrapper .hero_nav_dropdown button {
   border: none;
 }
 
-.hero_nav .hero_nav_dropdown_wrapper .hero_nav_dropdown button span {
+.hero_nav_dropdown_wrapper .hero_nav_dropdown button span {
   color: #fcfcfc;
   font-family: 'Raleway', sans-serif;
 }
 
-.hero_nav .hero_nav_dropdown_wrapper .hero_nav_dropdown button::after {
+.hero_nav_dropdown_wrapper .hero_nav_dropdown button::after {
   border-top: 5px solid #fcfcfc;
 }
 

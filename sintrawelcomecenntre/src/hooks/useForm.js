@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import emailjs from "emailjs-com"
 import validateFormInfo from '../components/validateForm'
+import ReactGa from 'react-ga'
 
 const useForm = () => {
     const [values, setValues] = useState({
@@ -26,6 +27,10 @@ const useForm = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
+        ReactGa.event({
+            category:'Form button',
+            action: 'Form button button clicked'
+        })
         const errors = validateFormInfo(values)
         setFormErrors(errors)
         

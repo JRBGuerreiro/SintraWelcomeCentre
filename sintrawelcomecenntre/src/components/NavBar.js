@@ -10,6 +10,18 @@ const Dropdown = styled.select`
     height: 10px;
 `
 
+const HeroNav = styled.nav`
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: center;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    display: flex;
+    align-items: baseline;
+    z-index: 10;
+`
+
 const SelectBox = ({onSelect}) => {
     useEffect(() => {
         $('#myDropdown').ddslick({
@@ -77,7 +89,7 @@ const NavBar = (props) => {
    
 
     return(
-        <nav className = "hero_nav" id="nav">
+        <HeroNav id="nav">
             <ul className="hero_nav_ul">
                 {NavBarData.map((item, index) => {
                     return (
@@ -94,7 +106,7 @@ const NavBar = (props) => {
                     onSelect = {handleChangeLang}
                 />
             </div>
-        </nav>
+        </HeroNav>
     )
 }
 

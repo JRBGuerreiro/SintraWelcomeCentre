@@ -12,8 +12,9 @@ const Animation = styled.div `
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 20px;
+    top: 0;
     z-index: 11;
+    background-color: #00000094;
 `
 
 const Modal = styled.div`
@@ -34,11 +35,11 @@ const Event = styled.div`
     background-image: url("${props => props.imageSrc}");
     background-size: contain;
     background-repeat: no-repeat;
-    height:400px;
+    height:375px;
     width:100%;
 
     @media (max-width: 800px) {
-        height: 300px;
+        height: 276px;
     }
 `
 
@@ -48,8 +49,8 @@ const Description = styled.p`
     padding: 0 20px;
     line-height: 30px;
     white-space: pre-line;
+    font-size: 13px;
     @media (max-width: 800px) {
-        font-size: 10pt;
         margin-top: 10px
         line-height: 27px;
         padding: 0 15px;
