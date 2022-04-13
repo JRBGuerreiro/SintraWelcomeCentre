@@ -112,7 +112,7 @@ const Products = (props) => {
                     />
                 })}
             </div>
-            <EventsWrapper>
+            {/* <EventsWrapper>
                 <EventsAnotherWrapper>
                     <AiFillHeart style={{color: "#fcfcfc", marginRight: "5px"}}/><EventProduct>{props.language !== "en"
                         ? "Dia dos Namorados"
@@ -121,7 +121,7 @@ const Products = (props) => {
                     </EventProduct><AiFillHeart style={{color: "#fcfcfc", marginLeft: "5px"}}/>
                 </EventsAnotherWrapper>
                 <EventsP onClick={tickleLocalStorageAndShowModal}>{props.language === "en" ? "Find out more" : "Descubra mais!"}</EventsP>
-            </EventsWrapper>
+            </EventsWrapper> */}
         </section>
     )
 }

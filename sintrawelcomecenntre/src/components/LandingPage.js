@@ -35,9 +35,9 @@ const LandingPage = () => {
                     language = { lang }
                   />
                 </div>
-                <EventModal
+                {/* <EventModal
                   language = { lang }
-                />
+                /> */}
             </>
             
             )
