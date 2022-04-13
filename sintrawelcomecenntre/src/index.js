@@ -9,6 +9,7 @@ import Products from "./components/Products";
 import Gallery from "./components/Gallery";
 import Form from "./components/Form";
 import Maps from "./components/Maps";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 const rootElement = document.getElementById("root");
 render(
@@ -18,6 +19,7 @@ render(
         <Route path='tuktuktours' element={<TukTukTours/>}/>
         <Route path='bycicletours' element={<BycicleTours/>}/>
         <Route path='walkingtours' element={<WalkingTours/>}/>
+        <Route path='privacypolicy' element={<PrivacyPolicy/>}/>
         <Route path='/aboutus' component={AboutUs}/>
         <Route path='/product' component={Products}/>
         <Route path='/places' component={Gallery}/>
