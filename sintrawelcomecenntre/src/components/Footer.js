@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaFacebook, FaInstagram, FaTripadvisor } from 'react-icons/fa'
 import { AiFillPhone } from 'react-icons/ai';
 import { BsHouseDoorFill } from 'react-icons/bs';
 import styled from "styled-components";
-import Modal from "./Modal";
 import { titles } from "../utility/text/titles";
 import ReactGa from "react-ga"
+import { Link } from 'react-router-dom';
 
 const FooterSection = styled.section`
     width: 100vw;
@@ -100,9 +100,14 @@ const StoreInfoContainer = styled.div`
     flex-direction: column;
 `
 
-const PrivacyPolicyBtn = styled.button`
+const PrivacyPolicyBtn = styled(Link)`
     width: 220px;
+    font-family: 'Raleway', sans-serif;
     padding: 0;
+    font-size: 10pt;
+    text-align: center;
+    color: #fcfcfc;
+    text-decoration: none;
     &:hover {
         color: #3dc050;
         background-color: #424e54;
@@ -129,7 +134,6 @@ const DevelopedBy = styled.a`
 `
 
 const Footer = ({ language }) => {
-    const [visible, setVisible] = useState(false)
 
     const onClickFb = () => {
         ReactGa.event({
@@ -159,8 +163,6 @@ const Footer = ({ language }) => {
     }
     return (
         <FooterSection>
-            
-
             <StoreInfo>
                 <StoreInfoContainer>
                         <StoreInfoTitle>Loja Centro Histórico</StoreInfoTitle>
@@ -180,17 +182,12 @@ const Footer = ({ language }) => {
                     <span style={{color:'#fcfcfc', fontFamily:'"Raleway", sans-serif', fontSize:'9pt', marginLeft:'5px'}}>{'\u00A9'}2021</span>
                 </p>
             </Copyright>
-            <Modal
-                language= {language}
-                visible = {visible}
-                onClose = {() => setVisible(false)}
-            />
             <FooterBottomAreaWrapper>
                 <DevelopedBy href="https://meetjorge.netlify.app/#/">Developed by JG</DevelopedBy>
-                <PrivacyPolicyBtn onClick={() => setVisible(true) }>{titles[language].privacyPolicy}</PrivacyPolicyBtn>
+                <PrivacyPolicyBtn to={"/privacypolicy"}>{titles[language].privacyPolicy}</PrivacyPolicyBtn>
                 <IconsWrapper>
                     <IconWrapper>
-                        <FaFacebook  onClick={onClickFb} style={{width:"15px", height: "15px", color:"#fcfcfc", zIndex:10}}/>
+                        <FaFacebook onClick={onClickFb} style={{width:"15px", height: "15px", color:"#fcfcfc", zIndex:10}}/>
                     </IconWrapper>
                     <IconWrapper onClick={onClickIG} style={{marginLeft:"15px"}}>
                         <FaInstagram style={{width:"15px", height: "15px", color:"#fcfcfc", zIndex:10}}/>

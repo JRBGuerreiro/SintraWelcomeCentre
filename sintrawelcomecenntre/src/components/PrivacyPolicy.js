@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { AiOutlineHome } from 'react-icons/ai';
@@ -25,11 +25,6 @@ const ProductsTitle = styled.h1`
     color: #fcfcfc;
     margin: 0;
     padding: 20px 0;
-`
-
-const IconProductCenterWrapper = styled.div`
-    display: flex;
-    align-items: center;
 `
 
 const GoBackWrapper = styled.div`
@@ -108,6 +103,9 @@ T.: +351 210 521 280
 Web: www.sintrawelcomecentre.com`
 
 const PrivacyPolicy = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, []);
     return(
         <PrivacyPolicySection>
                 <ProductsTitleWrapper>
