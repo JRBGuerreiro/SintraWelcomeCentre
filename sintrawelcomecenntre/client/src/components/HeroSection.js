@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import NavBar from "./NavBar";
 import { titles } from "../utility/text/titles";
 import HamburguerButton from "./HamburguerButton";

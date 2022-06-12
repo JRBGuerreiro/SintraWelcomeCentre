@@ -20,6 +20,25 @@ const HeroNav = styled.nav`
     display: flex;
     align-items: baseline;
     z-index: 10;
+
+    @media (max-width: 767px) {
+        flex-direction: column;
+        align-items: center;
+        background-color: #424e54 !important;
+        padding-bottom: 50px;
+        height: 100vh;
+        transition: 0.3s ease-out;
+        transform: translateX(-100vw);
+        ul{
+            flex-direction: column;
+            padding-left: 10px;
+
+            li{
+                margin-top: 30px;
+                margin-left: 27px;
+            }
+        }
+    }
 `
 
 const SelectBox = ({onSelect}) => {
@@ -89,7 +108,7 @@ const NavBar = (props) => {
    
 
     return(
-        <HeroNav id="nav">
+        <HeroNav class="hero_nav" id="nav">
             <ul className="hero_nav_ul">
                 {NavBarData.map((item, index) => {
                     return (

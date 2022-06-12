@@ -11,12 +11,6 @@ const LandingPage = () => {
     const [lang, setLang] = useState("en")
     const changeLanguage = (language) => setLang(language)
 
-    useEffect(async() => {
-      debugger
-      const resp = await fetch("https://server.sintrawelcomecentre.com/api")
-      resp.json().then(d => console.log(d))
-    }, [])
-
     return (
             <>
                 <div className="App">
