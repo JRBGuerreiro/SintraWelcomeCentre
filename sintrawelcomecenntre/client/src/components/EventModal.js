@@ -85,7 +85,7 @@ const EventModal = ({ language }) => {
     return(
         <Animation animate={visible} divOpacity={visible}>
             <Modal>
-                <BsXCircle onClick={closeModalAndStoreLocal} style={{position: "absolute", top: '8px', right: '8px', color:'#424e54', width:'30px', height:'30px', cursor:'pointer'}}/>
+                <BsXCircle onClick={closeModalAndStoreLocal} style={{position: "absolute", top: '8px', right: '8px', color:'#333', width:'30px', height:'30px', cursor:'pointer'}}/>
                 <Event imageSrc={`../images/Special/valentines${language}.jpg`}></Event>
                 <Description>
                     {language === "en" ? 

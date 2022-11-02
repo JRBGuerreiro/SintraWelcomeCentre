@@ -66,7 +66,7 @@ const CardDescription = styled.p`
 
 const CardTitle = styled.h3`
     font-family: 'Raleway', sans-serif;
-    color: #424e54;
+    color: #333;
     margin-left: 10px;
 `
 
@@ -82,13 +82,13 @@ const CardButton = styled(Link)`
     text-decoration: none;
     font-family: 'Raleway';
     font-size: 10pt;
-    background-color: #424e54;
+    background-color: #333;
     color: #fcfcfc;
     transition: 0.3s ease-in;
 
     &:hover {
         background-color: #fcfcfc;
-        color: #424e54;
+        color: #333;
     }
 `
 

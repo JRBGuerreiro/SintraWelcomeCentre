@@ -27,11 +27,13 @@ export const products = [
     {
         "en": {
             "title": "Walking Tours",
-            "description": "Walk around the village of Sintra through places unacessible by vehicles"
+            "description": "Walk around the village of Sintra through places unacessible by vehicles",
+            "disclaimer": "Reservation must take place at least 48 hours before the intended date. We only take groups over 2 people."
         },
 
         "pt": {
-            "title": "Caminhadas"
+            "title": "Caminhadas",
+            "disclaimer": "As reservas devem ser com antecedência de 48 horas com um minimo de 2 pessoas por grupo."
         },
         "image":"../images/app_logo.png",
         'route': '/walkingtours'

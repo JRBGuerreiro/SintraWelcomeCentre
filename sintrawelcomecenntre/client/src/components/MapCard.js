@@ -6,6 +6,9 @@ import mouros_en from "../pdfs/Mouros_ENG.pdf"
 import mouros_pt from "../pdfs/Mouros_PT.pdf"
 import vila_en from "../pdfs/Sintra_ENG.pdf"
 import vila_pt from "../pdfs/Sintra_PT.pdf"
+import biester_pt from "../pdfs/Palacio_Biester_PT.pdf"
+import biester_en from "../pdfs/Palacio_Biester_EN.pdf"
+import monserrate from "../pdfs/Monserrate_ENG.pdf"
 
 const MapCardWrapper = styled.div`
     display: flex;
@@ -17,11 +20,7 @@ const MapCardWrapper = styled.div`
     border-radius: 5px;
     background-color: #e7e7e7;
 
-    &:first-child {
-        margin-right: 30px;
-    }
-
-    &:last-child {
+    &:not(:first-child) {
         margin-left: 30px;
     }
 
@@ -29,6 +28,14 @@ const MapCardWrapper = styled.div`
         &:first-child {
             margin-right: 0;
             margin-bottom: 15px;
+        }
+
+        &:not(:first-child) {
+            margin-left: 0px;
+        }
+
+        &:nth-child(2) {
+            margin-right: 0px;
         }
 
         &:last-child {
@@ -63,7 +70,7 @@ const MapCardWrapperContent = styled.div`
 
 const MapCardTitle = styled.h3`
     font-family: 'Raleway', sans-serif;
-    color: #424e54;
+    color: #333;
     margin: 0;
     padding: 10px 0 10px 0;
     background-color: #dce4e4;
@@ -72,7 +79,7 @@ const MapCardTitle = styled.h3`
 
 const MapCardTitle2 = styled.h3`
     font-family: 'Raleway', sans-serif;
-    color: #424e54;
+    color: #333;
     font-size: 14px;
     text-align: center;
 `
@@ -86,23 +93,24 @@ const chooseFile = (monumentLang) => {
     switch (monumentLang) {
         case "pena_en":
             return pena_en
-            break;
         case "pena_pt":
             return pena_pt
-            break;
         case "mouros_en":
             return mouros_en
-            break;
         case "mouros_pt":
             return mouros_pt
-            break;
         case "vila_en":
             return vila_en
-            break;
         case "vila_pt":
             return vila_pt
-            break;
-    
+        case "monserrate_pt":
+            return monserrate
+        case "monserrate_en":
+            return monserrate
+        case "biester_pt":
+            return biester_pt
+        case "biester_en":
+            return biester_en
         default:
             break;
     }

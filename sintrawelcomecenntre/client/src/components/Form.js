@@ -18,7 +18,7 @@ const Form = styled.form `
     justify-content: center;
     align-items: center;
     p{
-        color: #424e54;
+        color: #333;
         font-size: 10pt;
         margin: 0;
     }
@@ -37,7 +37,7 @@ const DivWrapper = styled.div `
 `;
 
 const HeaderTitle = styled.h1 `
-    color: #424e54;
+    color: #333;
     font-size: 24pt;
     font-weight: 200;
     font-family: 'Raleway', sans-serif;

@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaTripadvisor } from 'react-icons/fa'
+import { IoLogoWhatsapp } from 'react-icons/io'
 import { AiFillPhone } from 'react-icons/ai';
 import { BsHouseDoorFill } from 'react-icons/bs';
 import styled from "styled-components";
@@ -9,12 +10,17 @@ import { Link } from 'react-router-dom';
 
 const FooterSection = styled.section`
     width: 100vw;
-    background-color: #424e54;
+    background-color: #333;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
     padding: 25px 0;
+`
+
+const FooterTopInfo = styled.div`
+    display: flex;
+    witdth: 100vw;
 `
 
 const IconWrapper = styled.div`
@@ -110,7 +116,7 @@ const PrivacyPolicyBtn = styled(Link)`
     text-decoration: none;
     &:hover {
         color: #3dc050;
-        background-color: #424e54;
+        background-color: #333;
     }
 `
 
@@ -130,6 +136,31 @@ const DevelopedBy = styled.a`
     @media (max-width: 767px) {
         margin-left: 5px;
         text-align: center;
+    }
+`
+
+const Separator = styled.div`
+    width: 100vw;
+    height: 1px;
+    background-color: #dde4e4;
+    margin: 20px 0px;
+`
+
+const ComplaintBook = styled.div`
+    background: url("../images/icon_livro_reclamacoes.png");
+    width: 100px;
+    height: 44px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+
+    &:hover{
+        background: url("../images/icon_livro_reclamacoes_on.png");
+        width: 100px;
+        height: 44px;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
     }
 `
 
@@ -161,6 +192,19 @@ const Footer = ({ language }) => {
 
         window.open('https://www.tripadvisor.co.uk/Attraction_Review-g189164-d16935621-Reviews-Sintra_Welcome_Centre-Sintra_Sintra_Municipality_Lisbon_District_Central_Portuga.html')
     }
+
+    const onClickWhatsapp = () => {
+        ReactGa.event({
+            category:'Whatsapp button',
+            action: 'Whatsapp button clicked'
+        })
+
+        window.open('https://api.whatsapp.com/send?phone=351932086001')
+    }
+
+    const mouseOver = (element) => {
+        element.setAttribute('src', '')
+    }
     return (
         <FooterSection>
             <StoreInfo>
@@ -185,6 +229,9 @@ const Footer = ({ language }) => {
             <FooterBottomAreaWrapper>
                 <DevelopedBy href="https://meetjorge.netlify.app/#/">Developed by JG</DevelopedBy>
                 <PrivacyPolicyBtn to={"/privacypolicy"}>{titles[language].privacyPolicy}</PrivacyPolicyBtn>
+                <ComplaintBook onClick={() => window.open('https://www.livroreclamacoes.pt')}/>
+            </FooterBottomAreaWrapper>
+            <Separator/>
                 <IconsWrapper>
                     <IconWrapper>
                         <FaFacebook onClick={onClickFb} style={{width:"15px", height: "15px", color:"#fcfcfc", zIndex:10}}/>
@@ -195,8 +242,10 @@ const Footer = ({ language }) => {
                     <IconWrapper onClick={onClickTP} style={{marginLeft:"15px"}}>
                         <FaTripadvisor style={{width:"15px", height: "15px", color:"#fcfcfc", zIndex:10}}/>
                     </IconWrapper>
+                    <IconWrapper onClick={onClickWhatsapp} style={{marginLeft:"15px"}}>
+                        <IoLogoWhatsapp style={{width:"15px", height: "15px", color:"#fcfcfc", zIndex:10}}/>
+                    </IconWrapper>
                 </IconsWrapper>
-            </FooterBottomAreaWrapper>
             
         </FooterSection>
     )

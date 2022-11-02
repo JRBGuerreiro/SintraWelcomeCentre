@@ -24,7 +24,7 @@ const HeroNav = styled.nav`
     @media (max-width: 767px) {
         flex-direction: column;
         align-items: center;
-        background-color: #424e54 !important;
+        background-color: #333 !important;
         padding-bottom: 50px;
         height: 100vh;
         transition: 0.3s ease-out;
@@ -84,7 +84,7 @@ const NavBar = (props) => {
             const currentH = document.documentElement.scrollTop;
             if(!nav) return;
             if(currentH >= wH) {
-                nav.style.backgroundColor = "#424e54";
+                nav.style.backgroundColor = "#333";
             } else {
                 nav.style.backgroundColor = 'transparent'
             }

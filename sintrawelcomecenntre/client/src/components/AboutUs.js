@@ -36,7 +36,7 @@ const AboutUsHeader = styled.h2 `
     width: 100%;
     font-family: 'Raleway', sans-serif;
     padding: 30px 0 45px 0;
-    color: #424e54;
+    color: #333;
     text-align: center;
     font-size: 24pt;
     font-weight: 200;
@@ -47,7 +47,7 @@ const AboutUsHeader = styled.h2 `
 `
 
 const AboutUsImage = styled.div `
-    background-image: url('./images/team.jpg');
+    background-image: url('./images/team.png');
     background-repeat: no-repeat;
     width: 600px;
     background-size: cover;

@@ -7,7 +7,7 @@ import { valuesImages } from "../utility/images/valuesImages";
 import Banner from "./Banner";
 import AboutUs from "./AboutUs";
 import { titles } from "../utility/text/titles";
-import { AiFillHeart } from "react-icons/ai"
+import FlipCard from "./FlipCard";
 
 
 const ProductsWhyContent = styled.div`
@@ -36,38 +36,11 @@ const ProductsWhyContentWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #424e54;
+    background-color: #333;
     border-radius: 3px;
     margin: 10px 10px 0 10px;
     padding: 20px 10px 10px 10px;
     
-`
-const EventsWrapper = styled.div`
-    display: flex;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    background-color: #e41c40;
-    flex-direction: column;
-`
-
-const EventsAnotherWrapper = styled.div`
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-`
-
-const EventProduct = styled.h3`
-    font-family: 'Raleway', sans-serif;
-    color: #fcfcfc;
-`
-
-const EventsP = styled.p`
-    font-family: 'Raleway', sans-serif;
-    color: #fcfcfc;
-    text-decoration: underline;
-    cursor: pointer;
 `
 
 const Products = (props) => {
@@ -103,13 +76,14 @@ const Products = (props) => {
                 <h2 className="products_title" id="product">{titles[props.language].ourProducts}</h2>
             <div className="products_content">
                 {products.map(product => {
-                    return <Card 
-                    title={product[props.language].title}
-                    description={product[props.language].description}
-                    image={product.image}
-                    language = {props.language}
-                    route = {product.route}
-                    />
+                    return <FlipCard
+                        title={product[props.language].title}
+                        description={product[props.language].description}
+                        image={product.image}
+                        language = {props.language}
+                        route = {product.route}
+                        disclaimer = {product[props.language].disclaimer}
+                    /> 
                 })}
             </div>
             {/* <EventsWrapper>

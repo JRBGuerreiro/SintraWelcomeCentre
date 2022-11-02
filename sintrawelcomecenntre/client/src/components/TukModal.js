@@ -39,7 +39,7 @@ const Modal = styled.div`
 
 const ModalTitle = styled.h2`
     font-family: Raleway, sans-serif;
-    color: #424e54;
+    color: #333;
     text-align: center;
 
     @media (max-width: 800px) {
@@ -60,20 +60,20 @@ const IconsContainer = styled.div`
 `
 
 const IconsText = styled.p`
-    color: #424e54;
+    color: #333;
     font-size: 10pt;
     font-family: 'Raleway', sans-serif;
     margin-left: 5px;
 `
 const TourDescription = styled.p`
-    color: #424e54;
+    color: #333;
     width: 70%;
     text-align: center;
     font-size: 10pt;
 `
 
 const DescriptionTitle = styled.h3`
-    color: #424e54;
+    color: #333;
     font-size: 14pt;
     font-family: 'Raleway', sans-serif;
 `
@@ -81,7 +81,7 @@ const DescriptionTitle = styled.h3`
 const Separator = styled.div`
     width: 80%;
     height:1px;
-    background-color: #424e54;
+    background-color: #333;
     margin-top: 15px;
     margin-bottom: 15px;
     opacity: 0.3;
@@ -93,7 +93,7 @@ debugger
         <Animation animate={showModal} divOpacity={showModal}>
             <Modal>
                 <ModalTitle>{ data[0] }</ModalTitle>
-                <BsXCircle onClick={() => close()} style={{position: "absolute", top: '8px', right: '8px', color:'#424e54', width:'30px', height:'30px', cursor:'pointer'}}/>
+                <BsXCircle onClick={() => close()} style={{position: "absolute", top: '8px', right: '8px', color:'#333', width:'30px', height:'30px', cursor:'pointer'}}/>
                 <SwipperGalleryTukTuk imageData={ imageData } />
                 <Separator/>
                 <DescriptionTitle>{tuktukmodaltext[language].title}</DescriptionTitle>
@@ -103,16 +103,16 @@ debugger
                 <Separator/>
                 <ModalIconsWrapper>
                     <IconsContainer>
-                        <FiThumbsUp style={{color:"#424e54", width:'22px', height:'22px'}}/><IconsText>{tuktukmodaltext[language].free}</IconsText>
+                        <FiThumbsUp style={{color:"#333", width:'22px', height:'22px'}}/><IconsText>{tuktukmodaltext[language].free}</IconsText>
                     </IconsContainer>
                     <IconsContainer>
-                        <BsPerson style={{color:"#424e54", width:'22px', height:'22px'}}/><IconsText>{tuktukmodaltext[language].live}</IconsText>
+                        <BsPerson style={{color:"#333", width:'22px', height:'22px'}}/><IconsText>{tuktukmodaltext[language].live}</IconsText>
                     </IconsContainer>
                     <IconsContainer>
-                        <RiMentalHealthLine style={{color:"#424e54", width:'22px', height:'22px'}}/><IconsText>{tuktukmodaltext[language].covid}</IconsText>
+                        <RiMentalHealthLine style={{color:"#333", width:'22px', height:'22px'}}/><IconsText>{tuktukmodaltext[language].covid}</IconsText>
                     </IconsContainer>
                     <IconsContainer>
-                        <GiDuration style={{color:"#424e54", width:'22px', height:'22px'}}/><IconsText>{data[1]}</IconsText>
+                        <GiDuration style={{color:"#333", width:'22px', height:'22px'}}/><IconsText>{data[1]}</IconsText>
                     </IconsContainer>
                 </ModalIconsWrapper>
             </Modal>

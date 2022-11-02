@@ -92,7 +92,7 @@ const GalleryTitle = styled.h2 `
 
 const PartnerShipTitle = styled.h3`
     font-family: 'Raleway',sans-serif;
-    color: #424e54;
+    color: #333;
     font-size: 18pt;
     text-align: center;
     text-transform: uppercase;
@@ -159,6 +159,9 @@ const partnersImagesArray = [
     ["./images/PartnerLogos/natapura.jpg", "#"],
     ["./images/PartnerLogos/mourisca.jpg", "#"],
     ["./images/PartnerLogos/bouldersintra.jpg", "https:/www.instagram.com/bouldersintra/"],
+    ["./images/PartnerLogos/LogoSapa.jpg", "https://www.facebook.com/queijadasdasapa/"],
+    ["./images/PartnerLogos/LogoBiester-01.png", "https://www.biester.pt"],
+    ["./images/PartnerLogos/PenhaLonga.png", "https://www.penhalonga.com/"],
 ]
 
 const isMobile = window.mobileCheck = function() {

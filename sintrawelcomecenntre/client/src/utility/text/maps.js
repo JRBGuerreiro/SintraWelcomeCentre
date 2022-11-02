@@ -33,4 +33,26 @@ export const maps = [
         "image":"../images/palaciodavila.jpg",
         "monument": "vila"
     },
+    {
+        "en": {
+            "title": "Monserrate Palace",
+        },
+
+        "pt": {
+            "title": "Palácio de Monserrate"
+        },
+        "image":"../images/monserrate.jpg",
+        "monument": "monserrate"
+    },
+    {
+        "en": {
+            "title": "Biester's Palace",
+        },
+
+        "pt": {
+            "title": "Palácio de Biester"
+        },
+        "image":"../images/biester_palace.jpeg",
+        "monument": "biester"
+    },
 ]

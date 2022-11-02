@@ -15,7 +15,7 @@ const ProductsTitleWrapper = styled.div`
     width:100%;
     justify-content: center;
     display: flex;
-    background-color: #424e54;
+    background-color: #333;
     position: relative;
 `
 
