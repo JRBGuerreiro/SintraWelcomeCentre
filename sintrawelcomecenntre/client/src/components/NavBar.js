@@ -19,7 +19,7 @@ const HeroNav = styled.nav`
     padding-bottom: 13px;
     display: flex;
     align-items: baseline;
-    z-index: 10;
+    z-index: 100;
 
     @media (max-width: 767px) {
         flex-direction: column;
