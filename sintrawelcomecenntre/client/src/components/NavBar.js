@@ -110,9 +110,9 @@ const NavBar = (props) => {
     return(
         <HeroNav class="hero_nav" id="nav">
             <ul className="hero_nav_ul">
-                {NavBarData.map((item, index) => {
+                {NavBarData.map((item, i) => {
                     return (
-                        <li key={index}>
+                        <li key={i}>
                             <HashLink to={item.path} smooth>
                                 <span onClick={() => setMenuOpen(false)}>{item[props.language].title}</span>
                             </HashLink>

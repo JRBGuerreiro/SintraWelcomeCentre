@@ -7,6 +7,7 @@ import styled from "styled-components";
 import { titles } from "../utility/text/titles";
 import ReactGa from "react-ga"
 import { Link } from 'react-router-dom';
+import { footerTranslationText } from "../utility/text/footer";
 
 const FooterSection = styled.section`
     width: 100vw;
@@ -69,6 +70,17 @@ const Copyright = styled.div`
     justify-content: center;
 `
 
+const PhoneDisclaimer = styled.div`
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 10pt;
+    color: #3dc050;
+    margin-top: 5px;
+}
+`
+
 const StoreInfo = styled.div`
     display: flex;
     width: 100%;
@@ -87,7 +99,7 @@ const StoreInfoParagraphWrapper = styled.div`
 `
 
 const StoreInfoParagraph = styled.p`
-    font-family: 'Raleway'. sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 10pt;
     color: #fcfcfc;
 `
@@ -211,16 +223,19 @@ const Footer = ({ language }) => {
                 <StoreInfoContainer>
                         <StoreInfoTitle>Loja Centro Histórico</StoreInfoTitle>
                     <StoreInfoParagraphWrapper>
-                        <AiFillPhone  style={{width:"20px", height: "20px", color:"#3dc050", marginRight: '5px'}} /><StoreInfoParagraph style={{marginRight:'15px'}}>+351 210 521 283</StoreInfoParagraph>
+                        <AiFillPhone  style={{width:"20px", height: "20px", color:"#3dc050", marginRight: '5px'}} /><StoreInfoParagraph style={{marginRight:'15px'}}>+351 210 521 283<span style={{color: "#3dc050", fontSize:"12pt"}}>&#42;</span></StoreInfoParagraph>
                         <BsHouseDoorFill  style={{width:"20px", height: "20px", color:"#3dc050", marginRight: '5px'}} /><StoreInfoParagraph>Rua Visconde de Monserrate, Loja 40, 2710-591 Sintra</StoreInfoParagraph>
                     </StoreInfoParagraphWrapper>
                         <StoreInfoTitle>Renting Hub Portela Sintra</StoreInfoTitle>
                     <StoreInfoParagraphWrapper>
-                        <AiFillPhone  style={{width:"20px", height: "20px", color:"#3dc050", marginRight: '5px'}} /><StoreInfoParagraph style={{marginRight:'15px'}}>+351 210 521 280</StoreInfoParagraph>
+                        <AiFillPhone  style={{width:"20px", height: "20px", color:"#3dc050", marginRight: '5px'}} /><StoreInfoParagraph style={{marginRight:'15px'}}>+351 210 521 280<span style={{color: "#3dc050", fontSize:"12pt"}}>&#42;</span></StoreInfoParagraph>
                         <BsHouseDoorFill  style={{width:"20px", height: "20px", color:"#3dc050", marginRight: '5px'}} /><StoreInfoParagraph>Av. Dr. Álvaro de Vasconcelos,4B, Portela de Sintra, 2710-420 Sintra</StoreInfoParagraph>
                     </StoreInfoParagraphWrapper>
                 </StoreInfoContainer>
             </StoreInfo>
+            <PhoneDisclaimer>
+                <span style={{fontSize:"12pt"}}>&#42;</span>{footerTranslationText[language].disclaimer}
+            </PhoneDisclaimer>
             <Copyright>
                 <p className="copyrightText" style={{color:'#3fda45', fontFamily:'"Raleway", sans-serif'}}>Sintra Welcome Centre
                     <span style={{color:'#fcfcfc', fontFamily:'"Raleway", sans-serif', fontSize:'9pt', marginLeft:'5px'}}>{'\u00A9'}2021</span>

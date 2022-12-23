@@ -47,7 +47,7 @@ const AboutUsHeader = styled.h2 `
 `
 
 const AboutUsImage = styled.div `
-    background-image: url('./images/team.png');
+    background-image: url('./images/Foto_AboutUs.jpg');
     background-repeat: no-repeat;
     width: 600px;
     background-size: cover;
