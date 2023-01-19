@@ -61,21 +61,15 @@ const ProductImage = styled.div`
 const ProductInfoWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-conten: center;
     padding-left: 10px;
 `
 
 const ProductTitle = styled.h4`
     font-family: 'Raleway', sans-serif;
-    font-size: 12pt;
+    font-size: 14pt;
     margin: 10px 0;
-`
-
-const ProductPrice = styled.p`
-    font-family: 'Raleway', sans-serif;
-    font-size: 11pt;
-    margin: 5px 0 5px 5px;
 `
 
 const ProductDuration = styled.p`
@@ -169,9 +163,6 @@ const renderProductsContent = (lang, show) => {
                     <ProductTitle>{tour[lang].title}</ProductTitle>
                     <IconProductCenterWrapper>
                         <AiOutlineClockCircle/><ProductDuration> {convertMinutesToHours(tour[lang].duration)}</ProductDuration>
-                    </IconProductCenterWrapper>
-                    <IconProductCenterWrapper>
-                        <RiMoneyEuroCircleLine/><ProductPrice> {tour[lang].price}</ProductPrice>
                     </IconProductCenterWrapper>
                 </ProductInfoWrapper>
                 <ProductButton onClick={() => show(tour[lang].title, convertMinutesToHours(tour[lang].duration), tour.data, tour.description)}>{tuktukmodaltext[lang].find}</ProductButton>

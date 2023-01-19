@@ -162,6 +162,7 @@ const partnersImagesArray = [
     ["./images/PartnerLogos/LogoSapa.jpg", "https://www.facebook.com/queijadasdasapa/"],
     ["./images/PartnerLogos/LogoBiester-01.png", "https://www.biester.pt"],
     ["./images/PartnerLogos/PenhaLonga.png", "https://www.penhalonga.com/"],
+    ["./images/PartnerLogos/casa_do_prego.png", "https://www.tripadvisor.com/Restaurant_Review-g189164-d23959309-Reviews-Casa_Do_Prego_Vila_De_Sintra-Sintra_Sintra_Municipality_Lisbon_District_Central_.html"],
 ]
 
 const isMobile = window.mobileCheck = function() {
