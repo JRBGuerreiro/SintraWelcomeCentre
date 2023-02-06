@@ -1,7 +1,6 @@
 import React from "react";
 import { products } from '../utility/text/products';
 import { valuesText } from "../utility/text/valuesText";
-import Card from "./Card";
 import styled from "styled-components";
 import { valuesImages } from "../utility/images/valuesImages";
 import Banner from "./Banner";

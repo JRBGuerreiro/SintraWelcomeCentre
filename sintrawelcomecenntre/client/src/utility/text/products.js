@@ -38,4 +38,16 @@ export const products = [
         "image":"../images/app_logo.png",
         'route': '/walkingtours'
     },
+    {
+        "en": {
+            "title": "Tours around Portugal",
+            "description": "Try out our most wanted E-bikes and join pleasure with exercise"
+        },
+
+        "pt": {
+            "title": "Tours à volta de Portugal"
+        },
+        "image":"../images/biciProducts.jpg",
+        'route': '/bycicletours'
+    },
 ]
