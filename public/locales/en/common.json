@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "about": "About Us",
+    "products": "Products",
+    "places": "Places You Can't Miss",
+    "maps": "Maps",
+    "contact": "Contact Us"
+  },
+  "landing": "Join us in discovering the most magical place in Portugal",
+  "about": "Ability to adapt to each client, every style and every personality, makes SWC the place that will guarantee that our clients feel welcomed and looked after, in order to ensure they will take from this experience, something memorable to remember and share with family and friends, making it more likely that one day they will wish to return to this village.",
+  "why": {
+    "responsability": "Responsability",
+    "hospitality": "Hospitality",
+    "attention_to_detail": "Attention to detail",
+    "adaptability": "Adaptability",
+    "efficiency": "Efficiency",
+    "quality": "Quality"
+  },
+  "keep_things_simple": {
+    "title": "Keep things simple",
+    "content": [
+      "Find out the product that most suits you.",
+      "Select a date to make sure you don't miss out.",
+      "Quickly pay with no hassle!"
+    ]
+  }
+}
