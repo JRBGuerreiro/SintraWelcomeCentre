@@ -1,12 +1,5 @@
 import React from "react";
-import { products } from '../utility/text/products';
-import { valuesText } from "../utility/text/valuesText";
 import styled from "styled-components";
-import { valuesImages } from "../utility/images/valuesImages";
-import Banner from "./Banner";
-import AboutUs from "./AboutUs";
-import { titles } from "../utility/text/titles";
-import FlipCard from "./FlipCard";
 import { cookiePolicy } from "../utility/text/cookiePolicy";
 
 const CookiePolicyWrapper = styled.div`
@@ -21,16 +14,16 @@ const CookiePolicyWrapper = styled.div`
 const CookiePolicyContainerWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    padding: 20px 10px 10px 10px;
+    padding: 25px 20px 10px 20px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     background-color: #396e34;
     align-items:center;
 `
 const CookieButton = styled.div`
-    padding: 7px;
+    padding: 7px 22px;
     border: 1px solid #fcfcfc;
     margin-top: 15px;
     display: flex;
@@ -40,7 +33,6 @@ const CookieButton = styled.div`
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s ease-in;
-    width: 15%;
 
     &:hover {
         background-color: #fcfcfc;
