@@ -1,10 +1,14 @@
-import Head from 'next/head';
+import { type FC } from 'react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-import Landing from '@swc/components/Landing';
+import HeroSection from '@swc/components/HeroSection';
 
-const Home = () => {
-  return <Landing />;
+const Home: FC = () => {
+  return (
+    <main className="flex h-screen w-full">
+      <HeroSection />
+    </main>
+  );
 };
 
 export async function getStaticProps({ locale = 'en' }) {
