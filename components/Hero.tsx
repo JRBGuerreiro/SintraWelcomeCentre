@@ -32,16 +32,9 @@ const HeroSection: FC = () => {
     });
   };
 
-  const toggleSlider = () => {
-    animateSlide.start({
-      from: { opacity: 0 },
-      to: { opacity: 1 }
-    });
-  };
-
   const NavBar: FC = () => {
     return (
-      <nav className="flex w-full items-center justify-end space-x-4 p-10">
+      <nav className="flex w-full items-center justify-end space-x-2 p-10">
         <LanguageSelector />
         <animated.span
           style={styledMenu}
@@ -49,9 +42,9 @@ const HeroSection: FC = () => {
           className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full"
         >
           {isMenuOpen ? (
-            <CloseIcon className="h-7 w-7" />
+            <CloseIcon className="h-6 w-6" />
           ) : (
-            <MenuIcon className="h-7 w-7" />
+            <MenuIcon className="h-6 w-6" />
           )}
         </animated.span>
       </nav>
@@ -62,7 +55,6 @@ const HeroSection: FC = () => {
     return (
       <animated.main
         style={styledSlider}
-        onClick={toggleSlider}
         className="bg-black-100 fixed top-0 left-0 z-10 h-full w-full bg-black bg-opacity-20 backdrop-blur-lg"
       >
         <NavBar />
@@ -81,13 +73,13 @@ const HeroSection: FC = () => {
         <div className="flex h-full flex-col bg-black/50">
           <NavBar />
 
-          <section className="flex h-full flex-col items-center justify-between py-40 px-10">
+          <section className="flex h-full flex-col items-center justify-between py-20 px-10">
             <Image src={swcLogo} alt="Sintra Welcome Centre" className="w-96" />
-            <div>
-              <h1 className="font-sans text-4xl font-bold shadow tablet:text-6xl laptop:text-8xl">
+            <div className="laptop:w-1/2 laptop:px-10">
+              <h1 className="font-sans text-5xl font-bold shadow laptop:text-7xl">
                 {t('landing')}
               </h1>
-              <span className="flex justify-end pt-2 text-[8px]">
+              <span className="flex justify-start pt-2 text-[8px]">
                 © 2021 SINTRA WELCOME CENTRE, TRADEMARKS AND BRAND ARE THE
                 PROPERTY OF THEIR RESPECTIVE
               </span>

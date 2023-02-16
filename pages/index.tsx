@@ -1,12 +1,18 @@
-import { type FC } from 'react';
+import { type NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-import HeroSection from '@swc/components/HeroSection';
+import Hero from '@swc/components/Hero';
+import About from '@swc/components/About';
 
-const Home: FC = () => {
+const Home: NextPage = () => {
   return (
-    <main className="flex h-screen w-full">
-      <HeroSection />
+    <main>
+      <section className="flex h-screen w-full">
+        <Hero />
+      </section>
+      <section className="w-full">
+        <About />
+      </section>
     </main>
   );
 };

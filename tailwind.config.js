@@ -24,6 +24,7 @@ module.exports = {
       night: '#0e0e0e',
       'light-green': '#3dc050',
       'forest-green': '#2e933c',
+      shamrock: '#009b72',
       'light-gray': '#dce4e4',
       'dark-gray': '#333333',
       red: '#ff0000' //used for debugging
