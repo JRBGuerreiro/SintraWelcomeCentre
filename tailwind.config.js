@@ -20,14 +20,29 @@ module.exports = {
     },
     colors: {
       black: '#000',
-      white: '#fff',
+      white: '#eef0f2',
+      'anti-flash-white': '#eef0f2',
       night: '#0e0e0e',
+      'swc-green': '#396e35',
+      green: {
+        100: '#d7e2d7',
+        200: '#b0c5ae',
+        300: '#88a886',
+        400: '#618b5d',
+        500: '#396e35',
+        600: '#2e582a',
+        700: '#224220',
+        800: '#172c15',
+        900: '#0b160b'
+      },
       'light-green': '#3dc050',
       'forest-green': '#2e933c',
       shamrock: '#009b72',
       'light-gray': '#dce4e4',
       'dark-gray': '#333333',
-      red: '#ff0000' //used for debugging
+      'tripadvisor-green': '#34e0a1',
+      red: '#ff0000', //used for debugging
+      brown: '#60463b'
     },
     backgroundImage: {
       hero: "url('../public/assets/images/hero-bg.jpg')"
