@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { animated, useSpring } from '@react-spring/web';
 
 import swcLogo from '@swc/assets/swc-logo.png';
-import MenuIcon from '@swc/utils/svg/Menu';
-import CloseIcon from '@swc/utils/svg/Cross';
+import MenuIcon from '@swc/components/svg/Menu';
+import CloseIcon from '@swc/components/svg/Cross';
 import LanguageSelector from './LanguageSelector';
 
 const HeroSection: FC = () => {
@@ -70,12 +70,12 @@ const HeroSection: FC = () => {
   return (
     <>
       <div className="flex flex-1 flex-col bg-hero bg-cover bg-center bg-no-repeat">
-        <div className="flex h-full flex-col bg-black/50">
+        <header className="flex h-full flex-col bg-black/50">
           <NavBar />
 
           <section className="flex h-full flex-col items-center justify-between py-20 px-10">
             <Image src={swcLogo} alt="Sintra Welcome Centre" className="w-96" />
-            <div className="laptop:w-1/2 laptop:px-10">
+            <div className="laptop:w-1/2">
               <h1 className="font-sans text-5xl font-bold shadow laptop:text-7xl">
                 {t('landing')}
               </h1>
@@ -85,7 +85,7 @@ const HeroSection: FC = () => {
               </span>
             </div>
           </section>
-        </div>
+        </header>
       </div>
       {isMenuOpen && <InvisibleMenu />}
     </>

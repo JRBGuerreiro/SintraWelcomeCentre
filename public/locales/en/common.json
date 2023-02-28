@@ -7,7 +7,14 @@
     "contact": "Contact Us"
   },
   "landing": "Join us in discovering the most magical place in Portugal",
-  "about": "Ability to adapt to each client, every style and every personality, makes SWC the place that will guarantee that our clients feel welcomed and looked after, in order to ensure they will take from this experience, something memorable to remember and share with family and friends, making it more likely that one day they will wish to return to this village.",
+  "about": {
+    "title": "You should always remember your trips as the most epic days of your life!",
+    "content": [
+      "We believe that travel is more than just visiting a new place - it's about creating memories that will last a lifetime.",
+      "Our team is dedicated to ensuring that every client feels welcomed and looked after from start to finish. We take the time to get to know our clients and their unique needs, so that we can create an experience that is truly unforgettable.",
+      "Whether you're exploring the village for the first time or returning for another visit, we guarantee that you'll take away something memorable to share with your family and friends. We're passionate about what we do, and we want to share that passion with you."
+    ]
+  },
   "why": {
     "responsability": "Responsability",
     "hospitality": "Hospitality",

@@ -2,10 +2,9 @@ import { useState, type FC } from 'react';
 import { useTranslation } from 'next-i18next';
 import { animated, useSpring } from '@react-spring/web';
 
-import ArrowDown from '@swc/utils/svg/ArrowDown';
-import { LANGUAGES } from '@swc/utils/constants/languages';
+import ArrowDown from '@swc/components/svg/ArrowDown';
+import { LANGUAGES } from '@swc/utils/constants';
 import { useRouter } from 'next/router';
-import LanguageIcon from '@swc/utils/svg/Language';
 
 const LanguageSelector: FC = () => {
   const { i18n } = useTranslation('common');
@@ -40,11 +39,10 @@ const LanguageSelector: FC = () => {
   return (
     <div className="flex flex-col">
       <section
-        className="flex cursor-pointer items-center justify-center font-inter"
+        className="flex cursor-pointer items-center justify-center font-inter transition-all hover:text-forest-green"
         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
       >
-        <animated.span
-          style={styledLanguage}
+        <div
           onClick={toggleAnimation}
           className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full"
         >
@@ -52,7 +50,7 @@ const LanguageSelector: FC = () => {
             {i18n.language.toUpperCase()}
           </span>
           <ArrowDown className="h-3 w-3" />
-        </animated.span>
+        </div>
 
         {/* <span className="text-gray mx-1 text-sm font-bold">
           {i18n.language.toUpperCase()}
@@ -63,7 +61,7 @@ const LanguageSelector: FC = () => {
       <animated.section
         style={styledLanguage}
         onClick={toggleAnimation}
-        className={`absolute top-20 flex w-14 flex-col items-center justify-center rounded-lg bg-white/25 shadow ${
+        className={`absolute top-20 flex w-14 flex-col items-center justify-center rounded-lg bg-black bg-opacity-10 shadow backdrop-blur-lg ${
           !isDropdownOpen && 'hidden'
         }`}
       >

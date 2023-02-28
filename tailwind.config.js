@@ -7,7 +7,7 @@ module.exports = {
   darkMode: 'class',
   theme: {
     screens: {
-      tablet: '640px',
+      tablet: { max: '1023px' },
       // => @media (min-width: 640px) { ... }
       laptop: '1024px',
       // => @media (min-width: 1024px) { ... }

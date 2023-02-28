@@ -3,6 +3,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import Hero from '@swc/components/Hero';
 import About from '@swc/components/About';
+import WhyUs from '@swc/components/WhyUs';
 
 const Home: NextPage = () => {
   return (
@@ -10,9 +11,12 @@ const Home: NextPage = () => {
       <section className="flex h-screen w-full">
         <Hero />
       </section>
-      <section className="w-full">
+      <section>
         <About />
       </section>
+      {/* <section>
+        <WhyUs />
+      </section> */}
     </main>
   );
 };
