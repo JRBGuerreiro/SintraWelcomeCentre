@@ -19,14 +19,14 @@ const About: FC = () => {
 
   return (
     <div className="flex justify-center bg-white p-10">
-      <div className="flex flex-col items-center justify-center gap-8 text-dark-gray laptop:w-1/2">
-        <span className="text-center font-inter text-2xl font-extrabold tracking-tight text-swc-green laptop:text-4xl">
+      <div className="flex flex-col items-center justify-center gap-8 text-dark-gray">
+        <span className="text-center font-inter text-2xl font-extrabold tracking-tight text-swc-green">
           {t('about.title')}
         </span>
-        <div className="tablet:space-y-4 laptop:flex laptop:flex-row laptop:items-start laptop:space-x-0">
+        <div className="">
           <Carousel slides={SLIDES} options={OPTIONS} />
 
-          <div className="space-y-4 font-inter font-medium laptop:pl-4">
+          <div className="space-y-4 font-inter font-medium">
             {Object.values(content).map((content, index) => (
               <li key={index} className="list-none text-[100%]">
                 {content}

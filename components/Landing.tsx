@@ -3,12 +3,12 @@ import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import { animated, useSpring } from '@react-spring/web';
 
-import swcLogo from '@swc/assets/swc-logo.png';
+import swcLogo from '@swc/assets/landing/swc-logo.png';
 import MenuIcon from '@swc/components/svg/Menu';
 import CloseIcon from '@swc/components/svg/Cross';
 import LanguageSelector from './LanguageSelector';
 
-const HeroSection: FC = () => {
+const LandingSection: FC = () => {
   const { t } = useTranslation('common');
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
@@ -76,9 +76,7 @@ const HeroSection: FC = () => {
           <section className="flex h-full flex-col items-center justify-between py-20 px-10">
             <Image src={swcLogo} alt="Sintra Welcome Centre" className="w-96" />
             <div className="laptop:w-1/2">
-              <h1 className="font-sans text-5xl font-bold shadow laptop:text-7xl">
-                {t('landing')}
-              </h1>
+              <h1 className="text-5xl font-bold shadow">{t('landing')}</h1>
               <span className="flex justify-start pt-2 text-[8px]">
                 © 2021 SINTRA WELCOME CENTRE, TRADEMARKS AND BRAND ARE THE
                 PROPERTY OF THEIR RESPECTIVE
@@ -92,4 +90,4 @@ const HeroSection: FC = () => {
   );
 };
 
-export default HeroSection;
+export default LandingSection;

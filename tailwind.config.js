@@ -7,16 +7,19 @@ module.exports = {
   darkMode: 'class',
   theme: {
     screens: {
-      tablet: { max: '1023px' },
-      // => @media (min-width: 640px) { ... }
-      laptop: '1024px',
-      // => @media (min-width: 1024px) { ... }
-      desktop: '1280px'
-      // => @media (min-width: 1280px) { ... }
+      /* mobile: { max: '767px' } */
+      mobile: '320px',
+      // => @media (min-width: 320px) { ... }
+      tablet: '768px',
+      // => @media (min-width: 768px) { ... }
+      laptop: '1200px'
+      // => @media (min-width: 1200px) { ... }
     },
     fontFamily: {
       inter: ['Inter', 'sans-serif'],
-      raleway: ['Raleway', 'sans-serif']
+      raleway: ['Raleway', 'sans-serif'],
+      rubik: ['Rubik', 'sans-serif'],
+      sans: ['Open Sans', 'sans-serif']
     },
     colors: {
       black: '#000',
@@ -45,9 +48,19 @@ module.exports = {
       brown: '#60463b'
     },
     backgroundImage: {
-      hero: "url('../public/assets/images/hero-bg.jpg')"
+      hero: "url('../public/assets/images/landing/hero-bg.jpg')"
     },
-    extend: {}
+    extend: {
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' }
+        }
+      },
+      animation: {
+        scroll: 'scroll 60s linear infinite'
+      }
+    }
   },
   variants: {
     typography: ['dark']

@@ -1,21 +1,33 @@
 import { type NextPage } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-import Hero from '@swc/components/Hero';
+import Landing from '@swc/components/Landing';
 import About from '@swc/components/About';
 import WhyUs from '@swc/components/WhyUs';
+import PopularDestinations from '@swc/components/PopularDestinations';
+import PopularProducts from '@swc/components/PopularProducts';
+import Partners from '@swc/components/Partners';
 
 const Home: NextPage = () => {
   return (
     <main>
       <section className="flex h-screen w-full">
-        <Hero />
+        <Landing />
       </section>
-      <section>
+      {/* <section>
         <About />
-      </section>
+      </section> */}
       <section>
         <WhyUs />
+      </section>
+      <section>
+        <PopularDestinations />
+      </section>
+      <section>
+        <PopularProducts />
+      </section>
+      <section>
+        <Partners />
       </section>
     </main>
   );
