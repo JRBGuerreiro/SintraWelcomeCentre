@@ -22,7 +22,7 @@ const PopularDestinations: FC = () => {
           </p>
         </div>
 
-        <div className="mt-8 flex flex-col items-center justify-around space-y-10 text-white">
+        <div className="mt-8 flex w-full flex-col items-center justify-around space-y-10 text-white">
           <DestinationCard />
           <DestinationCard />
           <DestinationCard />

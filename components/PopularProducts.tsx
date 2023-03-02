@@ -22,9 +22,7 @@ const PopularProducts: FC = () => {
           </p>
         </div>
 
-        <div className="mt-8 flex flex-col items-center justify-around space-y-10 text-white">
-          <ProductCard />
-          <ProductCard />
+        <div className="mt-8 flex w-full flex-col items-center justify-around space-y-10 text-white">
           <ProductCard />
         </div>
       </div>

@@ -26,9 +26,9 @@ const Home: NextPage = () => {
       <section>
         <PopularProducts />
       </section>
-      <section>
+      {/* <section>
         <Partners />
-      </section>
+      </section> */}
     </main>
   );
 };

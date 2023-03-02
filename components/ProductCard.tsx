@@ -1,37 +1,51 @@
 import type { FC } from 'react';
-
-import Star from './svg/Star';
+import Clock from './svg/Clock';
+import Person from './svg/Person';
+import Pin from './svg/Pin';
 
 const ProductCard: FC = () => (
-  <div className="relative flex h-[480px] items-end justify-center rounded-3xl bg-swc-green">
-    <figure className="absolute h-full overflow-hidden rounded-2xl">
+  <div className="flex w-full flex-col items-center overflow-hidden rounded-3xl bg-swc-green text-white">
+    <div className="flex h-[250px] overflow-hidden rounded-t-2xl">
       <img
-        src="/assets/images/destinations/pena-palace-inside.jpg"
+        src="/assets/images/village-concierge.jpg"
         alt="Sintra"
         loading="lazy"
-        className="object-cover"
+        className="w-full object-cover object-center"
       />
-    </figure>
+    </div>
 
-    <div className="relative m-6 flex max-h-32 flex-col rounded-2xl bg-white py-5 px-4 text-swc-green">
-      <div className="absolute -top-3 right-3 flex items-end justify-end rounded-2xl bg-swc-green p-2 text-white">
-        {Array.from(new Array(5), () => (
-          <Star className="h-4 w-4" fill="currentColor" />
-        ))}
-      </div>
-
-      <p className="text-xs font-medium uppercase">
-        <a href="#">Sintra</a>
-      </p>
-
+    <div className="flex w-full flex-col space-y-4 bg-light-gray p-8">
       <h1 className="text-xl font-black uppercase text-green-700">
-        <a href="#">Palácio da Pena</a>
+        Visit sintra by tuktuk
       </h1>
-
-      <p className="overflow-hidden text-dark-gray">
-        I'm baby tacos distillery VHS pinterest. Wolf moon ascot edison bulb
-        shabby chic everyday carry.
+      <p className="text-dark-gray">
+        I'm baby activated charcoal offal waistcoat, raclette skateboard
+        slow-carb viral man bun jean shorts pork belly DIY tumblr.
       </p>
+      <div className="flex justify-end">
+        <div className="flex max-w-fit divide-x-2 divide-green-700 rounded-full bg-white py-2 px-4 text-dark-gray shadow-md">
+          <div className="flex items-center space-x-1 px-3 first:pl-0">
+            <Clock className="w-4" />
+            <span>6h</span>
+          </div>
+          <div className="flex items-center space-x-1 px-3">
+            <Person className="w-4" /> <span>10</span>
+          </div>
+          <div className="flex items-center space-x-1 px-3 last:pr-0">
+            <Pin className="w-4" />
+            <span>Sintra</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="flex w-full items-center justify-between p-8">
+      <div className="flex flex-col items-center">
+        <h1 className="text-3xl font-black">100€</h1>
+        <span className="-mt-1 text-xs">/per person</span>
+      </div>
+      <button className="rounded-full border-2 border-white py-3 px-6 font-bold uppercase transition-all hover:border-green-500 hover:bg-white hover:text-green-500">
+        book now
+      </button>
     </div>
   </div>
 );
