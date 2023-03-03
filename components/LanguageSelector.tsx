@@ -1,10 +1,10 @@
 import { useState, type FC } from 'react';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 import { animated, useSpring } from '@react-spring/web';
 
 import ArrowDown from '@swc/components/svg/ArrowDown';
 import { LANGUAGES } from '@swc/utils/constants';
-import { useRouter } from 'next/router';
 
 const LanguageSelector: FC = () => {
   const { i18n } = useTranslation('common');

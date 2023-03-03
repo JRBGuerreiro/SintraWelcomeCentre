@@ -2,7 +2,7 @@ import type { FC } from 'react';
 import { useTranslation } from 'next-i18next';
 import { EmblaOptionsType } from 'embla-carousel-react';
 
-import Carousel from './Carousel';
+import Carousel from '@swc/components/Carousel';
 
 const About: FC = () => {
   const { t } = useTranslation('common');

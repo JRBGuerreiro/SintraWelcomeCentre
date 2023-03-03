@@ -4,9 +4,10 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Landing from '@swc/components/Landing';
 import About from '@swc/components/About';
 import WhyUs from '@swc/components/WhyUs';
-import PopularDestinations from '@swc/components/PopularDestinations';
-import PopularProducts from '@swc/components/PopularProducts';
+import PopularDestinations from '@swc/components/Destinations';
+import PopularProducts from '@swc/components/Products';
 import Partners from '@swc/components/Partners';
+import CuratedTestimonials from '@swc/components/Testimonials';
 
 const Home: NextPage = () => {
   return (
@@ -14,21 +15,12 @@ const Home: NextPage = () => {
       <section className="flex h-screen w-full">
         <Landing />
       </section>
-      {/* <section>
-        <About />
-      </section> */}
-      <section>
-        <WhyUs />
-      </section>
-      <section>
-        <PopularDestinations />
-      </section>
-      <section>
-        <PopularProducts />
-      </section>
-      {/* <section>
-        <Partners />
-      </section> */}
+      {/* <About />*/}
+      <WhyUs />
+      <PopularDestinations />
+      <PopularProducts />
+      {/* <Partners /> */}
+      <CuratedTestimonials />
     </main>
   );
 };

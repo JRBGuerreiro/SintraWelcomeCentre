@@ -1,9 +1,9 @@
 import type { FC } from 'react';
 import { useTranslation } from 'next-i18next';
 
-import StarIcon from './svg/Star';
-import TravellerChoiceIcon from './svg/TravellerChoice';
-import RocketIcon from './svg/Rocket';
+import StarIcon from '@swc/components/svg/Star';
+import TravellerChoiceIcon from '@swc/components/svg/TravellerChoice';
+import RocketIcon from '@swc/components/svg/Rocket';
 
 const WhyUs: FC = () => {
   const { t } = useTranslation('common');

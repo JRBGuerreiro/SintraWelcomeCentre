@@ -6,7 +6,7 @@ import { animated, useSpring } from '@react-spring/web';
 import swcLogo from '@swc/assets/landing/swc-logo.png';
 import MenuIcon from '@swc/components/svg/Menu';
 import CloseIcon from '@swc/components/svg/Cross';
-import LanguageSelector from './LanguageSelector';
+import LanguageSelector from '@swc/components/LanguageSelector';
 
 const LandingSection: FC = () => {
   const { t } = useTranslation('common');

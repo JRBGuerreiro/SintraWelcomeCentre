@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import Star from './svg/Star';
+import Star from '@swc/components/svg/Star';
 import type { PopularDestination } from '@swc/utils/popular-destinations';
 
 const DestinationCard: FC<{ destination: PopularDestination }> = ({
@@ -21,8 +21,8 @@ const DestinationCard: FC<{ destination: PopularDestination }> = ({
 
       <div className="relative m-6 flex max-h-32 flex-col rounded-2xl bg-white py-5 px-4 text-swc-green">
         <div className="absolute -top-3 right-3 flex items-end justify-end rounded-2xl bg-swc-green p-2 text-white">
-          {Array.from(new Array(5), () => (
-            <Star className="h-4 w-4" fill="currentColor" />
+          {Array.from(new Array(5), (_, index) => (
+            <Star key={index} className="h-4 w-4" fill="currentColor" />
           ))}
         </div>
 
