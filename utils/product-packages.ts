@@ -1,18 +1,15 @@
 export type ProductPackage = {
   id: number;
-  type: 'product';
   name: string;
   image: string;
   description: string;
   location: string;
   price: {
     type: 'individual' | 'group';
-    rate: 'hourly' | 'daily' | 'weekly' | 'monthly';
     value: number;
-    currency: string;
   };
   duration: {
-    type: 'hour' | 'day' | 'week' | 'month';
+    type: 'hour' | 'day';
     value: number;
   };
   limit: {
@@ -24,16 +21,51 @@ export type ProductPackage = {
 export default [
   {
     id: 1,
-    type: 'product',
-    name: 'Product 1',
-    image: 'https://picsum.photos/200/300',
-    description: 'Product 1 description',
-    location: 'Singapore',
+    name: 'Tuk Tuk Tour',
+    image: 'https://source.unsplash.com/featured/500x500',
+    description: `I'm baby tacos distillery VHS pinterest. Wolf moon ascot edison bulb shabby chic everyday carry.`,
+    location: 'Sintra',
     price: {
       type: 'individual',
-      rate: 'hourly',
-      value: 100,
-      currency: 'EUR'
+      value: 100
+    },
+    duration: {
+      type: 'day',
+      value: 1
+    },
+    limit: {
+      type: 'person',
+      value: 10
+    }
+  },
+  {
+    id: 2,
+    name: 'Walking Tour',
+    image: 'https://source.unsplash.com/featured/500x500',
+    description: `I'm baby tacos distillery VHS pinterest. Wolf moon ascot edison bulb shabby chic everyday carry.`,
+    location: 'Sintra',
+    price: {
+      type: 'individual',
+      value: 100
+    },
+    duration: {
+      type: 'day',
+      value: 1
+    },
+    limit: {
+      type: 'person',
+      value: 10
+    }
+  },
+  {
+    id: 3,
+    name: 'E-Bike Tour',
+    image: 'https://source.unsplash.com/featured/500x500',
+    description: `I'm baby tacos distillery VHS pinterest. Wolf moon ascot edison bulb shabby chic everyday carry.`,
+    location: 'Sintra',
+    price: {
+      type: 'individual',
+      value: 100
     },
     duration: {
       type: 'day',
