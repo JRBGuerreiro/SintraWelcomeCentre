@@ -1,4 +1,4 @@
-type ProductPackage = {
+export type ProductPackage = {
   id: number;
   type: 'product';
   name: string;
@@ -30,7 +30,7 @@ export default [
     description: 'Product 1 description',
     location: 'Singapore',
     price: {
-      type: 'per person',
+      type: 'individual',
       rate: 'hourly',
       value: 100,
       currency: 'EUR'
@@ -44,4 +44,4 @@ export default [
       value: 10
     }
   }
-];
+] as ProductPackage[];

@@ -1,10 +1,12 @@
-import type { FC } from 'react';
+import { FC, useState } from 'react';
 import { useTranslation } from 'next-i18next';
 
 import DestinationCard from './DestinationCard';
+import destinations from '@swc/utils/popular-destinations';
 
 const PopularDestinations: FC = () => {
   const { t } = useTranslation('common');
+  const [destinationsCount, setDestinationsCount] = useState(3);
 
   return (
     <div className="flex  w-full items-center justify-center bg-white py-20 px-10 text-swc-green">
@@ -23,9 +25,33 @@ const PopularDestinations: FC = () => {
         </div>
 
         <div className="mt-8 flex w-full flex-col items-center justify-around space-y-10 text-white">
-          <DestinationCard />
-          <DestinationCard />
-          <DestinationCard />
+          {destinations
+            .slice(0, destinationsCount)
+            .map((destination, index) => (
+              <DestinationCard key={index} destination={destination} />
+            ))}
+
+          {destinationsCount < destinations.length && (
+            <button
+              className="font-bold uppercase text-swc-green"
+              onClick={() => {
+                setDestinationsCount(destinationsCount + 3);
+              }}
+            >
+              Show More
+            </button>
+          )}
+
+          {destinationsCount > 3 && (
+            <button
+              className="font-bold uppercase text-swc-green"
+              onClick={() => {
+                setDestinationsCount(destinationsCount - 3);
+              }}
+            >
+              Show Less
+            </button>
+          )}
         </div>
       </div>
     </div>
