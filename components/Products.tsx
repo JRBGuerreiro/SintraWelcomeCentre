@@ -1,7 +1,8 @@
 import type { FC } from 'react';
 import { useTranslation } from 'next-i18next';
 
-import ProductCard from './ProductCard';
+import ProductCard from '@swc/components/ProductCard';
+import products from '@swc/utils/product-packages';
 
 const PopularProducts: FC = () => {
   const { t } = useTranslation('common');
@@ -23,7 +24,9 @@ const PopularProducts: FC = () => {
         </div>
 
         <div className="mt-8 flex w-full flex-col items-center justify-around space-y-10 text-white">
-          <ProductCard />
+          {products.slice(0, 3).map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
         </div>
       </div>
     </div>
