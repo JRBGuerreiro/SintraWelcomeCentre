@@ -8,6 +8,7 @@ import PopularDestinations from '@swc/components/Destinations';
 import PopularProducts from '@swc/components/Products';
 import Partners from '@swc/components/Partners';
 import CuratedTestimonials from '@swc/components/Testimonials';
+import Footer from '@swc/components/Footer';
 
 const Home: NextPage = () => {
   return (
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
       <PopularProducts />
       {/* <Partners /> */}
       <CuratedTestimonials />
+      <Footer />
     </main>
   );
 };
