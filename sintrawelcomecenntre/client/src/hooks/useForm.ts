@@ -1,10 +1,25 @@
 import {useState} from 'react'
 import emailjs from "emailjs-com"
-import validateFormInfo from '../components/validateForm'
+import validateFormInfo from './validateForm';
 import ReactGa from 'react-ga'
 
+type Submission = {
+    isSubmitted: boolean
+}
+
+type Error = {
+    isError: boolean
+}
+
+export type FormValues = {
+    name: string;
+    lastName: string;
+    email: string;
+    textArea: string;
+}
+
 const useForm = () => {
-    const [values, setValues] = useState({
+    const [values, setValues] = useState<FormValues>({
         name: "",
         lastName: "",
         email:"",
@@ -13,7 +28,7 @@ const useForm = () => {
 
     const [formErrors, setFormErrors] = useState({})
 
-    const handleChange = event => {
+    const handleChange = (event: React. ChangeEvent<HTMLInputElement>) => {
         const {name, value} = event.target
 
         setValues({
@@ -22,10 +37,10 @@ const useForm = () => {
         })
     }
 
-    const [isSubmitted, setSubmitted] = useState(false)
-    const [isError, setError] = useState(false)
+    const [isSubmitted, setSubmitted] = useState<Submission>({ isSubmitted:  false })
+    const [isError, setError] = useState<Error>({ isError: false })
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
         ReactGa.event({
             category:'Form button',
@@ -55,10 +70,12 @@ const useForm = () => {
             .then((result) => {
                 console.log(result)
                 setSubmitted({isSubmitted:true})
-                name.value = ""
-                lastname.value = ""
-                email.value = ""
-                message.value = ""
+                if(name !== null && lastname !== null && email !== null && message !== null) {
+                    name.innerText = ""
+                    lastname.innerText = ""
+                    email.innerText = ""
+                    message.innerText = ""
+                }
             }, (error) => {
                 setError({isError:true})
             })
@@ -66,14 +83,12 @@ const useForm = () => {
         
     }
 
-    let paragraph
+    let paragraph: HTMLParagraphElement | null = document.querySelector('p');
 
-    if(isSubmitted) {
-        paragraph = <p>Message has been sent!</p>
-    } else if (isError) {
-        paragraph = <p>There has been an error submitting your message. Please try again</p>
-    } else {
-        paragraph = null
+    if(isSubmitted && paragraph) {
+        paragraph.textContent = 'Message has been sent!'
+    } else if (isError && paragraph) {
+        paragraph.textContent = 'There has been an error submitting your message. Please try again'
     }
     
     return {handleChange, values, handleSubmit, paragraph, formErrors}

@@ -1,5 +1,7 @@
-export default function validateFormInfo(values) {
-    let errors={}
+import { FormValues } from "./useForm"
+
+export default function validateFormInfo(values: FormValues) {
+    let errors: Record<string, string>={}
 
     if(!values.name.trim()) {
         errors.name = "Name Required"
