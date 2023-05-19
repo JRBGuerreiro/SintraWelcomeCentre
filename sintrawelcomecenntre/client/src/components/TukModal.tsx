@@ -92,7 +92,7 @@ type TukModalProps = {
     data: Array<string>,
     showModal: boolean,
     imageData: Array<string>,
-    close: () => void,
+    closeModal: () => void,
     language: Language
 }
 
@@ -102,7 +102,7 @@ const TukModal = (props: TukModalProps) => {
         <Animation animate={props.showModal} divOpacity={props.showModal}>
             <Modal>
                 <ModalTitle>{ props.data[0] }</ModalTitle>
-                <BsXCircle onClick={() => close()} style={{position: "absolute", top: '8px', right: '8px', color:'#333', width:'30px', height:'30px', cursor:'pointer'}}/>
+                <BsXCircle onClick={() => props.closeModal} style={{position: "absolute", top: '8px', right: '8px', color:'#333', width:'30px', height:'30px', cursor:'pointer'}}/>
                 <SwipperGalleryTukTuk imageData={ props.imageData } />
                 <Separator/>
                 <DescriptionTitle>{tuktukmodaltext[props.language].title}</DescriptionTitle>

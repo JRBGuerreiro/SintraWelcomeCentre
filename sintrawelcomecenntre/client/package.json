@@ -12,7 +12,7 @@
     "ddslick": "^1.0.3",
     "emailjs-com": "^3.2.0",
     "history": "^5.3.0",
-    "jquery": "^3.6.3",
+    "jquery": "^3.7.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-ga": "^3.3.1",
@@ -21,6 +21,7 @@
     "react-router-dom": "^6.8.1",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "4.0.3",
+    "react-select": "^5.7.3",
     "styled-components": "^5.3.6",
     "web-vitals": "^1.1.2"
   },

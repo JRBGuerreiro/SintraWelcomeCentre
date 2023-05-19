@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import pena_en from "../pdfs/Pena_ENG.pdf"
-import pena_pt from "../pdfs/Pena_PT.pdf"
-import mouros_en from "../pdfs/Mouros_ENG.pdf"
-import mouros_pt from "../pdfs/Mouros_PT.pdf"
-import vila_en from "../pdfs/Sintra_ENG.pdf"
-import vila_pt from "../pdfs/Sintra_PT.pdf"
-import biester_pt from "../pdfs/Palacio_Biester_PT.pdf"
-import biester_en from "../pdfs/Palacio_Biester_EN.pdf"
-import monserrate from "../pdfs/Monserrate_ENG.pdf"
+
+const pena_en = "../pdfs/Pena_ENG.pdf"
+const pena_pt = "../pdfs/Pena_PT.pdf"
+const mouros_en = "../pdfs/Mouros_ENG.pdf"
+const mouros_pt = "../pdfs/Mouros_PT.pdf"
+const vila_en = "../pdfs/Sintra_ENG.pdf"
+const vila_pt = "../pdfs/Sintra_PT.pdf"
+const biester_pt = "../pdfs/Palacio_Biester_PT.pdf"
+const biester_en = "../pdfs/Palacio_Biester_EN.pdf"
+const monserrate = "../pdfs/Monserrate_ENG.pdf"
 
 const MapCardWrapper = styled.div`
     display: flex;
@@ -123,6 +124,7 @@ type MapCardProps = {
 }
 
 const MapCard = (props: MapCardProps) => {
+    console.log(props)
     return(
         <MapCardWrapper>
             <MapCardImageWrapper>

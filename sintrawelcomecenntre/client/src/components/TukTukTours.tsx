@@ -221,7 +221,7 @@ const TukTukTours = () => {
                 data = { data! }
                 showModal = {show}
                 imageData = { imageData! }
-                close = {closeModal}
+                closeModal = {closeModal}
                 language = { lang }
             />
         </>
