@@ -28,7 +28,7 @@ const useForm = () => {
 
     const [formErrors, setFormErrors] = useState({})
 
-    const handleChange = (event: React. ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const {name, value} = event.target
 
         setValues({

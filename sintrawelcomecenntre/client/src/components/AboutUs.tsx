@@ -2,6 +2,7 @@ import React from "react";
 import { aboutUsText } from "../utility/text/aboutUs";
 import styled from "styled-components";
 import { titles } from "../utility/text/titles";
+import { Language } from "../utility/types/types";
 
 const AboutUsSection = styled.section `
     width:100vw;
@@ -79,7 +80,7 @@ const AboutUsText = styled.p `
     }
 `
 
-const AboutUs = (props) => {
+const AboutUs = (props: Language) => {
     const aboutUs = aboutUsText.map((content, index) => {
         const values = content[props.language]
         if(index === 0) {

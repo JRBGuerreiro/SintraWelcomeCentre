@@ -1,6 +1,6 @@
 import LandingPage from "./components/LandingPage";
 import ReactGa from "react-ga"
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 const App = () => {
     useEffect(() => {

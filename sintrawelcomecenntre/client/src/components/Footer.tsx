@@ -8,6 +8,7 @@ import { titles } from "../utility/text/titles";
 import ReactGa from "react-ga"
 import { Link } from 'react-router-dom';
 import { footerTranslationText } from "../utility/text/footer";
+import { Language } from "../utility/types/types";
 
 const FooterSection = styled.section`
     width: 100vw;
@@ -18,12 +19,6 @@ const FooterSection = styled.section`
     position: relative;
     padding: 25px 0;
 `
-
-const FooterTopInfo = styled.div`
-    display: flex;
-    witdth: 100vw;
-`
-
 const IconWrapper = styled.div`
     width: 30px;
     height: 30px;
@@ -175,8 +170,9 @@ const ComplaintBook = styled.div`
         background-repeat: no-repeat;
     }
 `
+type FooterProps = Language
 
-const Footer = ({ language }) => {
+const Footer = (props: FooterProps) => {
 
     const onClickFb = () => {
         ReactGa.event({
@@ -213,10 +209,7 @@ const Footer = ({ language }) => {
 
         window.open('https://api.whatsapp.com/send?phone=351932086001')
     }
-
-    const mouseOver = (element) => {
-        element.setAttribute('src', '')
-    }
+    
     return (
         <FooterSection>
             <StoreInfo>
@@ -234,7 +227,7 @@ const Footer = ({ language }) => {
                 </StoreInfoContainer>
             </StoreInfo>
             <PhoneDisclaimer>
-                <span style={{fontSize:"12pt"}}>&#42;</span>{footerTranslationText[language].disclaimer}
+                <span style={{fontSize:"12pt"}}>&#42;</span>{footerTranslationText[props.language].disclaimer}
             </PhoneDisclaimer>
             <Copyright>
                 <p className="copyrightText" style={{color:'#3fda45', fontFamily:'"Raleway", sans-serif'}}>Sintra Welcome Centre
@@ -243,7 +236,7 @@ const Footer = ({ language }) => {
             </Copyright>
             <FooterBottomAreaWrapper>
                 <DevelopedBy href="https://meetjorge.netlify.app/#/">Developed by JG</DevelopedBy>
-                <PrivacyPolicyBtn to={"/privacypolicy"}>{titles[language].privacyPolicy}</PrivacyPolicyBtn>
+                <PrivacyPolicyBtn to={"/privacypolicy"}>{titles[props.language].privacyPolicy}</PrivacyPolicyBtn>
                 <ComplaintBook onClick={() => window.open('https://www.livroreclamacoes.pt')}/>
             </FooterBottomAreaWrapper>
             <Separator/>
