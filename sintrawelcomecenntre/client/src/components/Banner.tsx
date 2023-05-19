@@ -45,7 +45,10 @@ const BannerParagraph = styled.p`
         white-space: normal;
     }
 `
-const Banner = (props: Language) => {
+
+type BannerProps = { language: Language }
+
+const Banner = (props: BannerProps) => {
 
     return(
         <BannerWrapper>

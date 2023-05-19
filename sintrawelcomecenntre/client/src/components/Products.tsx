@@ -7,6 +7,7 @@ import Banner from "./Banner";
 import AboutUs from "./AboutUs";
 import { titles } from "../utility/text/titles";
 import FlipCard from "./FlipCard";
+import { Language } from "../utility/types/types";
 
 
 const ProductsWhyContent = styled.div`
@@ -38,16 +39,14 @@ const ProductsWhyContentWrapper = styled.div`
     background-color: #333;
     border-radius: 3px;
     margin: 10px 10px 0 10px;
-    padding: 20px 10px 10px 10px;
-    
+    padding: 20px 10px 10px 10px;   
 `
 
-const Products = (props) => {
-    const tickleLocalStorageAndShowModal = () => {
-        localStorage.removeItem("valentines")
-        window.scrollBy(0,2)
-    }
+type ProductsProps = {
+    language: Language
+}
 
+const Products = (props: ProductsProps) => {
     return(
         <section className="products">
             <AboutUs 
@@ -77,11 +76,10 @@ const Products = (props) => {
                 {products.map(product => {
                     return <FlipCard
                         title={product[props.language].title}
-                        description={product[props.language].description}
                         image={product.image}
                         language = {props.language}
                         route = {product.route}
-                        disclaimer = {product[props.language].disclaimer}
+                        {...(product[props.language].disclaimer && { disclaimer: product[props.language].disclaimer})}
                     /> 
                 })}
             </div>

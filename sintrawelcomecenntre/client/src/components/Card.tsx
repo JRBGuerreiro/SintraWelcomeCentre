@@ -39,7 +39,7 @@ const CardImageWrapper = styled.div`
     height: 200px;
 `
 
-const CardImage = styled.div`
+const CardImage = styled.div<{image: string}>`
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     height: 200px;
@@ -107,9 +107,9 @@ const Card = (props: CardProps) => {
                 <CardImage image={props.image}/>
             </CardImageWrapper>
             <CardWrapperContent>
-                <CardDescription>{titles[props.language.language].cardTitle}</CardDescription>
+                <CardDescription>{titles[props.language].cardTitle}</CardDescription>
                 <CardTitle>{props.title}</CardTitle>
-                <CardButton to={props.route} state={{lang: props.language}}>{titles[props.language.language].cardButton}</CardButton>
+                <CardButton to={props.route} state={{lang: props.language}}>{titles[props.language].cardButton}</CardButton>
             </CardWrapperContent>
         </CardWrapper>
     )

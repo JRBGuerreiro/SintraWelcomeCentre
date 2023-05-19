@@ -3,18 +3,18 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import styled from 'styled-components';
 
-const Image = styled.div`
+const Image = styled.div<{imageSrc: string}>`
     background-image: url("${props => props.imageSrc}");
     height: 200px;
     background-size: contain;
     background-repeat: no-repeat;
 `
 
-const SwipperGalleryTukTuk = ({imageData}) => {
+type SwipperGalleryTukTukProps = { imageData: Array<string> }
 
-
+const SwipperGalleryTukTuk = (props: SwipperGalleryTukTukProps) => {
  const renderImages = () => {
-    return imageData.map(image => {
+    return props.imageData.map(image => {
         debugger
         return <>
             <Image imageSrc={image}/>

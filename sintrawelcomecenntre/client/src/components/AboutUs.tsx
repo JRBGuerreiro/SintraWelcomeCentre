@@ -80,7 +80,9 @@ const AboutUsText = styled.p `
     }
 `
 
-const AboutUs = (props: Language) => {
+type AboutUsProps = { language: Language }
+
+const AboutUs = (props: AboutUsProps) => {
     const aboutUs = aboutUsText.map((content, index) => {
         const values = content[props.language]
         if(index === 0) {

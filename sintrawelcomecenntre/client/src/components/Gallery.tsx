@@ -4,6 +4,7 @@ import { galleryImages } from '../utility/images/galleryImages';
 import SwipperGallery from './SwipperGallery';
 import { partnersText } from "../utility/text/partnersText";
 import { titles } from '../utility/text/titles';
+import { Language } from '../utility/types/types';
 
 
 const GallerySection = styled.section`
@@ -30,7 +31,7 @@ const GalleryWrapper = styled.div`
     flex-wrap: wrap;
 `
 
-const GalleryImage = styled.div`
+const GalleryImage = styled.div<{imageSrc: string, imageTitle: string}>`
     background-image: ${props => `url('${props.imageSrc}')`};
     min-width: 250px;
     height: 250px;
@@ -99,8 +100,8 @@ const PartnerShipTitle = styled.h3`
     font-weight: 200;
 `
 
-const PartnerShipImage = styled.div`
-    background-image: ${props => `url('${props.imageSrc}')`};
+const PartnerShipImage = styled.div<{imageSrc:string}>`
+    background-image: ${({imageSrc}) => `url('${imageSrc}')`};
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -177,11 +178,11 @@ const renderImages = () => {
     })
 }
 
+type GalleryProps = { language: Language };
 
-
-const Gallery = ({language}) => {
+const Gallery = (props: GalleryProps) => {
     const partnerTitle = partnersText.map((text) => {
-        return text[language].title
+        return text[props.language].title
     })
 
     const partnerImages = partnersImagesArray.map((image) => {
@@ -190,7 +191,7 @@ const Gallery = ({language}) => {
     return(
     
         <GallerySection id="places">
-            <GalleryTitle>{titles[language].placesNoMiss}</GalleryTitle>
+            <GalleryTitle>{titles[props.language].placesNoMiss}</GalleryTitle>
             {isMobile() ? (
                 <SwipperGallery imageData={galleryImages}/>
             ) : (

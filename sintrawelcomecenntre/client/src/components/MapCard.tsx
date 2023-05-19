@@ -50,7 +50,7 @@ const MapCardImageWrapper = styled.div`
     height: 200px;
 `
 
-const MapCardImage = styled.div`
+const MapCardImage = styled.div<{image: string}>`
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     height: 200px;
@@ -89,7 +89,7 @@ const MapFlag = styled.div`
     justify-content: space-around;
 `
 let file;
-const chooseFile = (monumentLang) => {
+const chooseFile = (monumentLang: string) => {
     switch (monumentLang) {
         case "pena_en":
             return pena_en
@@ -116,20 +116,26 @@ const chooseFile = (monumentLang) => {
     }
 }
 
-const MapCard = ({ image, title, monument }) => {
+type MapCardProps = {
+    image: string,
+    title: string,
+    monument: string
+}
+
+const MapCard = (props: MapCardProps) => {
     return(
         <MapCardWrapper>
             <MapCardImageWrapper>
-                <MapCardImage image={image}/>
+                <MapCardImage image={props.image}/>
             </MapCardImageWrapper>
             <MapCardWrapperContent>
-                <MapCardTitle>{title}</MapCardTitle>
+                <MapCardTitle>{props.title}</MapCardTitle>
                 <MapCardTitle2>Download</MapCardTitle2>
                 <MapFlag>
-                    <a href={chooseFile(`${monument}_en`)} download>
+                    <a href={chooseFile(`${props.monument}_en`)} download>
                         <img style={{height: "20px", width:"30px"}} src={"../images/Flags/united-kingdom.png"}/>
                     </a>
-                    <a href={chooseFile(`${monument}_pt`)} download>
+                    <a href={chooseFile(`${props.monument}_pt`)} download>
                         <img style={{height: "20px", width:"30px"}} src={"../images/Flags/portugal-flag-small.png"}/>
                     </a>
                 </MapFlag>

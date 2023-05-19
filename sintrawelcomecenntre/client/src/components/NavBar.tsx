@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { NavBarData } from "./NavBarData";
+import { NavBarData } from "../utility/text/NavBarData";
 import {HashLink} from 'react-router-hash-link';
 import $ from 'jquery';
 import jqueryDdslick from "ddslick/src/jquery.ddslick";
 import styled from "styled-components";
+import { Language } from "../utility/types/types";
 
 const Dropdown = styled.select`
     width: 50px;
@@ -63,16 +64,23 @@ const SelectBox = ({onSelect}) => {
     )
 }
 
-const NavBar = (props) => {
+type NavBarProps = { 
+    language: Language
+    changeLang: (lang: Language) => void
+ }
+
+const NavBar = (props: NavBarProps) => {
     const [menuOpen, setMenuOpen] = useState(false);
 
-    function handleChangeLang(lang) {
+    const handleChangeLang = (lang: Language) => {
         props.changeLang(lang)
     }
 
     useEffect(() => {
 
         const menuBtn = document.getElementById("menuButton")
+
+        if(!menuBtn) return console.error("No menu button found")
 
         const toggleButtonStyle = () => menuOpen ? setMenuOpen(false) : setMenuOpen(true)
 
@@ -92,6 +100,8 @@ const NavBar = (props) => {
 
         if(window.innerWidth <= 767) {
             const nav = document.getElementById("nav");
+            
+             if(!nav) return console.error("No menu found");
 
             nav && menuOpen ? nav.style.transform = 'translateX(0vw)' : nav.style.transform = 'translateX(-100vw)'
             menuOpen ? menuBtn.classList.add('open') : menuBtn.classList.remove('open')
@@ -108,7 +118,7 @@ const NavBar = (props) => {
    
 
     return(
-        <HeroNav class="hero_nav" id="nav">
+        <HeroNav className="hero_nav" id="nav">
             <ul className="hero_nav_ul">
                 {NavBarData.map((item, i) => {
                     return (

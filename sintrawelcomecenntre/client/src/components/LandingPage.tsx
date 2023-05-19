@@ -6,12 +6,13 @@ import Form from "./Form";
 import Gallery from "./Gallery";
 import Maps from "./Maps";
 import CookiePolicy from "./CookiePolicy";
+import { Language } from "../utility/types/types";
 
 const LandingPage = () => {
 
-    const [lang, setLang] = useState<string>("en");
+    const [lang, setLang] = useState<Language>("en");
     const [cookie, setCookie] = useState<string>();
-    const changeLanguage = (language: string) => setLang(language)
+    const changeLanguage = (language: Language) => setLang(language)
 
     useEffect(() => {
       const hasSignedCookiePolicy = localStorage.getItem("cookie_policy") || "false";

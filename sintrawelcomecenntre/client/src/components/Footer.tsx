@@ -170,7 +170,7 @@ const ComplaintBook = styled.div`
         background-repeat: no-repeat;
     }
 `
-type FooterProps = Language
+type FooterProps = { language: Language }
 
 const Footer = (props: FooterProps) => {
 

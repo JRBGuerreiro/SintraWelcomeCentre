@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { maps } from "../utility/text/maps";
 import { titles } from "../utility/text/titles";
 import MapCard from "./MapCard";
+import { Language } from "../utility/types/types";
 
 const MapsSection = styled.section`
     display: flex;
@@ -36,15 +37,17 @@ const MapsWrapper = styled.div`
     }
 `
 
-const Maps = ({ language }) => {
+type MapsProps = { language: Language }
+
+const Maps = (props: MapsProps) => {
     return(
         <MapsSection id="maps">
-            <MapsTitle>{titles[language].maps}</MapsTitle>
+            <MapsTitle>{titles[props.language].maps}</MapsTitle>
             <MapsWrapper>
                 {maps.map(map => {
                     return <MapCard
                         image={map.image}
-                        title={map[language].title}
+                        title={map[props.language].title}
                         monument={map.monument}
                     />
                 })}

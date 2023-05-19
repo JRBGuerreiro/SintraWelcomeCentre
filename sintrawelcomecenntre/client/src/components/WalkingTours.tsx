@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import { disclaimer } from "../utility/text/disclaimer";
+import { isTypeOfLang } from "../utility/types/types";
 
 const TukTukSection = styled.section`
     display: flex;
@@ -63,8 +64,8 @@ const WalkingTours = () => {
                 <div style={{width:'100vw', height:'100vh', backgroundColor:'black', display:'flex', justifyContent:'center', alignItems:'center'}}>
                 <div style={{ display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
                   <img style={{width:'350px'}} className="logo" src="../images/logo.png" alt="logo"></img>
-                  <h1 style={{color: 'white', fontFamily:'"Raleway", sans-serif', textAlign:'center'}}>{disclaimer[lang].Coming}</h1>
-                  <p style={{color: 'white', fontFamily:'"Raleway", sans-serif', textAlign:'center', width: '80%'}}>{disclaimer[lang].description}</p>
+                  <h1 style={{color: 'white', fontFamily:'"Raleway", sans-serif', textAlign:'center'}}>{disclaimer[isTypeOfLang(lang) ? lang : 'en'].Coming}</h1>
+                  <p style={{color: 'white', fontFamily:'"Raleway", sans-serif', textAlign:'center', width: '80%'}}>{disclaimer[isTypeOfLang(lang) ? lang : 'en'].description}</p>
                 </div>
               </div>
             </TukTukSection>

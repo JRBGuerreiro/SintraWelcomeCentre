@@ -120,7 +120,7 @@ const CardImageWrapper = styled.div`
     height: 250px;
 `
 
-const CardImage = styled.div`
+const CardImage = styled.div<{ image: string }>`
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     height: 250px;
@@ -175,7 +175,7 @@ type FlipCardProps = {
     title: string,
     image: string,
     language: Language,
-    disclaimer: string,
+    disclaimer?: string,
     route: string
 }
 
@@ -199,7 +199,7 @@ const FlipCard = (props: FlipCardProps) => {
                         <CardImage image={props.image}/>
                     </CardImageWrapper>
                     <CardWrapperContent>
-                        <CardDescription>{titles[props.language.language].cardTitle}</CardDescription>
+                        <CardDescription>{titles[props.language].cardTitle}</CardDescription>
                         <CardTitle>{props.title}</CardTitle>
                     </CardWrapperContent>
                 </FlipCardFront>
@@ -230,7 +230,7 @@ const FlipCard = (props: FlipCardProps) => {
                             </FlipCardBackIconWrapper>
                         </>
                         :
-                        <CardButton to={props.route} state={{lang: props.language.language}}>{titles[props.language.language].cardButton}</CardButton>
+                        <CardButton to={props.route} state={{lang: props.language}}>{titles[props.language].cardButton}</CardButton>
                     }
                     
                 </FlipCardBack>

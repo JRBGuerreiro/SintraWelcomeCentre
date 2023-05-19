@@ -18,7 +18,7 @@ export type FormValues = {
     textArea: string;
 }
 
-const useForm = () => {
+const useForm = (validate: (values: FormValues) => Record<string, string>) => {
     const [values, setValues] = useState<FormValues>({
         name: "",
         lastName: "",
@@ -26,9 +26,9 @@ const useForm = () => {
         textArea: ""
     })
 
-    const [formErrors, setFormErrors] = useState({})
+    const [formErrors, setFormErrors] = useState<Record<string, string>>({})
 
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (event: any) => {
         const {name, value} = event.target
 
         setValues({
@@ -40,13 +40,13 @@ const useForm = () => {
     const [isSubmitted, setSubmitted] = useState<Submission>({ isSubmitted:  false })
     const [isError, setError] = useState<Error>({ isError: false })
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = (event: any) => {
         event.preventDefault()
         ReactGa.event({
             category:'Form button',
             action: 'Form button button clicked'
         })
-        const errors = validateFormInfo(values)
+        const errors = validate(values)
         setFormErrors(errors)
         
         ///only submit if we have no errors
@@ -83,12 +83,12 @@ const useForm = () => {
         
     }
 
-    let paragraph: HTMLParagraphElement | null = document.querySelector('p');
+    let paragraph: string = '';
 
     if(isSubmitted && paragraph) {
-        paragraph.textContent = 'Message has been sent!'
+        paragraph = 'Message has been sent!'
     } else if (isError && paragraph) {
-        paragraph.textContent = 'There has been an error submitting your message. Please try again'
+        paragraph = 'There has been an error submitting your message. Please try again'
     }
     
     return {handleChange, values, handleSubmit, paragraph, formErrors}

@@ -2,8 +2,11 @@ import React from "react";
 import NavBar from "./NavBar";
 import { titles } from "../utility/text/titles";
 import HamburguerButton from "./HamburguerButton";
+import { Language } from "../utility/types/types";
 
-const HeroSection = (props) => {
+type HeroSectionProps = { language: Language, changeLang: (language: Language) => void };
+
+const HeroSection = (props: HeroSectionProps) => {
 
     return (
         <>

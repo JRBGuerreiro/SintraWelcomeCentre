@@ -48,7 +48,7 @@ const HamburguerButton = () => {
         const hideShowButton = () => {
             const button = document.getElementById('menuButton');
 
-            window.innerWidth > 767 ? button.style.visibility = 'hidden' : button.style.visibility = 'visible'
+            window.innerWidth > 767 ? button!.style.visibility = 'hidden' : button!.style.visibility = 'visible'
         }
 
         hideShowButton();

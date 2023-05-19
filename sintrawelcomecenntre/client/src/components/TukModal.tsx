@@ -6,9 +6,10 @@ import { GiDuration } from "react-icons/gi";
 import { FiThumbsUp } from 'react-icons/fi';
 import SwipperGalleryTukTuk from "./SwipperGalleryTukTuk";
 import { tuktukmodaltext } from "../utility/text/tuktukmodaltext";
+import { Language } from "../utility/types/types";
 
 
-const Animation = styled.div `
+const Animation = styled.div<{divOpacity: boolean, animate: boolean}> `
     opacity: ${({divOpacity}) => (divOpacity ? "1" : "0")};
     transform: ${({ animate }) => (animate ? "translateY(0vh)" : "translateY(-100vh)")};
     transition: all 0.5s;
@@ -87,32 +88,40 @@ const Separator = styled.div`
     opacity: 0.3;
 `
 
-const TukModal = ({data, showModal, imageData, close, language}) => {
-debugger
+type TukModalProps = {
+    data: Array<string>,
+    showModal: boolean,
+    imageData: Array<string>,
+    close: () => void,
+    language: Language
+}
+
+const TukModal = (props: TukModalProps) => {
+    
     return(
-        <Animation animate={showModal} divOpacity={showModal}>
+        <Animation animate={props.showModal} divOpacity={props.showModal}>
             <Modal>
-                <ModalTitle>{ data[0] }</ModalTitle>
+                <ModalTitle>{ props.data[0] }</ModalTitle>
                 <BsXCircle onClick={() => close()} style={{position: "absolute", top: '8px', right: '8px', color:'#333', width:'30px', height:'30px', cursor:'pointer'}}/>
-                <SwipperGalleryTukTuk imageData={ imageData } />
+                <SwipperGalleryTukTuk imageData={ props.imageData } />
                 <Separator/>
-                <DescriptionTitle>{tuktukmodaltext[language].title}</DescriptionTitle>
+                <DescriptionTitle>{tuktukmodaltext[props.language].title}</DescriptionTitle>
                 <TourDescription>
-                    {data[2]}
+                    {props.data[2]}
                 </TourDescription>
                 <Separator/>
                 <ModalIconsWrapper>
                     <IconsContainer>
-                        <FiThumbsUp style={{color:"#333", width:'22px', height:'22px'}}/><IconsText>{tuktukmodaltext[language].free}</IconsText>
+                        <FiThumbsUp style={{color:"#333", width:'22px', height:'22px'}}/><IconsText>{tuktukmodaltext[props.language].free}</IconsText>
                     </IconsContainer>
                     <IconsContainer>
-                        <BsPerson style={{color:"#333", width:'22px', height:'22px'}}/><IconsText>{tuktukmodaltext[language].live}</IconsText>
+                        <BsPerson style={{color:"#333", width:'22px', height:'22px'}}/><IconsText>{tuktukmodaltext[props.language].live}</IconsText>
                     </IconsContainer>
                     <IconsContainer>
-                        <RiMentalHealthLine style={{color:"#333", width:'22px', height:'22px'}}/><IconsText>{tuktukmodaltext[language].covid}</IconsText>
+                        <RiMentalHealthLine style={{color:"#333", width:'22px', height:'22px'}}/><IconsText>{tuktukmodaltext[props.language].covid}</IconsText>
                     </IconsContainer>
                     <IconsContainer>
-                        <GiDuration style={{color:"#333", width:'22px', height:'22px'}}/><IconsText>{data[1]}</IconsText>
+                        <GiDuration style={{color:"#333", width:'22px', height:'22px'}}/><IconsText>{props.data[1]}</IconsText>
                     </IconsContainer>
                 </ModalIconsWrapper>
             </Modal>

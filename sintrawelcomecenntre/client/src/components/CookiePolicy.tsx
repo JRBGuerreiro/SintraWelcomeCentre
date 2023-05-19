@@ -56,7 +56,7 @@ const CookiePolicy = (props: CookiePolicyProps) => {
         <CookiePolicyWrapper>
             <CookiePolicyContainerWrapper>
                 <CookiePolicyContainer>
-                    {cookiePolicy[props.language.language]}
+                    {cookiePolicy[props.language]}
                 </CookiePolicyContainer>
                 <CookieButton onClick={() => props.setLocalStorage()}>OK</CookieButton>
             </CookiePolicyContainerWrapper>
