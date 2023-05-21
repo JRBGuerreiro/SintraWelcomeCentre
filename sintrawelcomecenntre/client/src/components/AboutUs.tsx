@@ -2,6 +2,8 @@ import React from "react";
 import { aboutUsText } from "../utility/text/aboutUs";
 import styled from "styled-components";
 import { titles } from "../utility/text/titles";
+import { Language } from "../utility/types/types";
+import { Element } from 'react-scroll'
 
 const AboutUsSection = styled.section `
     width:100vw;
@@ -79,7 +81,9 @@ const AboutUsText = styled.p `
     }
 `
 
-const AboutUs = (props) => {
+type AboutUsProps = { language: Language }
+
+const AboutUs = (props: AboutUsProps) => {
     const aboutUs = aboutUsText.map((content, index) => {
         const values = content[props.language]
         if(index === 0) {
@@ -93,13 +97,13 @@ const AboutUs = (props) => {
     })
 
     return (
-        <>
+        <Element name="aboutUs">
             <AboutUsSection id="aboutus">
                 <AboutUsHeader>{titles[props.language].aboutUs}</AboutUsHeader>
                 <AboutUsImage />
                 {aboutUs}
             </AboutUsSection>
-        </>
+        </Element>
     )
 }
 

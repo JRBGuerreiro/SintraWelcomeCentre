@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import pena_en from "../pdfs/Pena_ENG.pdf"
-import pena_pt from "../pdfs/Pena_PT.pdf"
-import mouros_en from "../pdfs/Mouros_ENG.pdf"
-import mouros_pt from "../pdfs/Mouros_PT.pdf"
-import vila_en from "../pdfs/Sintra_ENG.pdf"
-import vila_pt from "../pdfs/Sintra_PT.pdf"
-import biester_pt from "../pdfs/Palacio_Biester_PT.pdf"
-import biester_en from "../pdfs/Palacio_Biester_EN.pdf"
-import monserrate from "../pdfs/Monserrate_ENG.pdf"
+
+const pena_en = "../pdfs/Pena_ENG.pdf"
+const pena_pt = "../pdfs/Pena_PT.pdf"
+const mouros_en = "../pdfs/Mouros_ENG.pdf"
+const mouros_pt = "../pdfs/Mouros_PT.pdf"
+const vila_en = "../pdfs/Sintra_ENG.pdf"
+const vila_pt = "../pdfs/Sintra_PT.pdf"
+const biester_pt = "../pdfs/Palacio_Biester_PT.pdf"
+const biester_en = "../pdfs/Palacio_Biester_EN.pdf"
+const monserrate = "../pdfs/Monserrate_ENG.pdf"
 
 const MapCardWrapper = styled.div`
     display: flex;
@@ -50,7 +51,7 @@ const MapCardImageWrapper = styled.div`
     height: 200px;
 `
 
-const MapCardImage = styled.div`
+const MapCardImage = styled.div<{image: string}>`
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     height: 200px;
@@ -88,8 +89,8 @@ const MapFlag = styled.div`
     display: flex;
     justify-content: space-around;
 `
-let file;
-const chooseFile = (monumentLang) => {
+
+const chooseFile = (monumentLang: string) => {
     switch (monumentLang) {
         case "pena_en":
             return pena_en
@@ -116,20 +117,26 @@ const chooseFile = (monumentLang) => {
     }
 }
 
-const MapCard = ({ image, title, monument }) => {
+type MapCardProps = {
+    image: string,
+    title: string,
+    monument: string
+}
+
+const MapCard = (props: MapCardProps) => {
     return(
         <MapCardWrapper>
             <MapCardImageWrapper>
-                <MapCardImage image={image}/>
+                <MapCardImage image={props.image}/>
             </MapCardImageWrapper>
             <MapCardWrapperContent>
-                <MapCardTitle>{title}</MapCardTitle>
+                <MapCardTitle>{props.title}</MapCardTitle>
                 <MapCardTitle2>Download</MapCardTitle2>
                 <MapFlag>
-                    <a href={chooseFile(`${monument}_en`)} download>
+                    <a href={chooseFile(`${props.monument}_en`)} download>
                         <img style={{height: "20px", width:"30px"}} src={"../images/Flags/united-kingdom.png"}/>
                     </a>
-                    <a href={chooseFile(`${monument}_pt`)} download>
+                    <a href={chooseFile(`${props.monument}_pt`)} download>
                         <img style={{height: "20px", width:"30px"}} src={"../images/Flags/portugal-flag-small.png"}/>
                     </a>
                 </MapFlag>

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import { bannerText } from '../utility/text/banner';
+import { Language } from '../utility/types/types';
 
 const BannerWrapper = styled.div`
     width: 100%;
@@ -44,18 +45,21 @@ const BannerParagraph = styled.p`
         white-space: normal;
     }
 `
-const Banner = ({language}) => {
+
+type BannerProps = { language: Language }
+
+const Banner = (props: BannerProps) => {
 
     return(
         <BannerWrapper>
             <BannerTitle>
                 {bannerText.map(entry => {
-                    return entry[language].title
+                    return entry[props.language].title
                 })}
              </BannerTitle>
             <BannerParagraph>
                 {bannerText.map(entry => {
-                    return entry[language].text
+                    return entry[props.language].text
                 })}
             </BannerParagraph>
         </BannerWrapper>

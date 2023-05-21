@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { AiOutlineClockCircle, AiOutlineHome } from 'react-icons/ai';
-import { tuktukTours } from "../utility/text/tuktuktours";
-import { RiMoneyEuroCircleLine } from 'react-icons/ri';
-import Footer from "./Footer";
+import { tuktukTours } from "../../utility/text/tuktuktours";
+import Footer from "../../components/Footer";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import TukModal from "./TukModal";
-import { tuktukmodaltext } from "../utility/text/tuktukmodaltext";
+import { tuktukmodaltext } from "../../utility/text/tuktukmodaltext";
+import { Language, isTypeOfLang } from "../../utility/types/types";
 
 const TukTukSection = styled.section`
     display: flex;
@@ -52,7 +52,7 @@ const ProductWrapper = styled.div`
     width: 80%;
     border: 1px solid #e1e0e0;
 `
-const ProductImage = styled.div`
+const ProductImage = styled.div<{image: string}>`
     background-image: ${props => `url('${props.image}')`};
     background-size: cover;
     min-height: 300px;
@@ -122,8 +122,8 @@ const Disclaimer = styled.h4`
     }
 `
 
-export const convertMinutesToHours = (timeinMins) => {
-    let returnTime;
+export const convertMinutesToHours = (timeinMins: number | string) => {
+    let returnTime: string = '';
     if (typeof timeinMins === "number"){
         let hours = (timeinMins / 60);
         let rhours = Math.floor(hours);
@@ -153,7 +153,7 @@ export const convertMinutesToHours = (timeinMins) => {
     return returnTime;
 }
 
-const renderProductsContent = (lang, show) => {
+const renderProductsContent = (lang: Language, show: (title: string, time: string, data: string[], description: string) => void) => {
     return tuktukTours.map((tour) => {
         return <>
         <ProductWrapperContainer>
@@ -174,12 +174,12 @@ const renderProductsContent = (lang, show) => {
 
 const TukTukTours = () => {
     const [show, setShow] = useState(false)
-    const [data, setData] = useState([])
-    const [imageData, setImageData] = useState([])
+    const [data, setData] = useState<string[]>()
+    const [imageData, setImageData] = useState<string[]>()
     const location = useLocation();
     const { lang } = location.state
 
-    const setModalToShow = (title, duration, imgData, description) => {
+    const setModalToShow = (title: string, duration: string, imgData: string[], description: string) => {
         let dataModal = [title, duration, description]
         setImageData(imgData)
         setData(dataModal)
@@ -208,20 +208,20 @@ const TukTukTours = () => {
                     <ProductsTitle>TukTuk Tours</ProductsTitle>
                 </ProductsTitleWrapper>
                 <DisclaimerWrapper>
-                    <Disclaimer>{tuktukmodaltext[lang].disclaimer}</Disclaimer>
+                    <Disclaimer>{tuktukmodaltext[isTypeOfLang(lang) ? lang : 'en'].disclaimer}</Disclaimer>
                 </DisclaimerWrapper>
                 <WrapperOfProducts>
-                    {renderProductsContent(lang, setModalToShow)}
+                    {renderProductsContent(isTypeOfLang(lang) ? lang : 'en', setModalToShow)}
                 </WrapperOfProducts>
             </TukTukSection>
             <Footer
                 language = { lang }
             />
             <TukModal
-                data = { data }
+                data = { data! }
                 showModal = {show}
-                imageData = { imageData }
-                close = {closeModal}
+                imageData = { imageData! }
+                closeModal = {closeModal}
                 language = { lang }
             />
         </>

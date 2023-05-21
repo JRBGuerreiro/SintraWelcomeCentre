@@ -6,6 +6,7 @@ import {GiSandsOfTime} from 'react-icons/gi';
 import {IoLogoWhatsapp} from 'react-icons/io';
 import ReactGa from "react-ga"
 import { Link } from 'react-router-dom';
+import { Language } from '../utility/types/types';
 
 const FlipCardInner = styled.div`
     position: relative;
@@ -119,7 +120,7 @@ const CardImageWrapper = styled.div`
     height: 250px;
 `
 
-const CardImage = styled.div`
+const CardImage = styled.div<{ image: string }>`
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     height: 250px;
@@ -170,7 +171,15 @@ const CardButton = styled(Link)`
     }
 `
 
-const FlipCard = ({title, image, language, disclaimer, route}) => {
+type FlipCardProps = {
+    title: string,
+    image: string,
+    language: Language,
+    disclaimer?: string,
+    route: string
+}
+
+const FlipCard = (props: FlipCardProps) => {
 
     const onClickWhatsapp = () => {
         ReactGa.event({
@@ -187,15 +196,15 @@ const FlipCard = ({title, image, language, disclaimer, route}) => {
             <FlipCardInner>
                 <FlipCardFront>
                     <CardImageWrapper>
-                        <CardImage image={image}/>
+                        <CardImage image={props.image}/>
                     </CardImageWrapper>
                     <CardWrapperContent>
-                        <CardDescription>{titles[language].cardTitle}</CardDescription>
-                        <CardTitle>{title}</CardTitle>
+                        <CardDescription>{titles[props.language].cardTitle}</CardDescription>
+                        <CardTitle>{props.title}</CardTitle>
                     </CardWrapperContent>
                 </FlipCardFront>
                 <FlipCardBack>
-                    {disclaimer ? 
+                    {props.disclaimer ? 
                         <>
                             <FlipCardBackIconWrapper>
                                 <GrSchedule/>
@@ -206,7 +215,7 @@ const FlipCard = ({title, image, language, disclaimer, route}) => {
                                 <p style={{fontSize: "11pt", margin:"5px 0 2px 5px"}}>1h/1h30m</p>
                             </FlipCardBackIconWrapper>
                             <FlipCardBackText>
-                                {disclaimer}
+                                {props.disclaimer}
                             </FlipCardBackText>
                             <FlipCardBackTextCentered>
                                 Contact us:
@@ -221,7 +230,7 @@ const FlipCard = ({title, image, language, disclaimer, route}) => {
                             </FlipCardBackIconWrapper>
                         </>
                         :
-                        <CardButton to={route} state={{lang: language}}>{titles[language].cardButton}</CardButton>
+                        <CardButton to={props.route} state={{lang: props.language}}>{titles[props.language].cardButton}</CardButton>
                     }
                     
                 </FlipCardBack>

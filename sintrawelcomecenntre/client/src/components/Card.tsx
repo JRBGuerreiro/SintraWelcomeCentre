@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import { titles } from '../utility/text/titles';
+import { Language } from '../utility/types/types';
 
 const CardWrapper = styled.div`
     display: flex;
@@ -38,7 +39,7 @@ const CardImageWrapper = styled.div`
     height: 200px;
 `
 
-const CardImage = styled.div`
+const CardImage = styled.div<{image: string}>`
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     height: 200px;
@@ -92,16 +93,23 @@ const CardButton = styled(Link)`
     }
 `
 
-const Card = ({title, image, language, route}) => {
+type CardProps = {
+    title: string,
+    image: string,
+    language: Language,
+    route: string
+}
+
+const Card = (props: CardProps) => {
     return (
         <CardWrapper>
             <CardImageWrapper>
-                <CardImage image={image}/>
+                <CardImage image={props.image}/>
             </CardImageWrapper>
             <CardWrapperContent>
-                <CardDescription>{titles[language].cardTitle}</CardDescription>
-                <CardTitle>{title}</CardTitle>
-                <CardButton to={route} state={{lang: language}}>{titles[language].cardButton}</CardButton>
+                <CardDescription>{titles[props.language].cardTitle}</CardDescription>
+                <CardTitle>{props.title}</CardTitle>
+                <CardButton to={props.route} state={{lang: props.language}}>{titles[props.language].cardButton}</CardButton>
             </CardWrapperContent>
         </CardWrapper>
     )

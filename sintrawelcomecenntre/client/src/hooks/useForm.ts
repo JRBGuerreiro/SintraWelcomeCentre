@@ -1,19 +1,34 @@
 import {useState} from 'react'
 import emailjs from "emailjs-com"
-import validateFormInfo from '../components/validateForm'
+import validateFormInfo from './validateForm';
 import ReactGa from 'react-ga'
 
-const useForm = () => {
-    const [values, setValues] = useState({
+type Submission = {
+    isSubmitted: boolean
+}
+
+type Error = {
+    isError: boolean
+}
+
+export type FormValues = {
+    name: string;
+    lastName: string;
+    email: string;
+    textArea: string;
+}
+
+const useForm = (validate: (values: FormValues) => Record<string, string>) => {
+    const [values, setValues] = useState<FormValues>({
         name: "",
         lastName: "",
         email:"",
         textArea: ""
     })
 
-    const [formErrors, setFormErrors] = useState({})
+    const [formErrors, setFormErrors] = useState<Record<string, string>>({})
 
-    const handleChange = event => {
+    const handleChange = (event: any) => {
         const {name, value} = event.target
 
         setValues({
@@ -22,16 +37,16 @@ const useForm = () => {
         })
     }
 
-    const [isSubmitted, setSubmitted] = useState(false)
-    const [isError, setError] = useState(false)
+    const [isSubmitted, setSubmitted] = useState<Submission>({ isSubmitted:  false })
+    const [isError, setError] = useState<Error>({ isError: false })
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (event: any) => {
         event.preventDefault()
         ReactGa.event({
             category:'Form button',
             action: 'Form button button clicked'
         })
-        const errors = validateFormInfo(values)
+        const errors = validate(values)
         setFormErrors(errors)
         
         ///only submit if we have no errors
@@ -53,12 +68,13 @@ const useForm = () => {
             emailjs
             .send("default_service", "template_1oixrtt", templateParameters, "user_nibGXcWm9DhkdSVEaAZHw")
             .then((result) => {
-                console.log(result)
                 setSubmitted({isSubmitted:true})
-                name.value = ""
-                lastname.value = ""
-                email.value = ""
-                message.value = ""
+                if(name !== null && lastname !== null && email !== null && message !== null) {
+                    name.innerText = ""
+                    lastname.innerText = ""
+                    email.innerText = ""
+                    message.innerText = ""
+                }
             }, (error) => {
                 setError({isError:true})
             })
@@ -66,14 +82,12 @@ const useForm = () => {
         
     }
 
-    let paragraph
+    let paragraph: string = '';
 
-    if(isSubmitted) {
-        paragraph = <p>Message has been sent!</p>
-    } else if (isError) {
-        paragraph = <p>There has been an error submitting your message. Please try again</p>
-    } else {
-        paragraph = null
+    if(isSubmitted && paragraph) {
+        paragraph = 'Message has been sent!'
+    } else if (isError && paragraph) {
+        paragraph = 'There has been an error submitting your message. Please try again'
     }
     
     return {handleChange, values, handleSubmit, paragraph, formErrors}

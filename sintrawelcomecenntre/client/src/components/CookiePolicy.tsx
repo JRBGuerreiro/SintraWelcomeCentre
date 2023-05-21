@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { cookiePolicy } from "../utility/text/cookiePolicy";
+import { Language } from "../utility/types/types";
 
 const CookiePolicyWrapper = styled.div`
     height: 100vh;
@@ -45,7 +46,12 @@ const CookiePolicyContainer = styled.div`
     font-family: 'Raleway', sans-serif;
 `
 
-const CookiePolicy = (props) => {
+type CookiePolicyProps = {
+    language: Language,
+    setLocalStorage: () => void;
+}
+
+const CookiePolicy = (props: CookiePolicyProps) => {
     return(
         <CookiePolicyWrapper>
             <CookiePolicyContainerWrapper>
