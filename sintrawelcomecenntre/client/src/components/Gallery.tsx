@@ -5,6 +5,7 @@ import SwipperGallery from './SwipperGallery';
 import { partnersText } from "../utility/text/partnersText";
 import { titles } from '../utility/text/titles';
 import { Language } from '../utility/types/types';
+import { Element } from 'react-scroll';
 
 
 const GallerySection = styled.section`
@@ -187,26 +188,27 @@ const Gallery = (props: GalleryProps) => {
         return <PartnerShipLink href={image[1]}><PartnerShipImage imageSrc={image[0]}/></PartnerShipLink>
     })
     return(
-    
-        <GallerySection id="places">
-            <GalleryTitle>{titles[props.language].placesNoMiss}</GalleryTitle>
-            {isMobileDevice() ? (
-                <SwipperGallery imageData={galleryImages}/>
-            ) : (
-            <GalleryWrapper id="wrapper"> 
-                <GalleryImageWrapper>
-                    {renderImages()}
-                </GalleryImageWrapper>
-            </GalleryWrapper>
+        <Element name='gallery'>
+            <GallerySection id="places">
+                <GalleryTitle>{titles[props.language].placesNoMiss}</GalleryTitle>
+                {isMobileDevice() ? (
+                    <SwipperGallery imageData={galleryImages}/>
+                ) : (
+                <GalleryWrapper id="wrapper"> 
+                    <GalleryImageWrapper>
+                        {renderImages()}
+                    </GalleryImageWrapper>
+                </GalleryWrapper>
 
-            )}
-            <PartnerShipContainer>
-                <PartnerShipTitle>{partnerTitle}</PartnerShipTitle>
-                <PartnerShipWrapper>
-                    {partnerImages}
-                </PartnerShipWrapper>
-            </PartnerShipContainer>
-        </GallerySection>
+                )}
+                <PartnerShipContainer>
+                    <PartnerShipTitle>{partnerTitle}</PartnerShipTitle>
+                    <PartnerShipWrapper>
+                        {partnerImages}
+                    </PartnerShipWrapper>
+                </PartnerShipContainer>
+            </GallerySection>
+        </Element>
     )
 }
 

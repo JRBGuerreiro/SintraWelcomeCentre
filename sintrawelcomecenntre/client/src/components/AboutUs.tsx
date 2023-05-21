@@ -3,6 +3,7 @@ import { aboutUsText } from "../utility/text/aboutUs";
 import styled from "styled-components";
 import { titles } from "../utility/text/titles";
 import { Language } from "../utility/types/types";
+import { Element } from 'react-scroll'
 
 const AboutUsSection = styled.section `
     width:100vw;
@@ -96,13 +97,13 @@ const AboutUs = (props: AboutUsProps) => {
     })
 
     return (
-        <>
+        <Element name="aboutUs">
             <AboutUsSection id="aboutus">
                 <AboutUsHeader>{titles[props.language].aboutUs}</AboutUsHeader>
                 <AboutUsImage />
                 {aboutUs}
             </AboutUsSection>
-        </>
+        </Element>
     )
 }
 

@@ -4,12 +4,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import TukTukTours from "./components/TukTukTours";
 import BycicleTours from "./components/BicycleTours";
 import WalkingTours from "./components/WalkingTours";
-import AboutUs from "./components/AboutUs";
-import Products from "./components/Products";
-import Gallery from "./components/Gallery";
-import Form from "./components/Form";
-import Maps from "./components/Maps";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+import { Link as ScrollLink } from 'react-scroll'
 
 const rootElement = document.getElementById("root");
 render(
@@ -20,12 +16,12 @@ render(
         <Route path='bycicletours' element={<BycicleTours/>}/>
         <Route path='walkingtours' element={<WalkingTours/>}/>
         <Route path='privacypolicy' element={<PrivacyPolicy/>}/>
-        <Route path='/aboutus' component={AboutUs}/>
-        <Route path='/product' component={Products}/>
-        <Route path='/places' component={Gallery}/>
-        <Route path='/maps' component={Maps} />
-        <Route path='/contact' component={Form}/>
     </Routes>
+    <ScrollLink to="aboutUs" smooth={true} duration={500}/>
+    <ScrollLink to="products" smooth={true} duration={500}/>
+    <ScrollLink to="gallery" smooth={true} duration={500}/>
+    <ScrollLink to="maps" smooth={true} duration={500}/>
+    <ScrollLink to="form" smooth={true} duration={500}/>
   </BrowserRouter>,
   rootElement
 );

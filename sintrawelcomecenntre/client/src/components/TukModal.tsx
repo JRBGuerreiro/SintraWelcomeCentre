@@ -97,6 +97,8 @@ type TukModalProps = {
 }
 
 const TukModal = (props: TukModalProps) => {
+
+    console.log(props)
     
     return(
         <Animation animate={props.showModal} divOpacity={props.showModal}>

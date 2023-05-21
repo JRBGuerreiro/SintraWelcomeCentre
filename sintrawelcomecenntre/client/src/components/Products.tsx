@@ -8,7 +8,7 @@ import AboutUs from "./AboutUs";
 import { titles } from "../utility/text/titles";
 import FlipCard from "./FlipCard";
 import { Language } from "../utility/types/types";
-
+import { Element } from 'react-scroll';
 
 const ProductsWhyContent = styled.div`
     display: flex;
@@ -48,52 +48,44 @@ type ProductsProps = {
 
 const Products = (props: ProductsProps) => {
     return(
-        <section className="products">
-            <AboutUs 
-                language={props.language}
-            />
-            <div className="products_why_us">
-                <h2>{titles[props.language].whyUs}</h2>
-                <ProductsWhyContent>
-                    {valuesText.map((value) => {
-                        return Object.values(value[props.language]).map((valueWLang, index) => {
-                            const imageValue = Object.values(valuesImages)
-                            return <>
-                                <ProductsWhyContentWrapper>
-                                    <ProductsWhyContentImg src={imageValue[index]}/>
-                                    <ProductsWhyContentText>{valueWLang}</ProductsWhyContentText>
-                                </ProductsWhyContentWrapper>
-                            </>
-                        })
+        <Element name="products">
+            <section className="products">
+                <AboutUs 
+                    language={props.language}
+                />
+                <div className="products_why_us">
+                    <h2>{titles[props.language].whyUs}</h2>
+                    <ProductsWhyContent>
+                        {valuesText.map((value) => {
+                            return Object.values(value[props.language]).map((valueWLang, index) => {
+                                const imageValue = Object.values(valuesImages)
+                                return <>
+                                    <ProductsWhyContentWrapper>
+                                        <ProductsWhyContentImg src={imageValue[index]}/>
+                                        <ProductsWhyContentText>{valueWLang}</ProductsWhyContentText>
+                                    </ProductsWhyContentWrapper>
+                                </>
+                            })
+                        })}
+                    </ProductsWhyContent>
+                </div>
+                <Banner
+                    language={props.language}
+                />
+                    <h2 className="products_title" id="product">{titles[props.language].ourProducts}</h2>
+                <div className="products_content">
+                    {products.map(product => {
+                        return <FlipCard
+                            title={product[props.language].title}
+                            image={product.image}
+                            language = {props.language}
+                            route = {product.route}
+                            {...(product[props.language].disclaimer && { disclaimer: product[props.language].disclaimer})}
+                        /> 
                     })}
-                </ProductsWhyContent>
-            </div>
-            <Banner
-                language={props.language}
-            />
-                <h2 className="products_title" id="product">{titles[props.language].ourProducts}</h2>
-            <div className="products_content">
-                {products.map(product => {
-                    return <FlipCard
-                        title={product[props.language].title}
-                        image={product.image}
-                        language = {props.language}
-                        route = {product.route}
-                        {...(product[props.language].disclaimer && { disclaimer: product[props.language].disclaimer})}
-                    /> 
-                })}
-            </div>
-            {/* <EventsWrapper>
-                <EventsAnotherWrapper>
-                    <AiFillHeart style={{color: "#fcfcfc", marginRight: "5px"}}/><EventProduct>{props.language !== "en"
-                        ? "Dia dos Namorados"
-                        :"Valentine's Day"
-                    }
-                    </EventProduct><AiFillHeart style={{color: "#fcfcfc", marginLeft: "5px"}}/>
-                </EventsAnotherWrapper>
-                <EventsP onClick={tickleLocalStorageAndShowModal}>{props.language === "en" ? "Find out more" : "Descubra mais!"}</EventsP>
-            </EventsWrapper> */}
-        </section>
+                </div>
+            </section>
+        </Element>
     )
 }
 

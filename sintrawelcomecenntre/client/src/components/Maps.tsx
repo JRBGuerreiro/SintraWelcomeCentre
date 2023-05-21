@@ -4,6 +4,7 @@ import { maps } from "../utility/text/maps";
 import { titles } from "../utility/text/titles";
 import MapCard from "./MapCard";
 import { Language } from "../utility/types/types";
+import { Element } from 'react-scroll'
 
 const MapsSection = styled.section`
     display: flex;
@@ -41,19 +42,21 @@ type MapsProps = { language: Language }
 
 const Maps = (props: MapsProps) => {
     return(
-        <MapsSection id="maps">
-            <MapsTitle>{titles[props.language].maps}</MapsTitle>
-            <MapsWrapper>
-                {maps.map(map => {
-                    return <MapCard
-                        image={map.image}
-                        title={map[props.language].title}
-                        monument={map.monument}
-                    />
-                })}
-            </MapsWrapper>
-            
-        </MapsSection>
+        <Element name="maps">
+            <MapsSection id="maps">
+                <MapsTitle>{titles[props.language].maps}</MapsTitle>
+                <MapsWrapper>
+                    {maps.map(map => {
+                        return <MapCard
+                            image={map.image}
+                            title={map[props.language].title}
+                            monument={map.monument}
+                        />
+                    })}
+                </MapsWrapper>
+                
+            </MapsSection>
+        </Element>
     )
 }
 
