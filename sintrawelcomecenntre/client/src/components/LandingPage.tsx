@@ -24,7 +24,6 @@ const LandingPage = () => {
     }, [])
 
     const setCookieFromComponent = () => {
-      debugger;
       localStorage.setItem("cookie_policy", "true");
       setCookie("true");
     }

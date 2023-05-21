@@ -3,13 +3,7 @@ import { NavBarData } from "../utility/text/NavBarData";
 import {HashLink} from 'react-router-hash-link';
 import styled from "styled-components";
 import { Language } from "../utility/types/types";
-import Select, { OptionProps, MultiValue, SingleValue, ActionMeta } from 'react-select';
-import { valuesText } from "../utility/text/valuesText";
-
-const Dropdown = styled.select`
-    width: 50px;
-    height: 10px;
-`
+import Select, { SingleValue } from 'react-select';
 
 const HeroNav = styled.nav`
     position: fixed;

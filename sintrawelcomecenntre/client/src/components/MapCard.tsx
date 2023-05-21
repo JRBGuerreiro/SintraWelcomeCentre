@@ -89,7 +89,7 @@ const MapFlag = styled.div`
     display: flex;
     justify-content: space-around;
 `
-let file;
+
 const chooseFile = (monumentLang: string) => {
     switch (monumentLang) {
         case "pena_en":

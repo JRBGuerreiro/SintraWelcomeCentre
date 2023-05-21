@@ -14,7 +14,6 @@ type SwipperGalleryTukTukProps = { imageData: Array<string> }
 const SwipperGalleryTukTuk = (props: SwipperGalleryTukTukProps) => {
  const renderImages = () => {
     return props.imageData.map(image => {
-        debugger
         return <>
             <Image imageSrc={image}/>
         </>

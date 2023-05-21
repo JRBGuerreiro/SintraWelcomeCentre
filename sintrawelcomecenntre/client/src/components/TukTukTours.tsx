@@ -155,7 +155,6 @@ export const convertMinutesToHours = (timeinMins: number | string) => {
 
 const renderProductsContent = (lang: Language, show: (title: string, time: string, data: string[], description: string) => void) => {
     return tuktukTours.map((tour) => {
-        console.log(tour)
         return <>
         <ProductWrapperContainer>
             <ProductWrapper>

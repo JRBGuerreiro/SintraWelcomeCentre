@@ -97,10 +97,9 @@ type TukModalProps = {
 }
 
 const TukModal = (props: TukModalProps) => {
-
-    console.log(props)
-    
     return(
+        <>
+        { props.data &&
         <Animation animate={props.showModal} divOpacity={props.showModal}>
             <Modal>
                 <ModalTitle>{ props.data[0] }</ModalTitle>
@@ -128,6 +127,8 @@ const TukModal = (props: TukModalProps) => {
                 </ModalIconsWrapper>
             </Modal>
         </Animation>
+    }
+    </>
     )
 }
 
