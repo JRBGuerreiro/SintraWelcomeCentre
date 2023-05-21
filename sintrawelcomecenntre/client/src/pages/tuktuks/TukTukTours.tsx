@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { AiOutlineClockCircle, AiOutlineHome } from 'react-icons/ai';
-import { tuktukTours } from "../utility/text/tuktuktours";
-import Footer from "./Footer";
+import { tuktukTours } from "../../utility/text/tuktuktours";
+import Footer from "../../components/Footer";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import TukModal from "./TukModal";
-import { tuktukmodaltext } from "../utility/text/tuktukmodaltext";
-import { Language, isTypeOfLang } from "../utility/types/types";
+import { tuktukmodaltext } from "../../utility/text/tuktukmodaltext";
+import { Language, isTypeOfLang } from "../../utility/types/types";
 
 const TukTukSection = styled.section`
     display: flex;

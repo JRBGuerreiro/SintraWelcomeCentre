@@ -1,9 +1,9 @@
 import { render } from "react-dom";
 import App from "./App";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import TukTukTours from "./components/TukTukTours";
-import BycicleTours from "./components/BicycleTours";
-import WalkingTours from "./components/WalkingTours";
+import TukTukTours from "./pages/tuktuks/TukTukTours";
+import BycicleTours from "./pages/e-bikes/BicycleTours";
+import WalkingTours from "./pages/walking-tours/WalkingTours";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import { Link as ScrollLink } from 'react-scroll'
 

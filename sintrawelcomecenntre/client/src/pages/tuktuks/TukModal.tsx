@@ -5,8 +5,8 @@ import { RiMentalHealthLine } from "react-icons/ri";
 import { GiDuration } from "react-icons/gi";
 import { FiThumbsUp } from 'react-icons/fi';
 import SwipperGalleryTukTuk from "./SwipperGalleryTukTuk";
-import { tuktukmodaltext } from "../utility/text/tuktukmodaltext";
-import { Language } from "../utility/types/types";
+import { tuktukmodaltext } from "../../utility/text/tuktukmodaltext";
+import { Language } from "../../utility/types/types";
 
 
 const Animation = styled.div<{divOpacity: boolean, animate: boolean}> `

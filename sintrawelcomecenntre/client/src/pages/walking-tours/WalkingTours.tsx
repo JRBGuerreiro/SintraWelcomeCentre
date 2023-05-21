@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { AiOutlineHome } from 'react-icons/ai';
-import Footer from "./Footer";
+import Footer from "../../components/Footer";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
-import { disclaimer } from "../utility/text/disclaimer";
-import { isTypeOfLang } from "../utility/types/types";
+import { disclaimer } from "../../utility/text/disclaimer";
+import { isTypeOfLang } from "../../utility/types/types";
 
 const TukTukSection = styled.section`
     display: flex;
