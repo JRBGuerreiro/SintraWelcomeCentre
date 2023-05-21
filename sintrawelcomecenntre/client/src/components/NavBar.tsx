@@ -105,7 +105,6 @@ const NavBar = (props: NavBarProps) => {
     const handleChange = (
         newValue: SingleValue<CustomOptions>
     ) => {
-        console.log(newValue)
             setSelectedOption(newValue as CustomOptions)
             handleChangeLang(newValue && (newValue.value === 'en' || newValue.value === 'pt') ? newValue.value  : 'en')
     };

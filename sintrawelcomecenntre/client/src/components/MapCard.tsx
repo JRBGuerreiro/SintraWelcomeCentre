@@ -124,7 +124,6 @@ type MapCardProps = {
 }
 
 const MapCard = (props: MapCardProps) => {
-    console.log(props)
     return(
         <MapCardWrapper>
             <MapCardImageWrapper>

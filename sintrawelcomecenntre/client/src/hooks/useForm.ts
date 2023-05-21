@@ -68,7 +68,6 @@ const useForm = (validate: (values: FormValues) => Record<string, string>) => {
             emailjs
             .send("default_service", "template_1oixrtt", templateParameters, "user_nibGXcWm9DhkdSVEaAZHw")
             .then((result) => {
-                console.log(result)
                 setSubmitted({isSubmitted:true})
                 if(name !== null && lastname !== null && email !== null && message !== null) {
                     name.innerText = ""
