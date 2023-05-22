@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, {useEffect} from "react";
 import styled from "styled-components";
 import { AiOutlineHome } from 'react-icons/ai';
 import Footer from "../components/Footer";
@@ -45,7 +45,7 @@ const GoBackText = styled(Link)`
     text-decoration: none;
 `
 
-const WalkingTours = () => {
+const BycicleTours = () => {
 
     const router = useRouter();
     const lang = router.query.lang;
@@ -53,6 +53,7 @@ const WalkingTours = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
       }, []);
+
     return (
         <>
             <TukTukSection>
@@ -60,7 +61,7 @@ const WalkingTours = () => {
                     <GoBackWrapper>
                         <AiOutlineHome style={{color:"#fcfcfc"}}/><GoBackText href="/">Go Back</GoBackText>
                     </GoBackWrapper>
-                    <ProductsTitle>Walking Tours</ProductsTitle>
+                    <ProductsTitle>Bycicle Tours</ProductsTitle>
                 </ProductsTitleWrapper>
                 <div style={{width:'100vw', height:'100vh', backgroundColor:'black', display:'flex', justifyContent:'center', alignItems:'center'}}>
                 <div style={{ display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
@@ -77,4 +78,4 @@ const WalkingTours = () => {
     )
 }
 
-export default WalkingTours;
+export default BycicleTours;

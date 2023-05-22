@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { AiOutlineClockCircle, AiOutlineHome } from 'react-icons/ai';
-import { tuktukTours } from "../src/utility/text/tuktuktours";
-import Footer from "../src/components/Footer";
+import { tuktukTours } from "../utility/text/tuktuktours";
+import Footer from "../components/Footer";
 import { useLocation } from "react-router";
-import { Link } from "react-router-dom";
-import TukModal from "../src/pages/tuktuks/TukModal";
-import { tuktukmodaltext } from "../src/utility/text/tuktukmodaltext";
-import { Language, isTypeOfLang } from "../src/utility/types/types";
+import Link from 'next/link';
+import TukModal from "../components/TukModal";
+import { tuktukmodaltext } from "../utility/text/tuktukmodaltext";
+import { Language, isTypeOfLang } from "../utility/types/types";
+import { useRouter } from "next/router";
 
 const TukTukSection = styled.section`
     display: flex;
@@ -176,8 +177,11 @@ const TukTukTours = () => {
     const [show, setShow] = useState(false)
     const [data, setData] = useState<string[]>()
     const [imageData, setImageData] = useState<string[]>()
-    const location = useLocation();
-    const { lang } = location.state
+    
+    const router = useRouter();
+    const lang = router.query.lang;
+
+    debugger
 
     const setModalToShow = (title: string, duration: string, imgData: string[], description: string) => {
         let dataModal = [title, duration, description]
@@ -203,7 +207,7 @@ const TukTukTours = () => {
             <TukTukSection>
                 <ProductsTitleWrapper>
                     <GoBackWrapper>
-                        <AiOutlineHome style={{color:"#fcfcfc"}}/><GoBackText to="/">Go Back</GoBackText>
+                        <AiOutlineHome style={{color:"#fcfcfc"}}/><GoBackText href="/">Go Back</GoBackText>
                     </GoBackWrapper>
                     <ProductsTitle>TukTuk Tours</ProductsTitle>
                 </ProductsTitleWrapper>
@@ -215,14 +219,14 @@ const TukTukTours = () => {
                 </WrapperOfProducts>
             </TukTukSection>
             <Footer
-                language = { lang }
+                {...isTypeOfLang(lang) ? {language: lang} : {language: 'en'}}
             />
             <TukModal
                 data = { data! }
                 showModal = {show}
                 imageData = { imageData! }
                 closeModal = {closeModal}
-                language = { lang }
+                language =  {isTypeOfLang(lang) ?  lang : 'en'}
             />
         </>
     )
