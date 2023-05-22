@@ -5,7 +5,7 @@ const ButtonContainer = styled.div`
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 30;
+    z-index: 800;
     height: 45px;
     width: 45px;
     display: flex;
