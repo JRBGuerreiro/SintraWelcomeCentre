@@ -24,7 +24,7 @@
     "start": "next start",
     "build": "next build",
     "dev": "next dev",
-    "build:server": "tsc server.tsx --outDir build"
+    "build-test-prod": "next build && next start"
   },
   "eslintConfig": {
     "extends": [

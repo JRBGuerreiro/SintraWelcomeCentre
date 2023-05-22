@@ -36,6 +36,10 @@ const HeroNav = styled.nav`
     }
 `
 
+const SelectWrapper = styled(Select)`
+    background-color: red;
+`
+
 const options = [
     { value: '2', label: 'Language' },
     { value: 'pt', label: 'Portuguese'},
@@ -127,6 +131,28 @@ const NavBar = (props: NavBarProps) => {
                     options={options} 
                     value={selectedOption}
                     defaultValue={selectedOption}
+                    styles={{
+                        control: (baseStyles, state) => ({
+                            ...baseStyles,
+                            backgroundColor: 'transparent',
+                            border: 'none'
+                        }),
+                        singleValue: (baseStyles, state) => ({
+                            ...baseStyles,
+                            color: '#fcfcfc',
+                            fontFamily: "'Raleway', sans-serif"
+                        }),
+                        menu: (baseStyles, state) => ({
+                            ...baseStyles,
+                            backgroundColor: '#396e34',
+                            marginTop: 0
+                        }),
+                        menuList: (baseStyles, state) => {console.log(state); return ({
+                            ...baseStyles,
+                            fontFamily: "'Raleway', sans-serif",
+                            color: '#fcfcfc',
+                        })},
+                    }}
                     onChange={handleChange}
                     getOptionLabel={(lbl) => lbl.label}
                     getOptionValue={(lbl) => lbl.value}
