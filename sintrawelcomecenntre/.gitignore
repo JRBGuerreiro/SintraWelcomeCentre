@@ -8,8 +8,20 @@
 # testing
 /coverage
 
-# production
-/.next
+# Next.js build output
+.next/
+
+# Next.js serverless build output
+.serverless/
+
+# Next.js static export output
+out/
+
+# Next.js build cache
+.cache/
+
+# Next.js development server files
+.next-cache/
 
 # misc
 .DS_Store
