@@ -204,6 +204,18 @@
     width: 10px;
   }
 }
+@media (max-width: 480px) {
+  .hero_section .hero_copyright {
+    font-size: 4pt;
+    bottom: 50px;
+  }
+  .hero_section .hero_scroll_container {
+    bottom: 60px;
+  }
+  .hero_section .hero_text_banner {
+    bottom: 50px;
+  }
+}
 *, *:before, *:after {
   box-sizing: border-box;
   outline: none;

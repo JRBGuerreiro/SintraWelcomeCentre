@@ -24,6 +24,7 @@
     "start": "next start",
     "build": "next build",
     "dev": "next dev",
+    "export": "next export",
     "build-test-prod": "next build && next start"
   },
   "eslintConfig": {

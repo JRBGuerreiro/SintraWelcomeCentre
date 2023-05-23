@@ -58,6 +58,22 @@ const FlipCardWrapper = styled.div`
             margin-right: 0px;
         }
     }
+
+    @media (max-width: 480px) {
+        &:first-child {
+            margin-bottom: 15px;
+            margin-right: 0px;
+        }
+
+        &:nth-child(2) {
+            margin-bottom: 15px;
+        }
+
+        &:last-child {
+            margin-left: 0px;
+            margin-top: 15px;
+        }
+    }
 `
 
 const FlipCardFront = styled.div`
