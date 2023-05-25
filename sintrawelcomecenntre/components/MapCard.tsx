@@ -124,6 +124,17 @@ type MapCardProps = {
 }
 
 const MapCard = (props: MapCardProps) => {
+
+    const handleDownload = (file: string) => {
+        const fileUrl = file;
+        const link = document.createElement('a');
+        if(fileUrl) {
+            link.href = fileUrl;
+            link.download = fileUrl;
+            link.click();
+        }
+    }
+
     return(
         <MapCardWrapper>
             <MapCardImageWrapper>
@@ -133,12 +144,12 @@ const MapCard = (props: MapCardProps) => {
                 <MapCardTitle>{props.title}</MapCardTitle>
                 <MapCardTitle2>Download</MapCardTitle2>
                 <MapFlag>
-                    <a href={chooseFile(`${props.monument}_en`)} download>
+                    <div onClick={() => handleDownload(chooseFile(`${props.monument}_en`)!)}>
                         <img style={{height: "20px", width:"30px"}} src={"../images/Flags/united-kingdom.png"}/>
-                    </a>
-                    <a href={chooseFile(`${props.monument}_pt`)} download>
+                    </div>
+                    <div onClick={() => handleDownload(chooseFile(`${props.monument}_pt`)!)}>
                         <img style={{height: "20px", width:"30px"}} src={"../images/Flags/portugal-flag-small.png"}/>
-                    </a>
+                    </div>
                 </MapFlag>
             </MapCardWrapperContent>
         </MapCardWrapper>
