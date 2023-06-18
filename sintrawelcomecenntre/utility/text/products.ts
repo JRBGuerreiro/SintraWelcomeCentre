@@ -14,7 +14,7 @@ export const products = [
     },
     {
         "en": {
-            "title": "E-Bikes",
+            "title": "E-Bike Rentals",
             "description": "Try out our most wanted E-bikes and join pleasure with exercise"
         },
 
@@ -47,7 +47,57 @@ export const products = [
         "pt": {
             "title": "Tours à volta de Portugal"
         },
-        "image":"../images/biciProducts.jpg",
+        "image":"../images/noImage.jpg",
         'route': '/bycicletours'
+    },
+    {
+        "en": {
+            "title": "Jeep Tours",
+            "description": "Sintra and Cascais - Full day"
+        },
+
+        "pt": {
+            "title": "Jeep Tours",
+            "description": "Sintra e Cascais - Dia todo"
+        },
+        "image":"../images/noImage.jpg",
+        'route': '/jeeptours'
+    },    {
+        "en": {
+            "title": "Private Tours around Portugal",
+            "description": "Sintra + Cabo da Roca + Cascais",
+        },
+        "pt": {
+            "title": "Tours privados em Portugal",
+            "description": "Sintra + Cabo da Roca + Cascais"
+        },
+        "image":"../images/noImage.jpg",
+        'route': '/privatetours'
+    },
+    {
+        "en": {
+            "title": "Tour",
+            "description": "Teste"
+        },
+
+        "pt": {
+            "title": "Excursões"
+        },
+        "image":"../images/noImage.jpg",
+        'route': '/tours'
+    },
+
+    {
+        "en": {
+            "title": "Corporate",
+            "description": "Teste"
+        },
+
+        "pt": {
+            "title": "Corporate"
+        },
+        "image":"../images/noImage.jpg",
+        'route': '/corporate'
+      
     },
 ]
