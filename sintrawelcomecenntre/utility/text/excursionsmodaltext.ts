@@ -1,4 +1,4 @@
-export const toursmodaltext = 
+export const excursionsmodaltext = 
     {
         "en": {
             "covid": "Covid-19 precautions",

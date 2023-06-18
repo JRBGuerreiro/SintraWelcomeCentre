@@ -1,4 +1,4 @@
-export const tours = [
+export const excursions = [
     {
         "en": {
             "title": "Vila Walking Tour ",

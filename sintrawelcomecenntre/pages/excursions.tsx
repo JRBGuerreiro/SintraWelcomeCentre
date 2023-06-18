@@ -5,7 +5,7 @@ import { jeepTours } from "../utility/text/jeeptours";
 import Footer from "../components/Footer";
 import Link from "next/link";
 import TukModal from "../components/TukModal";
-import { toursmodaltext } from "../utility/text/toursmodaltext";
+import { excursionsmodaltext } from "../utility/text/excursionsmodaltext";
 import { Language, isTypeOfLang } from "../utility/types/types";
 import { useRouter } from "next/router";
 
@@ -183,7 +183,7 @@ const renderProductsContent = (
                 )
               }
             >
-              {toursmodaltext[lang].find}
+              {excursionsmodaltext[lang].find}
             </ProductButton>
           </ProductWrapper>
         </ProductWrapperContainer>
@@ -192,7 +192,7 @@ const renderProductsContent = (
   });
 };
 
-const JeepTours = () => {
+const ExcursionsTours = () => {
   const [show, setShow] = useState(false);
   const [data, setData] = useState<string[]>();
   const [imageData, setImageData] = useState<string[]>();
@@ -236,7 +236,7 @@ const JeepTours = () => {
         </ProductsTitleWrapper>
         <DisclaimerWrapper>
           <Disclaimer>
-            {toursmodaltext[isTypeOfLang(lang) ? lang : "en"].disclaimer}
+            {excursionsmodaltext[isTypeOfLang(lang) ? lang : "en"].disclaimer}
           </Disclaimer>
         </DisclaimerWrapper>
         <WrapperOfProducts>
@@ -260,4 +260,4 @@ const JeepTours = () => {
   );
 };
 
-export default JeepTours;
+export default ExcursionsTours;
