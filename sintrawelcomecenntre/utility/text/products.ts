@@ -35,7 +35,7 @@ export const products = [
             "title": "Caminhadas",
             "disclaimer": "As reservas devem ser com antecedência de 48 horas com um minimo de 2 pessoas por grupo."
         },
-        "image":"../images/app_logo.png",
+        "image":"../images/walkingtours.jpg",
         'route': '/walkingtours'
     },
     {
@@ -47,7 +47,7 @@ export const products = [
         "pt": {
             "title": "Tours à volta de Portugal"
         },
-        "image":"../images/noImage.jpg",
+        "image":"../images/portugaltours.jpg",
         'route': '/bycicletours'
     },
     {

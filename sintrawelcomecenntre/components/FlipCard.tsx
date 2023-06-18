@@ -214,7 +214,7 @@ const FlipCard = (props: FlipCardProps) => {
           </CardWrapperContent>
         </FlipCardFront>
         <FlipCardBack>
-          {props.disclaimer ? (
+          {/* {props.disclaimer ? (
             <>
               <FlipCardBackIconWrapper>
                 <GrSchedule />
@@ -249,14 +249,14 @@ const FlipCard = (props: FlipCardProps) => {
                 <FlipCardBackText>+351 932 086 001</FlipCardBackText>
               </FlipCardBackIconWrapper>
             </>
-          ) : (
-            <CardButton
-              href={`${props.route}?lang=${props.language}`}
-              hrefLang={props.language}
-            >
-              {titles[props.language].cardButton}
-            </CardButton>
-          )}
+          ) : ( */}
+          <CardButton
+            href={`${props.route}?lang=${props.language}`}
+            hrefLang={props.language}
+          >
+            {titles[props.language].cardButton}
+          </CardButton>
+          {/* )} */}
         </FlipCardBack>
       </FlipCardInner>
     </FlipCardWrapper>
