@@ -1,5 +1,6 @@
 import React from "react";
 import { products } from "../utility/text/products";
+import { services } from "../utility/text/services";
 import { valuesText } from "../utility/text/valuesText";
 import styled from "styled-components";
 import { valuesImages } from "../utility/images/valuesImages";
@@ -79,6 +80,24 @@ const Products = (props: ProductsProps) => {
         </h2>
         <div className="products_content">
           {products.map((product) => {
+            return (
+              <FlipCard
+                title={product[props.language].title}
+                image={product.image}
+                language={props.language}
+                route={product.route}
+                {...(product[props.language].disclaimer && {
+                  disclaimer: product[props.language].disclaimer,
+                })}
+              />
+            );
+          })}
+        </div>
+        <h2 className="products_title" id="product">
+          {titles[props.language].ourServices}
+        </h2>
+        <div className="products_content">
+          {services.map((product) => {
             return (
               <FlipCard
                 title={product[props.language].title}

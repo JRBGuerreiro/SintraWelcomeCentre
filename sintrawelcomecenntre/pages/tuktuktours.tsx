@@ -3,10 +3,9 @@ import styled from "styled-components";
 import { AiOutlineClockCircle, AiOutlineHome } from "react-icons/ai";
 import { tuktukTours } from "../utility/text/tuktuktours";
 import Footer from "../components/Footer";
-import { useLocation } from "react-router";
 import Link from "next/link";
 import TukModal from "../components/TukModal";
-import { tuktukmodaltext } from "../utility/text/tuktukmodaltext";
+import { modaltext } from "../utility/text/modaltext";
 import { Language, isTypeOfLang } from "../utility/types/types";
 import { useRouter } from "next/router";
 
@@ -183,7 +182,7 @@ const renderProductsContent = (
                 )
               }
             >
-              {tuktukmodaltext[lang].find}
+              {modaltext.general[lang].find}
             </ProductButton>
           </ProductWrapper>
         </ProductWrapperContainer>
@@ -236,7 +235,7 @@ const TukTukTours = () => {
         </ProductsTitleWrapper>
         <DisclaimerWrapper>
           <Disclaimer>
-            {tuktukmodaltext[isTypeOfLang(lang) ? lang : "en"].disclaimer}
+            {modaltext.general[isTypeOfLang(lang) ? lang : "en"].disclaimer}
           </Disclaimer>
         </DisclaimerWrapper>
         <WrapperOfProducts>

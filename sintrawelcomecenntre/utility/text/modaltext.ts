@@ -1,5 +1,5 @@
-export const corporatemodaltext = 
-    {
+export const modaltext = {
+    general:{
         "en": {
             "covid": "Covid-19 precautions",
             "live": "Live tour guide",
@@ -18,3 +18,5 @@ export const corporatemodaltext =
             'disclaimer': 'Para quaisquer reservas por favor contate-nos quando mais lhe for conveniente utilizando os contatos disponibilizados no rodapé desta página'
         }
     }
+}
+

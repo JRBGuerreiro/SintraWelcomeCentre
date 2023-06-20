@@ -5,7 +5,7 @@ import { corporate } from "../utility/text/corporate";
 import Footer from "../components/Footer";
 import Link from "next/link";
 import TukModal from "../components/TukModal";
-import { corporatemodaltext } from "../utility/text/corporatemodaltext";
+import { modaltext } from "../utility/text/modaltext";
 import { Language, isTypeOfLang } from "../utility/types/types";
 import { useRouter } from "next/router";
 
@@ -183,7 +183,7 @@ const renderProductsContent = (
                 )
               }
             >
-              {corporatemodaltext[lang].find}
+              {modaltext.general[lang].find}
             </ProductButton>
           </ProductWrapper>
         </ProductWrapperContainer>
@@ -236,7 +236,7 @@ const Corporate = () => {
         </ProductsTitleWrapper>
         <DisclaimerWrapper>
           <Disclaimer>
-            {corporatemodaltext[isTypeOfLang(lang) ? lang : "en"].disclaimer}
+            {modaltext.general[isTypeOfLang(lang) ? lang : "en"].disclaimer}
           </Disclaimer>
         </DisclaimerWrapper>
         <WrapperOfProducts>

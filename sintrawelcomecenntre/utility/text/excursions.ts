@@ -9,6 +9,7 @@ export const excursions = [
             "title": "Walking Tour na Vila",
             "duration": 120
         },
+        "path": "/school",
         "location":"Sintra",
         "price": "preço sob consulta",
         "image": "../images/TukTukTours/noImage.jpg",
@@ -26,6 +27,7 @@ export const excursions = [
             "title": "Walking Tour com visita a Palácio Nacional",
             "duration": "2h mais tempo de visita ao Palácio (cerca de 4h)"
         },
+        "path": "/groups",
         "location":"Sintra",
         "preco": "preço sob consulta" ,
         "image": "../images/TukTukTours/noImage.jpg",

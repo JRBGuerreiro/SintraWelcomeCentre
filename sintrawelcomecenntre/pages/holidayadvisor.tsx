@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { AiOutlineClockCircle, AiOutlineHome } from "react-icons/ai";
-import { excursions } from "../utility/text/excursions";
+import { jeepTours } from "../utility/text/jeeptours";
 import Footer from "../components/Footer";
 import Link from "next/link";
-
+import TukModal from "../components/TukModal";
 import { modaltext } from "../utility/text/modaltext";
 import { Language, isTypeOfLang } from "../utility/types/types";
 import { useRouter } from "next/router";
@@ -52,7 +52,6 @@ const ProductWrapper = styled.div`
   flex-direction: column;
   width: 80%;
   border: 1px solid #e1e0e0;
-  justify-content: space-between;
 `;
 const ProductImage = styled.div<{ image: string }>`
   background-image: ${(props) => `url('${props.image}')`};
@@ -149,8 +148,16 @@ export const convertMinutesToHours = (timeinMins: number | string) => {
   return returnTime;
 };
 
-const renderProductsContent = (lang: Language) => {
-  return excursions.map((tour) => {
+const renderProductsContent = (
+  lang: Language,
+  show: (
+    title: string,
+    time: string,
+    data: string[],
+    description: string
+  ) => void
+) => {
+  return jeepTours.map((tour) => {
     return (
       <>
         <ProductWrapperContainer>
@@ -161,13 +168,23 @@ const renderProductsContent = (lang: Language) => {
               <IconProductCenterWrapper>
                 <AiOutlineClockCircle />
                 <ProductDuration>
+                  {" "}
                   {convertMinutesToHours(tour[lang].duration)}
                 </ProductDuration>
               </IconProductCenterWrapper>
             </ProductInfoWrapper>
-            <Link href={tour.path}>
-              <ProductButton>{modaltext.general[lang].find}</ProductButton>
-            </Link>
+            <ProductButton
+              onClick={() =>
+                show(
+                  tour[lang].title,
+                  convertMinutesToHours(tour[lang].duration),
+                  tour.data,
+                  tour.description
+                )
+              }
+            >
+              {modaltext.general[lang].find}
+            </ProductButton>
           </ProductWrapper>
         </ProductWrapperContainer>
       </>
@@ -175,9 +192,33 @@ const renderProductsContent = (lang: Language) => {
   });
 };
 
-const ExcursionsTours = () => {
+const JeepTours = () => {
+  const [show, setShow] = useState(false);
+  const [data, setData] = useState<string[]>();
+  const [imageData, setImageData] = useState<string[]>();
+
   const router = useRouter();
   const lang = router.query.lang;
+
+  const setModalToShow = (
+    title: string,
+    duration: string,
+    imgData: string[],
+    description: string
+  ) => {
+    let dataModal = [title, duration, description];
+    setImageData(imgData);
+    setData(dataModal);
+    setShow(true);
+    document.body.style.overflowY = "hidden";
+    document.documentElement.style.overflowY = "hidden";
+  };
+
+  const closeModal = () => {
+    setShow(false);
+    document.body.style.overflowY = "visible";
+    document.documentElement.style.overflowY = "visible";
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -191,7 +232,7 @@ const ExcursionsTours = () => {
             <AiOutlineHome style={{ color: "#fcfcfc" }} />
             <GoBackText href="/">Go Back</GoBackText>
           </GoBackWrapper>
-          <ProductsTitle>Excursions</ProductsTitle>
+          <ProductsTitle>Holiday advisor</ProductsTitle>
         </ProductsTitleWrapper>
         <DisclaimerWrapper>
           <Disclaimer>
@@ -199,14 +240,24 @@ const ExcursionsTours = () => {
           </Disclaimer>
         </DisclaimerWrapper>
         <WrapperOfProducts>
-          {renderProductsContent(isTypeOfLang(lang) ? lang : "en")}
+          {renderProductsContent(
+            isTypeOfLang(lang) ? lang : "en",
+            setModalToShow
+          )}
         </WrapperOfProducts>
       </Section>
       <Footer
         {...(isTypeOfLang(lang) ? { language: lang } : { language: "en" })}
       />
+      <TukModal
+        data={data!}
+        showModal={show}
+        imageData={imageData!}
+        closeModal={closeModal}
+        language={isTypeOfLang(lang) ? lang : "en"}
+      />
     </>
   );
 };
 
-export default ExcursionsTours;
+export default JeepTours;

@@ -40,18 +40,6 @@ export const products = [
     },
     {
         "en": {
-            "title": "Tours around Portugal",
-            "description": "Try out our most wanted E-bikes and join pleasure with exercise"
-        },
-
-        "pt": {
-            "title": "Tours à volta de Portugal"
-        },
-        "image":"../images/portugaltours.jpg",
-        'route': '/bycicletours'
-    },
-    {
-        "en": {
             "title": "Jeep Tours",
             "description": "Sintra and Cascais - Full day"
         },
