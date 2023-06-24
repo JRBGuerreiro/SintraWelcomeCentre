@@ -1,17 +1,35 @@
-export const jeepTours = [
+export const schools= [
     {
         "en": {
-            "title": "Sintra and Cascais - Full day",
-            "duration": 360
+            "title": "Vila Walking Tour",
+            "duration": 120
         },
 
         "pt": {
-            "title": "Sintra e Cascais - Full day",
-            "duration": 360
+            "title": "Walking Tour na Vila",
+            "duration": 120
         },
-        "image": "../images/TukTukTours/noImage.jpg",
+        "pax":"min 15",
+        "image": "../images/schools.jpg",
         "data": ["../images/ProductsImages/noImage.jpg", "../images/noImage.jpg", "../images/ProductsImages/noImage.jpg"],
-        "description": "Fonte da Sabuga, Palácio Nacional de Sintra, Túneis, The Biester, Challet do Relógio, Castelo dos Mouros & Palácio da Pena, Lagos, Cascata dos Pisões, Quinta da Regaleira, Palácio de seteais, Palácio de Monserrate, Praia das Maças, Azenhas do Mar, Praia da Adraga (5km offroad), Cabo da Roca, Peninha, Guincho, Cascais"
+        "description": "Receção aos alunos no Centro da Vila, pelos nossos Guias e início do Walking Tour, com passagem na Volta do Duche, Camara Municipal, Palácio Nacional, Palácio de Biester, Fonte de Pisões, Quinta da Regaleira e volta ao Centro da Vila, através das pequenas Ruas do Centro Comercial e Histórico"
+    },
+    {
+        "en": {
+            "title": "Walking Tour com visita a Palácio Nacional",
+            "duration": "120 mais tempo de visita ao Palácio (cerca de 240 )"
+
+        },
+
+        "pt": {
+            "title": "Walking Tour com visita a Palácio Nacional",
+            "duration": "120 mais tempo de visita ao Palácio (cerca de 240 )"
+
+        },
+        "pax":"min 15",
+        "image": "../images/schools.jpg",
+        "data": ["../images/ProductsImages/noImage.jpg", "../images/noImage.jpg", "../images/ProductsImages/noImage.jpg"],
+        "description": "Receção aos alunos no Centro da Vila, pelos nossos Guias e início do Walking Tour, com passagem na Volta do Duche, Camara Municipal, Palácio Nacional (Bilhete de visita ao seu interior incluída), Palácio de Biester, Fonte de Pisões e Quinta da Regaleira e volta ao Centro da Vila, através das pequenas Ruas do Centro Comercial e Histórico"
     },
 
 

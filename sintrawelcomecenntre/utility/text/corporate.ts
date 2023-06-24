@@ -1,37 +1,22 @@
 export const corporate = [
     {
         "en": {
-            "title": "Vila Walking Tour ",
-            "duration": 120
+            "title": "Tuktuk paper",
+            "duration": 240
         },
 
         "pt": {
-            "title": "Walking Tour na Vila",
-            "duration": 120
+            "title": "Tuktuk paper",
+            "duration": 240
         },
         "location":"Sintra",
         "price": "preço sob consulta",
         "image": "../images/TukTukTours/noImage.jpg",
         "data": ["../images/ProductsImages/noImage.jpg", "../images/noImage.jpg", "../images/ProductsImages/noImage.jpg"],
-        "description": "Receção aos alunos no Centro da Vila, pelos nossos Guias e início do Walking Tour, com passagem na Volta do Duche, Camara Municipal, Palácio Nacional, Palácio de Biester, Fonte de Pisões, Quinta da Regaleira e volta ao Centro da Vila, através das pequenas Ruas do Centro Comercial e Histórico"
+        "description": "Uma experiência única. Uma atividade em equipa ou uma aventura para toda a família. Desde atividades criativas, enigmas para desvendar, desafios constantes e muita aventura, o Tuk Tuk Paper é uma surpresa ao longo do percurso que nos leva pelos maravilhosos cantos da Serra de Sintra à descoberta."
 
     },
-    {
-        "en": {
-            "title": "Walking Tour with a visit to the national Palace",
-            "duration": "2h plus palace viewing time (about 4h)"
-        },
 
-        "pt": {
-            "title": "Walking Tour com visita a Palácio Nacional",
-            "duration": "2h mais tempo de visita ao Palácio (cerca de 4h)"
-        },
-        "location":"Sintra",
-        "preco": "preço sob consulta" ,
-        "image": "../images/TukTukTours/noImage.jpg",
-        "data": ["../images/ProductsImages/noImage.jpg", "../images/noImage.jpg", "../images/ProductsImages/noImage.jpg"],
-        "description": "Receção aos alunos no Centro da Vila, pelos nossos Guias e início do Walking Tour, com passagem na Volta do Duche, Camara Municipal, Palácio Nacional (Bilhete de visita ao seu interior incluída), Palácio de Biester, Fonte de Pisões e Quinta da Regaleira e volta ao Centro da Vila, através das pequenas Ruas do Centro Comercial e Histórico "
-    },
 
 
 ]

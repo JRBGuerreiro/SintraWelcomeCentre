@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { AiOutlineClockCircle, AiOutlineHome } from "react-icons/ai";
-import { jeepTours } from "../utility/text/jeeptours";
+import { schools } from "../utility/text/schools";
 import Footer from "../components/Footer";
 import Link from "next/link";
 import TukModal from "../components/TukModal";
@@ -52,6 +52,7 @@ const ProductWrapper = styled.div`
   flex-direction: column;
   width: 80%;
   border: 1px solid #e1e0e0;
+  justify-content: space-between;
 `;
 const ProductImage = styled.div<{ image: string }>`
   background-image: ${(props) => `url('${props.image}')`};
@@ -157,7 +158,7 @@ const renderProductsContent = (
     description: string
   ) => void
 ) => {
-  return jeepTours.map((tour) => {
+  return schools.map((tour) => {
     return (
       <>
         <ProductWrapperContainer>

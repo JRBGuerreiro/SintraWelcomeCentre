@@ -154,7 +154,8 @@ const renderProductsContent = (
     title: string,
     time: string,
     data: string[],
-    description: string
+    description: string,
+    description2: string[]
   ) => void
 ) => {
   return groups.map((tour) => {
@@ -179,7 +180,8 @@ const renderProductsContent = (
                   tour[lang].title,
                   convertMinutesToHours(tour[lang].duration),
                   tour.data,
-                  tour.description
+                  tour.description,
+                  tour.description2
                 )
               }
             >
@@ -192,7 +194,7 @@ const renderProductsContent = (
   });
 };
 
-const JeepTours = () => {
+const Groups = () => {
   const [show, setShow] = useState(false);
   const [data, setData] = useState<string[]>();
   const [imageData, setImageData] = useState<string[]>();
@@ -204,9 +206,10 @@ const JeepTours = () => {
     title: string,
     duration: string,
     imgData: string[],
-    description: string
+    description: string,
+    description2: string[]
   ) => {
-    let dataModal = [title, duration, description];
+    let dataModal = [title, duration, description, description2];
     setImageData(imgData);
     setData(dataModal);
     setShow(true);
@@ -230,7 +233,7 @@ const JeepTours = () => {
         <ProductsTitleWrapper>
           <GoBackWrapper>
             <AiOutlineHome style={{ color: "#fcfcfc" }} />
-            <GoBackText href="/">Go Back</GoBackText>
+            <GoBackText href="/excursions">Go Back</GoBackText>
           </GoBackWrapper>
           <ProductsTitle>Groups</ProductsTitle>
         </ProductsTitleWrapper>
@@ -260,4 +263,4 @@ const JeepTours = () => {
   );
 };
 
-export default JeepTours;
+export default Groups;

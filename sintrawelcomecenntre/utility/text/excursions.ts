@@ -1,13 +1,13 @@
 export const excursions = [
     {
         "en": {
-            "title": "Vila Walking Tour ",
-            "duration": 120
+            "title": "Schools ",
+            "duration": "",
         },
 
         "pt": {
-            "title": "Walking Tour na Vila",
-            "duration": 120
+            "title": "Escolas",
+            "duration": "",
         },
         "path": "/school",
         "location":"Sintra",
@@ -19,16 +19,16 @@ export const excursions = [
     },
     {
         "en": {
-            "title": "Walking Tour with a visit to the national Palace",
-            "duration": "2h plus palace viewing time (about 4h)"
+            "title": "Groups",
+            "duration": "",
         },
 
         "pt": {
-            "title": "Walking Tour com visita a Palácio Nacional",
-            "duration": "2h mais tempo de visita ao Palácio (cerca de 4h)"
+            "title": "Grupos",
+            "duration": "",
         },
         "path": "/groups",
-        "location":"Sintra",
+
         "preco": "preço sob consulta" ,
         "image": "../images/TukTukTours/noImage.jpg",
         "data": ["../images/ProductsImages/noImage.jpg", "../images/noImage.jpg", "../images/ProductsImages/noImage.jpg"],

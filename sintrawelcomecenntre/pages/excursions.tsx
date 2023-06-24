@@ -93,6 +93,7 @@ const GoBackWrapper = styled.div`
   position: absolute;
   left: 10px;
   padding-top: 20px;
+  justify-content: space-between;
 `;
 
 const GoBackText = styled(Link)`

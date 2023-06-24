@@ -24,6 +24,8 @@ const Animation = styled.div<{ divOpacity: boolean; animate: boolean }>`
 `;
 
 const Modal = styled.div`
+  max-height: 80%;
+  overflow: auto;
   position: fixed;
   display: flex;
   width: 800px;
@@ -89,7 +91,7 @@ const Separator = styled.div`
 `;
 
 type TukModalProps = {
-  data: Array<string>;
+  data: any;
   showModal: boolean;
   imageData: Array<string>;
   closeModal: () => void;
@@ -121,6 +123,13 @@ const TukModal = (props: TukModalProps) => {
               {modaltext.general[props.language].title}
             </DescriptionTitle>
             <TourDescription>{props.data[2]}</TourDescription>
+
+            {props?.data[3]
+              ? props?.data[3]?.map((des: any, i: number) => {
+                  return <TourDescription key={i}>{des}</TourDescription>;
+                })
+              : null}
+
             <Separator />
             <ModalIconsWrapper>
               <IconsContainer>

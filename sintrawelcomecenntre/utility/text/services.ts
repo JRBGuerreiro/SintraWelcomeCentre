@@ -8,7 +8,7 @@ export const services = [
         "pt": {
             "title": "Consultor de ferias"
         },
-        "image":"../images/ProductsImages/tuks-min.jpg",
+        "image":"../images/ProductsImages/holiday.jpg",
         'route':'/holidayadvisor'
 
     },
@@ -21,7 +21,7 @@ export const services = [
         "pt": {
             "title": "PARKmyCAR"
         },
-        "image":"../images/biciProducts.jpg",
+        "image":"../images/park.jpg",
         'route': '/parkmycar'
     },
     {
@@ -35,7 +35,7 @@ export const services = [
             "title": "Personal Shopper",
             "disclaimer": "As reservas devem ser com antecedência de 48 horas com um minimo de 2 pessoas por grupo."
         },
-        "image":"../images/walkingtours.jpg",
+        "image":"../images/shop.jpg",
         'route': '/personalshopper'
     },
     {
@@ -58,7 +58,7 @@ export const services = [
         "pt": {
             "title": "Bilheteira"
         },
-        "image":"../images/portugaltours.jpg",
+        "image":"../images/ticket.jpg",
         'route': '/ticketoffice'
     },
 

@@ -71,7 +71,7 @@ export const products = [
         "pt": {
             "title": "Excursões"
         },
-        "image":"../images/noImage.jpg",
+        "image":"../images/bus.jpg",
         'route': '/excursions'
     },
 

@@ -63,8 +63,26 @@ export const privateTours = [
         "preco": "preço sob consulta" ,
         "image": "../images/ToursAroundPortugal/fatima.jpg",
         "data": ["../images/ProductsImages/noImage.jpg", "../images/noImage.jpg", "../images/ProductsImages/noImage.jpg"],
+        "description": " "
+    },
+    {
+        "en": {
+            "title": "Other tours",
+            "duration": 480
+        },
+
+        "pt": {
+            "title": "Outros tours",
+            "duration": 480
+        },
+        "location":"Fatima",
+       " Pax": "1-3",
+        "preco": "preço sob consulta" ,
+        "image": "../images/ToursAroundPortugal/fatima.jpg",
+        "data": ["../images/ProductsImages/noImage.jpg", "../images/noImage.jpg", "../images/ProductsImages/noImage.jpg"],
         "description": "Évora, Fátima, Algarve, Aveiro, Coimbra,Porto  "
     },
+
 
 
 ]
