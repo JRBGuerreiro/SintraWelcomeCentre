@@ -59,6 +59,7 @@ const ProductImage = styled.div<{ image: string }>`
   background-size: cover;
   min-height: 300px;
   width: 100%;
+  background-position: center;
 `;
 const ProductInfoWrapper = styled.div`
   display: flex;

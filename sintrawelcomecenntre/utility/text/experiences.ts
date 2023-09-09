@@ -2,129 +2,82 @@ export const experiences = [
     {
         "en": {
             "title": "Prova de Vinhos e visitas a adegas",
-            "duration": 360
+             "duration": "All day"
         },
 
         "pt": {
             "title": "Prova de Vinhos e visitas a adegas",
-            "duration": 360
+            "duration": "All day"        
         },
-        "image": "../images/TukTukTours/noImage.jpg",
-        "data": ["../images/ProductsImages/noImage.jpg", "../images/noImage.jpg", "../images/ProductsImages/noImage.jpg"],
-        "description": "Fonte da Sabuga, Palácio Nacional de Sintra, Túneis, The Biester, Challet do Relógio, Castelo dos Mouros & Palácio da Pena, Lagos, Cascata dos Pisões, Quinta da Regaleira, Palácio de seteais, Palácio de Monserrate, Praia das Maças, Azenhas do Mar, Praia da Adraga (5km offroad), Cabo da Roca, Peninha, Guincho, Cascais"
+        "location":"Quinta Vale da Roca",
+        "image": "../images/brand.png",
+        "data": ["../images/brand.png"],
+        "description": "Visita para conhecer as vinhas e as castas plantadas, a história da Quinta Vale da Roca, degustar os seus vinhos que podem ser acompanhados por tapas selecionadas e conhecer os segredos da produção e vinificação."
     },
     {
         "en": {
-            "title": "Sintra and Cascais - Full day",
-            "duration": 360
+            "title": "Picnic Box",
+            "duration": "All day"        
         },
 
         "pt": {
-            "title": "Sintra e Cascais - Full day",
-            "duration": 360
+            "title": "Picnic Box",
+            "duration": "All day"        
         },
-        "image": "../images/TukTukTours/noImage.jpg",
-        "data": ["../images/ProductsImages/noImage.jpg", "../images/noImage.jpg", "../images/ProductsImages/noImage.jpg"],
-        "description": "Fonte da Sabuga, Palácio Nacional de Sintra, Túneis, The Biester, Challet do Relógio, Castelo dos Mouros & Palácio da Pena, Lagos, Cascata dos Pisões, Quinta da Regaleira, Palácio de seteais, Palácio de Monserrate, Praia das Maças, Azenhas do Mar, Praia da Adraga (5km offroad), Cabo da Roca, Peninha, Guincho, Cascais"
+        "Price": "sob consulta",
+
+        "image": "../images/brand.png",
+        "data": ["../images/brand.png"],        
+        "description": "Wrap de legumes salteados/ Atum com maionese xx/ Frango, Croissant com queijo, Croquete de carne, Salada de Fruta, Bolo de laranja da Avó xx, Doce tradicional de Sintra, Água Simples/Água aromatizada/ Sumo de frutos vermelhos"
+
+    
+    
     },
     {
         "en": {
-            "title": "Sintra and Cascais - Full day",
-            "duration": 360
+            "title": "Cerveja",
+            "duration": "All day"  
         },
 
         "pt": {
-            "title": "Sintra e Cascais - Full day",
-            "duration": 360
+            "title": "Cerveja",
+            "duration": "All day"  
         },
-        "image": "../images/TukTukTours/noImage.jpg",
-        "data": ["../images/ProductsImages/noImage.jpg", "../images/noImage.jpg", "../images/ProductsImages/noImage.jpg"],
-        "description": "Fonte da Sabuga, Palácio Nacional de Sintra, Túneis, The Biester, Challet do Relógio, Castelo dos Mouros & Palácio da Pena, Lagos, Cascata dos Pisões, Quinta da Regaleira, Palácio de seteais, Palácio de Monserrate, Praia das Maças, Azenhas do Mar, Praia da Adraga (5km offroad), Cabo da Roca, Peninha, Guincho, Cascais"
+        "location":"Hopsin Brewpub",
+
+        "image": "../images/brand.png",
+        "data": ["../images/brand.png"],        
+        "description": "Degustação de Cerveja artesanal, num local especial e acolhedor, Cervejas muito interessantes com opções para os menos apreciadores de cerveja. Visita à Fábrica, com explicação sobre método de Fabricação."
     },
     {
         "en": {
-            "title": "Sintra and Cascais - Full day",
-            "duration": 360
+            "title": "Chef em Casa",
+            "duration": "All day"  
         },
 
         "pt": {
-            "title": "Sintra e Cascais - Full day",
-            "duration": 360
+            "title": "Chef em Casa",
+            "duration": "All day"  
         },
-        "image": "../images/TukTukTours/noImage.jpg",
-        "data": ["../images/ProductsImages/noImage.jpg", "../images/noImage.jpg", "../images/ProductsImages/noImage.jpg"],
-        "description": "Fonte da Sabuga, Palácio Nacional de Sintra, Túneis, The Biester, Challet do Relógio, Castelo dos Mouros & Palácio da Pena, Lagos, Cascata dos Pisões, Quinta da Regaleira, Palácio de seteais, Palácio de Monserrate, Praia das Maças, Azenhas do Mar, Praia da Adraga (5km offroad), Cabo da Roca, Peninha, Guincho, Cascais"
+        "image": "../images/brand.png",
+        "data": ["../images/brand.png"],        
+         "description": "Lar doce lar, o lugar mais íntimo e cómodo, a nossa própria casa, onde podemos ficar à vontade com as pessoas de quem mais gostamos. Nós trazemos a magia e os sabores de um restaurante requintado para a mesa, através de chefs talentosos que adaptam um menu aos nossos desejos."
     },
     {
         "en": {
-            "title": "Sintra and Cascais - Full day",
-            "duration": 360
+            "title": "Barco",
+            "duration": "All day"  
         },
 
         "pt": {
-            "title": "Sintra e Cascais - Full day",
-            "duration": 360
+            "title": "Barco",
+            "duration": "All day"  
         },
-        "image": "../images/TukTukTours/noImage.jpg",
-        "data": ["../images/ProductsImages/noImage.jpg", "../images/noImage.jpg", "../images/ProductsImages/noImage.jpg"],
-        "description": "Fonte da Sabuga, Palácio Nacional de Sintra, Túneis, The Biester, Challet do Relógio, Castelo dos Mouros & Palácio da Pena, Lagos, Cascata dos Pisões, Quinta da Regaleira, Palácio de seteais, Palácio de Monserrate, Praia das Maças, Azenhas do Mar, Praia da Adraga (5km offroad), Cabo da Roca, Peninha, Guincho, Cascais"
+        "image": "../images/brand.png",
+        "data": ["../images/brand.png"],        
+        "description": "Com partidas da Marina de Cascais, terra de pescadores e de gente do mar, logo se verá envolvido pelo ambiente da costa de Cascais, uma linha ténue entre a calma do oceano e a paisagem indisciplinada e selvagem da costa."
     },
-    {
-        "en": {
-            "title": "Sintra and Cascais - Full day",
-            "duration": 360
-        },
 
-        "pt": {
-            "title": "Sintra e Cascais - Full day",
-            "duration": 360
-        },
-        "image": "../images/TukTukTours/noImage.jpg",
-        "data": ["../images/ProductsImages/noImage.jpg", "../images/noImage.jpg", "../images/ProductsImages/noImage.jpg"],
-        "description": "Fonte da Sabuga, Palácio Nacional de Sintra, Túneis, The Biester, Challet do Relógio, Castelo dos Mouros & Palácio da Pena, Lagos, Cascata dos Pisões, Quinta da Regaleira, Palácio de seteais, Palácio de Monserrate, Praia das Maças, Azenhas do Mar, Praia da Adraga (5km offroad), Cabo da Roca, Peninha, Guincho, Cascais"
-    },
-    {
-        "en": {
-            "title": "Sintra and Cascais - Full day",
-            "duration": 360
-        },
-
-        "pt": {
-            "title": "Sintra e Cascais - Full day",
-            "duration": 360
-        },
-        "image": "../images/TukTukTours/noImage.jpg",
-        "data": ["../images/ProductsImages/noImage.jpg", "../images/noImage.jpg", "../images/ProductsImages/noImage.jpg"],
-        "description": "Fonte da Sabuga, Palácio Nacional de Sintra, Túneis, The Biester, Challet do Relógio, Castelo dos Mouros & Palácio da Pena, Lagos, Cascata dos Pisões, Quinta da Regaleira, Palácio de seteais, Palácio de Monserrate, Praia das Maças, Azenhas do Mar, Praia da Adraga (5km offroad), Cabo da Roca, Peninha, Guincho, Cascais"
-    },
-    {
-        "en": {
-            "title": "Sintra and Cascais - Full day",
-            "duration": 360
-        },
-
-        "pt": {
-            "title": "Sintra e Cascais - Full day",
-            "duration": 360
-        },
-        "image": "../images/TukTukTours/noImage.jpg",
-        "data": ["../images/ProductsImages/noImage.jpg", "../images/noImage.jpg", "../images/ProductsImages/noImage.jpg"],
-        "description": "Fonte da Sabuga, Palácio Nacional de Sintra, Túneis, The Biester, Challet do Relógio, Castelo dos Mouros & Palácio da Pena, Lagos, Cascata dos Pisões, Quinta da Regaleira, Palácio de seteais, Palácio de Monserrate, Praia das Maças, Azenhas do Mar, Praia da Adraga (5km offroad), Cabo da Roca, Peninha, Guincho, Cascais"
-    },
-    {
-        "en": {
-            "title": "Sintra and Cascais - Full day",
-            "duration": 360
-        },
-
-        "pt": {
-            "title": "Sintra e Cascais - Full day",
-            "duration": 360
-        },
-        "image": "../images/TukTukTours/noImage.jpg",
-        "data": ["../images/ProductsImages/noImage.jpg", "../images/noImage.jpg", "../images/ProductsImages/noImage.jpg"],
-        "description": "Fonte da Sabuga, Palácio Nacional de Sintra, Túneis, The Biester, Challet do Relógio, Castelo dos Mouros & Palácio da Pena, Lagos, Cascata dos Pisões, Quinta da Regaleira, Palácio de seteais, Palácio de Monserrate, Praia das Maças, Azenhas do Mar, Praia da Adraga (5km offroad), Cabo da Roca, Peninha, Guincho, Cascais"
-    },
 
 
 ]

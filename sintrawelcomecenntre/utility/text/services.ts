@@ -8,7 +8,7 @@ export const services = [
         "pt": {
             "title": "Consultor de ferias"
         },
-        "image":"../images/ProductsImages/holiday.jpg",
+        "image":"../images/holiday.jpg",
         'route':'/holidayadvisor'
 
     },

@@ -66,6 +66,7 @@ const ProductInfoWrapper = styled.div`
   align-items: center;
   justify-conten: center;
   padding-left: 10px;
+  background-position: center;
 `;
 
 const ProductTitle = styled.h4`

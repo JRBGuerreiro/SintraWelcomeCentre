@@ -48,7 +48,7 @@ export const products = [
             "title": "Jeep Tours",
             "description": "Sintra e Cascais - Dia todo"
         },
-        "image":"../images/noImage.jpg",
+        "image":"../images/brand.png",
         'route': '/jeeptours'
     },    {
         "en": {
@@ -59,7 +59,7 @@ export const products = [
             "title": "Tours privados em Portugal",
             "description": "Sintra + Cabo da Roca + Cascais"
         },
-        "image":"../images/noImage.jpg",
+        "image":"../images/brand.png",
         'route': '/privatetours'
     },
     {
@@ -84,7 +84,7 @@ export const products = [
         "pt": {
             "title": "Corporate"
         },
-        "image":"../images/noImage.jpg",
+        "image":"../images/brand.png",
         'route': '/corporate'
       
     },
