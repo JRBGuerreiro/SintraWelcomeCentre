@@ -14,7 +14,7 @@ export const products = [
     },
     {
         "en": {
-            "title": "E-Bikes",
+            "title": "E-Bike Rentals",
             "description": "Try out our most wanted E-bikes and join pleasure with exercise"
         },
 
@@ -35,19 +35,57 @@ export const products = [
             "title": "Caminhadas",
             "disclaimer": "As reservas devem ser com antecedência de 48 horas com um minimo de 2 pessoas por grupo."
         },
-        "image":"../images/app_logo.png",
+        "image":"../images/walkingtours.jpg",
         'route': '/walkingtours'
     },
     {
         "en": {
-            "title": "Tours around Portugal",
-            "description": "Try out our most wanted E-bikes and join pleasure with exercise"
+            "title": "Jeep Tours",
+            "description": "Sintra and Cascais - Full day"
         },
 
         "pt": {
-            "title": "Tours à volta de Portugal"
+            "title": "Jeep Tours",
+            "description": "Sintra e Cascais - Dia todo"
         },
-        "image":"../images/biciProducts.jpg",
-        'route': '/bycicletours'
+        "image":"../images/brand.png",
+        'route': '/jeeptours'
+    },    {
+        "en": {
+            "title": "Private Tours around Portugal",
+            "description": "Sintra + Cabo da Roca + Cascais",
+        },
+        "pt": {
+            "title": "Tours privados em Portugal",
+            "description": "Sintra + Cabo da Roca + Cascais"
+        },
+        "image":"../images/brand.png",
+        'route': '/privatetours'
+    },
+    {
+        "en": {
+            "title": "Excursions",
+            "description": "Teste"
+        },
+
+        "pt": {
+            "title": "Excursões"
+        },
+        "image":"../images/bus.jpg",
+        'route': '/excursions'
+    },
+
+    {
+        "en": {
+            "title": "Corporate",
+            "description": "Teste"
+        },
+
+        "pt": {
+            "title": "Corporate"
+        },
+        "image":"../images/brand.png",
+        'route': '/corporate'
+      
     },
 ]

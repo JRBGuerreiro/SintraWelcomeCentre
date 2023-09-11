@@ -1,0 +1,39 @@
+export const excursions = [
+    {
+        "en": {
+            "title": "Schools ",
+            "duration": "",
+        },
+
+        "pt": {
+            "title": "Escolas",
+            "duration": "",
+        },
+        "path": "/school",
+        "location":"Sintra",
+        "price": "preço sob consulta",
+        "image": "../images/schools.jpg",
+        "data": ["../images/brand.png"],
+        "description": "Receção aos alunos no Centro da Vila, pelos nossos Guias e início do Walking Tour, com passagem na Volta do Duche, Camara Municipal, Palácio Nacional, Palácio de Biester, Fonte de Pisões, Quinta da Regaleira e volta ao Centro da Vila, através das pequenas Ruas do Centro Comercial e Histórico"
+
+    },
+    {
+        "en": {
+            "title": "Groups",
+            "duration": "",
+        },
+
+        "pt": {
+            "title": "Grupos",
+            "duration": "",
+        },
+        "path": "/groups",
+
+        "preco": "preço sob consulta" ,
+        "image": "../images/bus.jpg",
+        "data": ["../images/brand.png"],
+        "description": "Receção aos alunos no Centro da Vila, pelos nossos Guias e início do Walking Tour, com passagem na Volta do Duche, Camara Municipal, Palácio Nacional (Bilhete de visita ao seu interior incluída), Palácio de Biester, Fonte de Pisões e Quinta da Regaleira e volta ao Centro da Vila, através das pequenas Ruas do Centro Comercial e Histórico "
+    },
+
+
+]
