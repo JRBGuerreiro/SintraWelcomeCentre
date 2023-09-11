@@ -210,7 +210,7 @@ const Groups = () => {
     description: string,
     description2: string[]
   ) => {
-    let dataModal = [title, duration, description, description2];
+    let dataModal: any = [title, duration, description, description2];
     setImageData(imgData);
     setData(dataModal);
     setShow(true);
