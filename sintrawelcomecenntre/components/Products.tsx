@@ -82,6 +82,7 @@ const Products = (props: ProductsProps) => {
           {products.map((product) => {
             return (
               <FlipCard
+                key={product[props.language].title}
                 title={product[props.language].title}
                 image={product.image}
                 language={props.language}
@@ -100,6 +101,7 @@ const Products = (props: ProductsProps) => {
           {services.map((product) => {
             return (
               <FlipCard
+                key={product[props.language].title}
                 title={product[props.language].title}
                 image={product.image}
                 language={props.language}
