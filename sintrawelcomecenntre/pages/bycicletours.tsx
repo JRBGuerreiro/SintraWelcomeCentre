@@ -63,6 +63,7 @@ const BycicleTours = () => {
           </GoBackWrapper>
           <ProductsTitle>Bycicle Tours</ProductsTitle>
         </ProductsTitleWrapper>
+        //to edit
         {/* <div style={{width:'100vw', height:'100vh', backgroundColor:'black', display:'flex', justifyContent:'center', alignItems:'center'}}>
                         <div style={{ display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
                             <img style={{width:'350px'}} className="logo" src="../images/logo.png" alt="logo"></img>
